@@ -637,7 +637,7 @@ MonoBehaviour:
   sideDistance: 2.29
   timeSwitchSide: 4.88
   jumpPower: 1.32
-  rollPower: 0
+  rollPower: 2.04
   SwipeLeft: 0
   SwipeRight: 0
   SwipeUp: 0
