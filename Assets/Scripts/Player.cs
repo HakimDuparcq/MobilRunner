@@ -92,7 +92,7 @@ public class Player : MonoBehaviour
         x = Mathf.Lerp(x, NexPos, Time.deltaTime * timeSwitchSide);
         charac.Move(moveVector);
         Jump();
-
+        Roll();
     }
 
 
@@ -117,14 +117,14 @@ public class Player : MonoBehaviour
     {
         if (charac.isGrounded)
         {
+            
+        }
+        else
+        {
             if (SwipeDown)
             {
                 y -= rollPower * Time.deltaTime;
             }
-        }
-        else
-        {
-            
         }
     }
 }
