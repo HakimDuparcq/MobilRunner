@@ -18,11 +18,11 @@ public class Player : MonoBehaviour
     [Range(0.1f, 15)] public float timeSwitchSide;
     [Range(0.1f, 15)] public float jumpPower, rollPower;
 
-    public bool SwipeLeft, SwipeRight, SwipeUp, SwipeDown;
+    [HideInInspector] public bool SwipeLeft, SwipeRight, SwipeUp, SwipeDown;
 
     public CharacterController charac;
 
-    public float NexPos;
+    private float NexPos;
     private float x, y, z;
 
 
