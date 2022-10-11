@@ -1,0 +1,11 @@
+1er proto :
+		deplacement paler / cam
+		3 anim
+		map vite f
+
+
+2eme proto : 
+		editeur feedbacks
+		editeur maps
+		cinemachine
+		UI

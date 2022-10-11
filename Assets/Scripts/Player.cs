@@ -16,28 +16,43 @@ public class Player : MonoBehaviour
 
     [Range(0.1f, 5)] public float sideDistance;
     [Range(0.1f, 15)] public float timeSwitchSide;
-    [Range(0.1f, 15)] public float jumpPower, rollPower;
+     public float jumpPower, downSpeed, rollPower;
 
     [HideInInspector] public bool SwipeLeft, SwipeRight, SwipeUp, SwipeDown;
 
-    public CharacterController charac;
+    public Rigidbody rb;
 
-    private float NexPos;
+    private float NexPosX, NexPosY;
     private float x, y, z;
 
+    public GameObject cube;
+
+
+    public float groundDrag;
+    public float playerHeight;
+    public LayerMask Ground;
+    bool isGrounded;
+    public float jumpCouldown;
+    private bool isJumping = false;
 
     void Start()
     {
-        
+        y = 2;
+        transform.position = new Vector3(0, 2, 0);
     }
 
     void Update()
     {
         GetInput();
         MoveX();
-
-
+        Debug.Log(isGrounded);
     }
+
+    void FixedUpdate()
+    {
+        Moving();
+    }
+
     private void GetInput()
     {
         SwipeLeft = Input.GetKeyDown(KeyCode.Q) || Input.GetKeyDown(KeyCode.LeftArrow);
@@ -48,7 +63,16 @@ public class Player : MonoBehaviour
 
     private void MoveX()
     {
-        
+
+        isGrounded = Physics.Raycast(transform.position, Vector3.down, playerHeight * 0.5f + 0.2f, Ground);
+        if (isGrounded)
+        {
+            rb.drag = groundDrag;
+        }
+        else
+        {
+            rb.drag = 0;
+        }
 
         if (SwipeLeft) // Left
         {
@@ -59,12 +83,12 @@ public class Player : MonoBehaviour
             else if (side == SIDE.Middle)
             {
                 side = SIDE.Left;
-                NexPos = -sideDistance;
+                NexPosX = -sideDistance;
             }
             else if (side == SIDE.Right)
             {
                 side = SIDE.Middle;
-                NexPos = 0;
+                NexPosX = 0;
 
             }
         }
@@ -73,12 +97,12 @@ public class Player : MonoBehaviour
             if (side == SIDE.Left)
             {
                 side = SIDE.Middle;
-                NexPos = 0;
+                NexPosX = 0;
             }
             else if (side == SIDE.Middle)
             {
                 side = SIDE.Right;
-                NexPos = sideDistance;
+                NexPosX = sideDistance;
             }
             else if (side == SIDE.Right)
             {
@@ -87,44 +111,70 @@ public class Player : MonoBehaviour
         }
 
 
-        Vector3 moveVector = new Vector3(x- transform.position.x, y*Time.deltaTime, 0);
 
-        x = Mathf.Lerp(x, NexPos, Time.deltaTime * timeSwitchSide);
-        charac.Move(moveVector);
         Jump();
         Roll();
     }
 
+    private void Moving()
+    {
+        x = Mathf.Lerp(transform.position.x, NexPosX, Time.fixedDeltaTime * timeSwitchSide);
 
+        y= Mathf.Lerp(transform.position.y, NexPosY, Time.fixedDeltaTime * downSpeed);
+        Vector3 moveVector = new Vector3(x, y , 0);
+
+        rb.MovePosition(moveVector);
+    }
 
     private void Jump()
     {
-        if (charac.isGrounded)
+        if (isGrounded && !isJumping)
         {
+            NexPosY = transform.position.y;
             if (SwipeUp)
             {
-                y = jumpPower;
+                NexPosY = jumpPower;
+                isJumping = true;
+                StartCoroutine(JumpCouldown(jumpCouldown));
             }
         }
         else
         {
-            y -= jumpPower * Time.deltaTime;
+            NexPosY -= downSpeed * Time.deltaTime;
         }
     }
 
 
+
+
     private void Roll()
     {
-        if (charac.isGrounded)
+        if (isGrounded)
         {
-            
+
         }
         else
         {
             if (SwipeDown)
             {
-                y -= rollPower * Time.deltaTime;
+                NexPosY = 0 + playerHeight/2;
             }
         }
     }
+
+
+    public IEnumerator JumpCouldown(float time)
+    {
+        yield return new WaitForSeconds(time);
+        isJumping = false;
+
+    }
+
+
+    public void OnCollisionEnter(Collision collision)
+    {
+        Debug.Log(collision.transform.name);
+    }
+
+
 }
