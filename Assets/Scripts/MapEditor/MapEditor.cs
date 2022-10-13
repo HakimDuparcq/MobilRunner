@@ -6,6 +6,8 @@ using TMPro;
 
 public class MapEditor : MonoBehaviour
 {
+    public static MapEditor instance;
+
     public Camera worldCamera;
     public GameObject actualObstacle;
     public GameObject[] obstacles;
@@ -14,6 +16,19 @@ public class MapEditor : MonoBehaviour
     public GameObject plane;
 
     public float sizeXmap;
+
+
+    public List<GameObject> obstaclesOnMap = new List<GameObject>();
+
+    public GameObject newObstacle;
+    public GameObject followObstacle;
+
+    public Material cantPlaceMaterial;
+
+    public void Awake()
+    {
+        instance = this;
+    }
     void Start()
     {
         //sizeXmap = plane.transform.localScale.z;
@@ -35,7 +50,7 @@ public class MapEditor : MonoBehaviour
 
     private void FixedUpdate()
     {
-        
+        ObjectFollowMouse();
     }
 
     public void ClickButtonUI(int i )
@@ -54,30 +69,88 @@ public class MapEditor : MonoBehaviour
             {
                 if (hit.transform.gameObject == plane)
                 {
-                    Debug.Log(hit.transform.position);
-                    Vector3 positionObject;
-                    if (hit.point.x<sizeXmap*0.33f && hit.point.x<0)
+                    Vector3 positionObject=new  Vector3(0,0,0);
+                    if (hit.point.x < -sizeXmap * 0.33f)
                     {
-                        positionObject = new Vector3(-2, hit.point.y, hit.point.z);
+                        positionObject = new Vector3(-sizeXmap / 2, hit.point.y, hit.point.z);
                     }
-                    else if (hit.point.x> sizeXmap * 0.33f  && hit.point.x < sizeXmap * 0.66f)
+                    else if (hit.point.x > -sizeXmap * 0.33f && hit.point.x < sizeXmap * 0.33f)
                     {
                         positionObject = new Vector3(0, hit.point.y, hit.point.z);
-
                     }
-                    else
+                    else if (hit.point.x > sizeXmap * 0.33f)
                     {
-                        positionObject = new Vector3(2, hit.point.y, hit.point.z);
-
+                        positionObject = new Vector3(sizeXmap / 2, hit.point.y, hit.point.z);
                     }
-                    Instantiate(actualObstacle, positionObject, Quaternion.identity);
+                    newObstacle =  Instantiate(actualObstacle, positionObject, Quaternion.identity);
+                    newObstacle.AddComponent<Rigidbody>();
+                    newObstacle.GetComponent<Rigidbody>().isKinematic=true;
+                    newObstacle.GetComponent<Rigidbody>().useGravity=false;
+                    newObstacle.GetComponent<Collider>().isTrigger = true;
 
+                    StartCoroutine(TestPlacement());
                 }
-
-                //Debug.Log(hit.transform.name);
 
             }
         }
+
         
+    }
+
+    public void ObjectFollowMouse()  // Mettre un layer mask pour que cube suive mieux souris
+    {
+        RaycastHit hit;
+        
+        Ray ray = worldCamera.ScreenPointToRay(Input.mousePosition);
+        if (Physics.Raycast(ray, out hit))
+        {
+            //if touch plane
+            Vector3 positionObject = new Vector3(0, 0, 0);
+            if (hit.transform.gameObject == plane )
+            {
+                if (hit.point.x < - sizeXmap * 0.33f )
+                {
+                    positionObject = new Vector3(-sizeXmap/2, hit.point.y, hit.point.z);
+                }
+                else if (hit.point.x > - sizeXmap * 0.33f && hit.point.x < sizeXmap * 0.33f)
+                {
+                    positionObject = new Vector3(0, hit.point.y, hit.point.z);
+                }
+                else if(hit.point.x > sizeXmap*0.33f)
+                {
+                    positionObject = new Vector3(sizeXmap/2, hit.point.y, hit.point.z);
+                }
+
+                //createobject
+                if (followObstacle == null)
+                {
+                    followObstacle = Instantiate(actualObstacle, positionObject, Quaternion.identity);
+
+                }
+                //move it
+                followObstacle.transform.position = positionObject;
+            }
+        }
+        else
+        {
+            if (followObstacle!=null)
+            {
+                Debug.Log("Destroy");
+                Destroy(followObstacle);
+            }
+        }
+    }
+
+    public IEnumerator TestPlacement()
+    {
+        yield return new WaitForSeconds(0.2f);
+        if (newObstacle.GetComponent<PrefabsCollision>().isRightPlacement)
+        {
+            obstaclesOnMap.Add(newObstacle);
+        }
+        else
+        {
+            Destroy(newObstacle);
+        }
     }
 }
