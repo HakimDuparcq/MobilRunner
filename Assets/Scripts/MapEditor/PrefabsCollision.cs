@@ -3,9 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
+public enum TypeObstacle{cube, barriere}
+
 public class PrefabsCollision : MonoBehaviour
 {
-    public bool isRightPlacement;
+    public TypeObstacle typeObstacle;
+    public int crossNumber; // to know if is not in something
     void Start()
     {
 
@@ -21,17 +24,18 @@ public class PrefabsCollision : MonoBehaviour
     {
         if (MapEditor.instance.obstaclesOnMap.Contains(other.gameObject))
         {
-            Debug.Log(other.transform.name + "Enter");
-            isRightPlacement = false;
+            crossNumber++;
+
         }
-        
+
     }
 
     public void OnTriggerExit(Collider other)
     {
         if (MapEditor.instance.obstaclesOnMap.Contains(other.gameObject))
         {
-            isRightPlacement = true;
+            crossNumber--;
+
         }
     }
 
