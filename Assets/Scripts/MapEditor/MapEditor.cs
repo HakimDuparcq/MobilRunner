@@ -14,9 +14,8 @@ public class MapEditor : MonoBehaviour
 
     public Camera worldCamera;
     public GameObject actualObstacle;
-    public GameObject[] obstacles;
+    public Category[] catalog;
 
-    public Button[] SelectObstacles;
     public Button Selector;
     public Button Save;
     public Button Load;
@@ -47,8 +46,9 @@ public class MapEditor : MonoBehaviour
 
     public State state;
 
-    public ScrollRect[] scrollRects;
-    public Button[] categorysButton;
+
+
+    public int actualCategory;
 
     public void Awake()
     {
@@ -56,11 +56,15 @@ public class MapEditor : MonoBehaviour
     }
     void Start()
     {
-        for (int i = 0; i < SelectObstacles.Length; i++)
+        for (int i = 0; i < catalog.Length; i++)
         {
-            int x = i;
-            SelectObstacles[i].onClick.AddListener(delegate { ClickButtonPrefabs(x); });
-            SelectObstacles[i].GetComponent<RawImage>().texture = AssetPreview.GetAssetPreview(obstacles[i]);
+            for (int ii = 0; ii < catalog[i].prefabsButton.Length; ii++)
+            {
+                int x = ii;
+                catalog[i].prefabsButton[ii].onClick.AddListener(delegate { ClickButtonPrefabs(x); });
+                catalog[i].prefabsButton[ii].GetComponent<RawImage>().texture = AssetPreview.GetAssetPreview(catalog[i].prefabsObject[ii]);
+            }
+            
         }
         Selector.onClick.AddListener(OnSelection);
         Save.onClick.AddListener(OnSave);
@@ -69,11 +73,14 @@ public class MapEditor : MonoBehaviour
         DestroyObjectScene.onClick.AddListener(OnDestroyObjectScene);
 
         ShowCategory(-1);
-        for (int i = 0; i < categorysButton.Length; i++)
+        for (int i = 0; i < catalog.Length; i++)
         {
+
             int x = i;
-            categorysButton[i].onClick.AddListener(delegate { ShowCategory(x); });
+            catalog[i].categoryButton.onClick.AddListener(delegate { ShowCategory(x); });
+
         }
+        
 
 
     }
@@ -97,19 +104,20 @@ public class MapEditor : MonoBehaviour
 
     public void ClickButtonPrefabs(int i )
     {
-        actualObstacle = obstacles[i];
+        actualObstacle = catalog[actualCategory].prefabsObject[i];
         state = State.Placement;
     }
 
     public void ShowCategory(int x)
     {
-        for (int i = 0; i < scrollRects.Length; i++)
+        actualCategory = x;
+        for (int i = 0; i < catalog.Length; i++)
         {
-            scrollRects[i].gameObject.SetActive(false);
+            catalog[i].scrollRect.gameObject.SetActive(false);
         }
         if (x!=-1)
         {
-            scrollRects[x].gameObject.SetActive(true);
+            catalog[x].scrollRect.gameObject.SetActive(true);
         }
 
     }
@@ -224,12 +232,16 @@ public class MapEditor : MonoBehaviour
 
         for (int i = 0; i < obstaclesOnMap.Count; i++)
         {
-            for (int ii = 0; ii < obstacles.Length; ii++)
+            for (int ii = 0; ii < catalog.Length; ii++)
             {
-                if (obstacles[ii].GetComponent<PrefabsCollision>().typeObstacle == obstaclesOnMap[i].GetComponent<PrefabsCollision>().typeObstacle)
+                for (int iii = 0; iii < catalog[ii].prefabsObject.Length; iii++)
                 {
-                    pattern.gameObjects.Add(obstacles[ii]);
+                    if (catalog[ii].prefabsObject[iii].GetComponent<PrefabsCollision>().typeObstacle == obstaclesOnMap[i].GetComponent<PrefabsCollision>().typeObstacle)
+                    {
+                        pattern.gameObjects.Add(catalog[ii].prefabsObject[iii]);
+                    }
                 }
+                
             }
 
 
