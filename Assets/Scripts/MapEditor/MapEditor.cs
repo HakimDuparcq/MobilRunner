@@ -3,6 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEditor;
+
+public enum State { None, Selection, Placement}
+
 
 public class MapEditor : MonoBehaviour
 {
@@ -13,11 +17,14 @@ public class MapEditor : MonoBehaviour
     public GameObject[] obstacles;
 
     public Button[] SelectObstacles;
+    public Button Selector;
     public Button Save;
     public Button Load;
+    public Button ResetPattern;
+    public Button DestroyObjectScene;
 
     public GameObject plane;
-
+    public GameObject contener;
     public float sizeXmap;
 
 
@@ -25,17 +32,23 @@ public class MapEditor : MonoBehaviour
 
     public GameObject newObstacle;
     public GameObject followObstacle;
+    public GameObject selectObstacle;
 
     public Material previouPlaceMaterial;
     public Material canPlaceMaterial;
     public Material canNotPlaceMaterial;
 
-    public LayerMask LayerMask;
+    public LayerMask layerGround;
+    public LayerMask layerObstacle;
     public float hitDistance;
+
 
     public Pattern pattern;
 
+    public State state;
 
+    public ScrollRect[] scrollRects;
+    public Button[] categorysButton;
 
     public void Awake()
     {
@@ -46,34 +59,100 @@ public class MapEditor : MonoBehaviour
         for (int i = 0; i < SelectObstacles.Length; i++)
         {
             int x = i;
-            SelectObstacles[i].onClick.AddListener(delegate { ClickButtonUI(x); });
+            SelectObstacles[i].onClick.AddListener(delegate { ClickButtonPrefabs(x); });
+            SelectObstacles[i].GetComponent<RawImage>().texture = AssetPreview.GetAssetPreview(obstacles[i]);
         }
+        Selector.onClick.AddListener(OnSelection);
         Save.onClick.AddListener(OnSave);
         Load.onClick.AddListener(OnLoad);
-        
+        ResetPattern.onClick.AddListener(OnResetPattern);
+        DestroyObjectScene.onClick.AddListener(OnDestroyObjectScene);
+
+        ShowCategory(-1);
+        for (int i = 0; i < categorysButton.Length; i++)
+        {
+            int x = i;
+            categorysButton[i].onClick.AddListener(delegate { ShowCategory(x); });
+        }
+
+
     }
 
     void Update()
     {
-        ObjectFollowMouse();
+        if (state==State.Placement)
+        {
+            ObjectFollowMouse();
+
+
+        }
+        else if (state==State.Selection)
+        {
+            SelectionMode();
+        }
 
     }
 
 
 
-    public void ClickButtonUI(int i )
+    public void ClickButtonPrefabs(int i )
     {
         actualObstacle = obstacles[i];
+        state = State.Placement;
     }
 
-    
+    public void ShowCategory(int x)
+    {
+        for (int i = 0; i < scrollRects.Length; i++)
+        {
+            scrollRects[i].gameObject.SetActive(false);
+        }
+        if (x!=-1)
+        {
+            scrollRects[x].gameObject.SetActive(true);
+        }
 
-    public void ObjectFollowMouse()  // Mettre un layer mask pour que cube suive mieux souris
+    }
+
+    public void OnSelection()
+    {
+        state = State.Selection;
+    }
+
+    public void SelectionMode()
+    {
+        if (Input.GetMouseButtonDown(0))
+        {
+            RaycastHit hit;
+
+            Ray ray = worldCamera.ScreenPointToRay(Input.mousePosition);
+            if (Physics.Raycast(ray, out hit, hitDistance, layerObstacle))
+            {
+                selectObstacle = hit.transform.gameObject;
+            }
+            else
+            {
+                selectObstacle = null;
+            }
+        }
+
+        if (selectObstacle != null)
+        {
+            state = State.Placement;
+            followObstacle = selectObstacle;
+            selectObstacle = null;
+            
+
+        }
+    }
+
+
+    public void ObjectFollowMouse()  
     {
         RaycastHit hit;
         
         Ray ray = worldCamera.ScreenPointToRay(Input.mousePosition);
-        if (Physics.Raycast(ray, out hit, hitDistance,LayerMask))
+        if (Physics.Raycast(ray, out hit, hitDistance,layerGround))
         {
             //if touch plane
             Vector3 positionObject = new Vector3(0, 0, 0);
@@ -118,6 +197,7 @@ public class MapEditor : MonoBehaviour
                 if (Input.GetMouseButtonDown(0) && followObstacle.GetComponent<PrefabsCollision>().crossNumber==0)
                 {
                     newObstacle = Instantiate(actualObstacle, positionObject, Quaternion.identity);
+                    newObstacle.transform.parent = contener.transform;
                     newObstacle.GetComponent<MeshRenderer>().material = canPlaceMaterial;
                     obstaclesOnMap.Add(newObstacle);
                 }
@@ -135,6 +215,8 @@ public class MapEditor : MonoBehaviour
         
 
     }
+    
+
 
     public void OnSave()
     {
@@ -147,7 +229,6 @@ public class MapEditor : MonoBehaviour
                 if (obstacles[ii].GetComponent<PrefabsCollision>().typeObstacle == obstaclesOnMap[i].GetComponent<PrefabsCollision>().typeObstacle)
                 {
                     pattern.gameObjects.Add(obstacles[ii]);
-                    Debug.Log("noice");
                 }
             }
 
@@ -159,7 +240,27 @@ public class MapEditor : MonoBehaviour
 
     public void OnLoad()
     {
+        OnDestroyObjectScene();
+        for (int i = 0; i < pattern.gameObjects.Count; i++)
+        {
+            GameObject obstacle = Instantiate(pattern.gameObjects[i], pattern.positions[i], Quaternion.identity);
+            obstacle.transform.parent = contener.transform;
+            obstaclesOnMap.Add(obstacle);
+        }
+    }
 
+    public void OnResetPattern()
+    {
+        pattern.gameObjects = new List<GameObject>();
+        pattern.positions = new List<Vector3>();
+    }
+
+    public void OnDestroyObjectScene()
+    {
+        foreach (GameObject child in obstaclesOnMap)
+        {
+            Destroy(child.gameObject);
+        }
     }
 
 }
