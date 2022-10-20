@@ -11,7 +11,9 @@ GameObject:
   - component: {fileID: 414276}
   - component: {fileID: 3365836}
   - component: {fileID: 2353008}
-  m_Layer: 0
+  - component: {fileID: 7292215215093937963}
+  - component: {fileID: -6682075002104545551}
+  m_Layer: 6
   m_Name: SM_Env_BonePile_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -83,3 +85,32 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &7292215215093937963
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 145504}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300000, guid: b89ef59607bc8c8478705cc0ceadc89f, type: 3}
+--- !u!114 &-6682075002104545551
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 145504}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae861be614bf2424e92bd1323d5b1542, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  crossNumber: 0
+  offset: {fileID: 0}
+  size: 0

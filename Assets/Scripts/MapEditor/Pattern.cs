@@ -10,6 +10,7 @@ public class Pattern : ScriptableObject
 
     public List<GameObject> gameObjects = new List<GameObject>();
     public List<Vector3> positions = new List<Vector3>();
+    public List<Quaternion> rotation = new List<Quaternion>();
 
 
 

@@ -4,8 +4,9 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using UnityEditor;
+using System.Linq;
 
-public enum State { None, Selection, Placement}
+public enum State { None, Selection, Placement, Rotation}
 
 
 public class MapEditor : MonoBehaviour
@@ -13,7 +14,6 @@ public class MapEditor : MonoBehaviour
     public static MapEditor instance;
 
     public Camera worldCamera;
-    public GameObject actualObstacle;
     public Category[] catalog;
 
     public Button Selector;
@@ -21,6 +21,14 @@ public class MapEditor : MonoBehaviour
     public Button Load;
     public Button ResetPattern;
     public Button DestroyObjectScene;
+    public Toggle GrilleMap;
+    public Button NextPattern;
+    public Button PreviousPattern;
+    public TextMeshProUGUI TextpatternNumber;
+    public Button RotationModeButton;
+    public Slider RotationX;
+    public Slider RotationY;
+    public Slider RotationZ;
 
     public GameObject plane;
     public GameObject contener;
@@ -29,9 +37,9 @@ public class MapEditor : MonoBehaviour
 
     public List<GameObject> obstaclesOnMap = new List<GameObject>();
 
+    public GameObject actualObstacle;
     public GameObject newObstacle;
     public GameObject followObstacle;
-    public GameObject selectObstacle;
 
     public Material previouPlaceMaterial;
     public Material canPlaceMaterial;
@@ -39,13 +47,16 @@ public class MapEditor : MonoBehaviour
 
     public LayerMask layerGround;
     public LayerMask layerObstacle;
+    public LayerMask layerGroundObstacle;
+
     public float hitDistance;
 
 
-    public Pattern pattern;
-
+    public Pattern[] patterns;
+    public int patternNumber;
     public State state;
 
+    public bool isGrillMode;
 
 
     public int actualCategory;
@@ -58,7 +69,7 @@ public class MapEditor : MonoBehaviour
     {
         for (int i = 0; i < catalog.Length; i++)
         {
-            for (int ii = 0; ii < catalog[i].prefabsButton.Length; ii++)
+            for (int ii = 0; ii < catalog[i].prefabsButton.Length  && ii < catalog[i].prefabsObject.Length; ii++)
             {
                 int x = ii;
                 catalog[i].prefabsButton[ii].onClick.AddListener(delegate { ClickButtonPrefabs(x); });
@@ -71,8 +82,9 @@ public class MapEditor : MonoBehaviour
         Load.onClick.AddListener(OnLoad);
         ResetPattern.onClick.AddListener(OnResetPattern);
         DestroyObjectScene.onClick.AddListener(OnDestroyObjectScene);
+        GrilleMap.onValueChanged.AddListener(delegate {GrilleModeActivation();});
 
-        ShowCategory(-1);
+            ShowCategory(-1);
         for (int i = 0; i < catalog.Length; i++)
         {
 
@@ -80,9 +92,14 @@ public class MapEditor : MonoBehaviour
             catalog[i].categoryButton.onClick.AddListener(delegate { ShowCategory(x); });
 
         }
-        
+        OnClickNExtPattern(0);
+        NextPattern.onClick.AddListener(delegate { OnClickNExtPattern(1); });
+        PreviousPattern.onClick.AddListener(delegate { OnClickNExtPattern(-1); });
 
-
+        RotationModeButton.onClick.AddListener(()=>state = State.Rotation);
+        RotationX.onValueChanged.AddListener(delegate { OnRotation(); });
+        RotationY.onValueChanged.AddListener(delegate { OnRotation(); });
+        RotationZ.onValueChanged.AddListener(delegate { OnRotation(); });
     }
 
     void Update()
@@ -90,17 +107,34 @@ public class MapEditor : MonoBehaviour
         if (state==State.Placement)
         {
             ObjectFollowMouse();
-
-
         }
         else if (state==State.Selection)
         {
             SelectionMode();
         }
+        else if (state == State.Rotation)
+        {
+            RotationMode();
+        }
 
     }
 
+    public void RotationMode()
+    {
+        if (Input.GetMouseButtonDown(0))
+        {
+            RaycastHit hit;
 
+            Ray ray = worldCamera.ScreenPointToRay(Input.mousePosition);
+            if (Physics.Raycast(ray, out hit, hitDistance, layerObstacle))
+            {
+                followObstacle = null;
+                actualObstacle = hit.transform.gameObject;
+
+            }
+
+        }
+    }
 
     public void ClickButtonPrefabs(int i )
     {
@@ -136,21 +170,26 @@ public class MapEditor : MonoBehaviour
             Ray ray = worldCamera.ScreenPointToRay(Input.mousePosition);
             if (Physics.Raycast(ray, out hit, hitDistance, layerObstacle))
             {
-                selectObstacle = hit.transform.gameObject;
-            }
-            else
-            {
-                selectObstacle = null;
-            }
-        }
+                //GameObject selectObstacle = hit.transform.gameObject;
+                state = State.Placement;
+                followObstacle = null;
 
-        if (selectObstacle != null)
-        {
-            state = State.Placement;
-            followObstacle = selectObstacle;
-            selectObstacle = null;
+
+                for (int ii = 0; ii < catalog.Length; ii++)
+                {
+                    for (int iii = 0; iii < catalog[ii].prefabsObject.Length; iii++)
+                    {
+                        if (catalog[ii].prefabsObject[iii].name + "(Clone)" == hit.transform.gameObject.name)
+                        {
+                            actualObstacle =catalog[ii].prefabsObject[iii];
+                        }
+                    }
+                }
+                obstaclesOnMap.Remove(hit.transform.gameObject);
+                Destroy(hit.transform.gameObject);
+                
+            }
             
-
         }
     }
 
@@ -160,57 +199,86 @@ public class MapEditor : MonoBehaviour
         RaycastHit hit;
         
         Ray ray = worldCamera.ScreenPointToRay(Input.mousePosition);
-        if (Physics.Raycast(ray, out hit, hitDistance,layerGround))
+        if (Physics.Raycast(ray, out hit, hitDistance,layerGroundObstacle))
         {
-            //if touch plane
             Vector3 positionObject = new Vector3(0, 0, 0);
-            if (hit.transform.gameObject == plane )
+            //createobject
+            if (followObstacle == null)
             {
-                if (hit.point.x < - sizeXmap * 0.33f )
-                {
-                    positionObject = new Vector3(-sizeXmap/2, hit.point.y, hit.point.z);
-                }
-                else if (hit.point.x > - sizeXmap * 0.33f && hit.point.x < sizeXmap * 0.33f)
-                {
-                    positionObject = new Vector3(0, hit.point.y, hit.point.z);
-                }
-                else if(hit.point.x > sizeXmap*0.33f)
-                {
-                    positionObject = new Vector3(sizeXmap/2, hit.point.y, hit.point.z);
-                }
+                followObstacle = Instantiate(actualObstacle, positionObject, Quaternion.identity);
+                followObstacle.AddComponent<Rigidbody>();
+                followObstacle.GetComponent<Rigidbody>().isKinematic = true;
+                followObstacle.GetComponent<Rigidbody>().useGravity = false;
+                followObstacle.GetComponent<Collider>().isTrigger = true;
+                followObstacle.layer = 0; //Default
+            }
 
-                //createobject
-                if (followObstacle == null)
-                {
-                    followObstacle = Instantiate(actualObstacle, positionObject, Quaternion.identity);
-                    followObstacle.AddComponent<Rigidbody>();
-                    followObstacle.GetComponent<Rigidbody>().isKinematic = true;
-                    followObstacle.GetComponent<Rigidbody>().useGravity = false;
-                    followObstacle.GetComponent<Collider>().isTrigger = true;
-                }
-                //move it
-                followObstacle.transform.position = positionObject;
+            
+            //if (layerGroundObstacle == (layerGroundObstacle | (1 << hit.transform.gameObject.layer)))  //si layermash contient layer;
 
-                if (followObstacle.GetComponent<PrefabsCollision>().crossNumber == 0)
+            float zPos = 0;
+            if (isGrillMode) //GRILLE
+            {
+                if (followObstacle.GetComponent<PrefabData>().size == 0 )
                 {
-                    followObstacle.GetComponent<MeshRenderer>().material = previouPlaceMaterial;
+                    zPos = hit.point.z - hit.point.z % 1;
                 }
                 else
                 {
-                    followObstacle.GetComponent<MeshRenderer>().material = canNotPlaceMaterial;
+                    zPos = hit.point.z - hit.point.z % followObstacle.GetComponent<PrefabData>().size;
                 }
-
-
-
-                if (Input.GetMouseButtonDown(0) && followObstacle.GetComponent<PrefabsCollision>().crossNumber==0)
-                {
-                    newObstacle = Instantiate(actualObstacle, positionObject, Quaternion.identity);
-                    newObstacle.transform.parent = contener.transform;
-                    newObstacle.GetComponent<MeshRenderer>().material = canPlaceMaterial;
-                    obstaclesOnMap.Add(newObstacle);
-                }
-
             }
+            else
+            {
+                zPos = hit.point.z;
+            }
+
+            if (hit.point.x < - sizeXmap * 0.33f )
+            {
+                
+                positionObject = new Vector3(-sizeXmap/2, hit.point.y, zPos);  //hit.point.y
+            }
+            else if (hit.point.x > - sizeXmap * 0.33f && hit.point.x < sizeXmap * 0.33f)
+            {
+                positionObject = new Vector3(0, hit.point.y, zPos);
+            }
+            else if(hit.point.x > sizeXmap*0.33f)
+            {
+                positionObject = new Vector3(sizeXmap/2, hit.point.y, zPos);
+            }
+
+            if (followObstacle!= null && followObstacle.GetComponent<PrefabData>().offset != null)
+            {
+                positionObject -= followObstacle.GetComponent<PrefabData>().offset.localPosition;
+            }
+            
+
+            
+            //move it
+            followObstacle.transform.position = positionObject;
+
+            //materials
+            Material[] matArray = { followObstacle.GetComponent<MeshRenderer>().material, null };
+
+            if (followObstacle.GetComponent<PrefabData>().crossNumber == 0)
+            {
+                matArray[1] = previouPlaceMaterial;
+            }
+            else
+            {
+                matArray[1] = canNotPlaceMaterial;
+            }
+
+            if (Input.GetMouseButtonDown(0) && followObstacle.GetComponent<PrefabData>().crossNumber==0)
+            {
+                newObstacle = Instantiate(actualObstacle, positionObject, Quaternion.identity);
+                newObstacle.transform.parent = contener.transform;
+                matArray[1] = canPlaceMaterial;
+                obstaclesOnMap.Add(newObstacle);
+            }
+            followObstacle.GetComponent<MeshRenderer>().materials = matArray;
+
+            
         }
         else
         {
@@ -228,7 +296,8 @@ public class MapEditor : MonoBehaviour
 
     public void OnSave()
     {
-        pattern.sizePattern = 100;
+        OnResetPattern();
+        patterns[patternNumber].sizePattern = 100;
 
         for (int i = 0; i < obstaclesOnMap.Count; i++)
         {
@@ -236,26 +305,29 @@ public class MapEditor : MonoBehaviour
             {
                 for (int iii = 0; iii < catalog[ii].prefabsObject.Length; iii++)
                 {
-                    if (catalog[ii].prefabsObject[iii].GetComponent<PrefabsCollision>().typeObstacle == obstaclesOnMap[i].GetComponent<PrefabsCollision>().typeObstacle)
+                    if (catalog[ii].prefabsObject[iii].name+"(Clone)" == obstaclesOnMap[i].name)
                     {
-                        pattern.gameObjects.Add(catalog[ii].prefabsObject[iii]);
+                        patterns[patternNumber].gameObjects.Add(catalog[ii].prefabsObject[iii]);
+                        patterns[patternNumber].positions.Add(obstaclesOnMap[i].transform.position);
+                        patterns[patternNumber].rotation.Add(obstaclesOnMap[i].transform.rotation);
+                        EditorUtility.SetDirty(patterns[patternNumber]);
                     }
                 }
-                
             }
 
 
-            pattern.positions.Add(obstaclesOnMap[i].transform.position);
-
         }
+        AssetDatabase.SaveAssets();
+
     }
 
     public void OnLoad()
     {
         OnDestroyObjectScene();
-        for (int i = 0; i < pattern.gameObjects.Count; i++)
+        for (int i = 0; i < patterns[patternNumber].gameObjects.Count; i++)
         {
-            GameObject obstacle = Instantiate(pattern.gameObjects[i], pattern.positions[i], Quaternion.identity);
+            GameObject obstacle = Instantiate(patterns[patternNumber].gameObjects[i], patterns[patternNumber].positions[i], patterns[patternNumber].rotation[i]);
+
             obstacle.transform.parent = contener.transform;
             obstaclesOnMap.Add(obstacle);
         }
@@ -263,16 +335,41 @@ public class MapEditor : MonoBehaviour
 
     public void OnResetPattern()
     {
-        pattern.gameObjects = new List<GameObject>();
-        pattern.positions = new List<Vector3>();
+        patterns[patternNumber].gameObjects = new List<GameObject>();
+        patterns[patternNumber].positions = new List<Vector3>();
+        patterns[patternNumber].rotation = new List<Quaternion>();
     }
 
     public void OnDestroyObjectScene()
     {
-        foreach (GameObject child in obstaclesOnMap)
+        for (int i = 0; i < obstaclesOnMap.Count; i++)
         {
-            Destroy(child.gameObject);
+            Destroy(obstaclesOnMap[i]);
         }
+        obstaclesOnMap.RemoveRange(0, obstaclesOnMap.Count);
     }
 
+    public void GrilleModeActivation()
+    {
+        isGrillMode = GrilleMap.isOn;
+    }
+
+    public void OnClickNExtPattern(int numberAdd)
+    {
+        if (patternNumber + numberAdd>=0)
+        {
+            patternNumber = (patternNumber + numberAdd) % (patterns.Length);
+        }
+        else
+        {
+            patternNumber = patterns.Length - 1;
+        }
+        
+        TextpatternNumber.text = "Number " + patternNumber.ToString() +", " + patterns[patternNumber].name; 
+    }
+
+    public void OnRotation()
+    {
+        actualObstacle.transform.rotation = Quaternion.Euler(RotationX.value, RotationY.value, RotationZ.value);
+    }
 }

@@ -1,0 +1,130 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d208b9bff2ef3244cb845cf008b766ed, type: 3}
+  m_Name: New Game Event 2
+  m_EditorClassIdentifier: 
+  Name: 
+  GameObject: {fileID: 0}
+  Feedbacks:
+  - rid: 1490480471456350241
+  - rid: 1490480471456350242
+  - rid: 1490480471456350243
+  - rid: 1490480471456350251
+  - rid: 1490480471456350244
+  - rid: 1490480471456350245
+  - rid: 1490480471456350246
+  - rid: 1490480471456350247
+  - rid: 1490480471456350248
+  - rid: 1490480471456350249
+  - rid: 1490480471456350250
+  - rid: 1490480471456350252
+  - rid: 1490480471456350253
+  - rid: 1490480498367004672
+  - rid: 1490480498367004673
+  - rid: 1490480498367004674
+  - rid: 1490480498367004675
+  - rid: 1490480498367004676
+  - rid: 1490480498367004677
+  - rid: 1490480498367004678
+  - rid: 1490480501303017472
+  ColorsType:
+  - {r: 1, g: 1, b: 1, a: 1}
+  - {r: 0, g: 0, b: 0, a: 1}
+  - {r: 0, g: 0, b: 1, a: 1}
+  ColorFeedbacks: []
+  references:
+    version: 2
+    RefIds:
+    - rid: 1490480471456350241
+      type: {class: InstantiateFeedback, ns: Hakim, asm: Assembly-CSharp}
+      data:
+        Prefab: {fileID: 0}
+    - rid: 1490480471456350242
+      type: {class: InstantiateFeedback, ns: Hakim, asm: Assembly-CSharp}
+      data:
+        Prefab: {fileID: 0}
+    - rid: 1490480471456350243
+      type: {class: InstantiateFeedback, ns: Hakim, asm: Assembly-CSharp}
+      data:
+        Prefab: {fileID: 0}
+    - rid: 1490480471456350244
+      type: {class: InstantiateFeedback, ns: Hakim, asm: Assembly-CSharp}
+      data:
+        Prefab: {fileID: 0}
+    - rid: 1490480471456350245
+      type: {class: InstantiateFeedback, ns: Hakim, asm: Assembly-CSharp}
+      data:
+        Prefab: {fileID: 0}
+    - rid: 1490480471456350246
+      type: {class: InstantiateFeedback, ns: Hakim, asm: Assembly-CSharp}
+      data:
+        Prefab: {fileID: 0}
+    - rid: 1490480471456350247
+      type: {class: InstantiateFeedback, ns: Hakim, asm: Assembly-CSharp}
+      data:
+        Prefab: {fileID: 0}
+    - rid: 1490480471456350248
+      type: {class: InstantiateFeedback, ns: Hakim, asm: Assembly-CSharp}
+      data:
+        Prefab: {fileID: 0}
+    - rid: 1490480471456350249
+      type: {class: InstantiateFeedback, ns: Hakim, asm: Assembly-CSharp}
+      data:
+        Prefab: {fileID: 0}
+    - rid: 1490480471456350250
+      type: {class: InstantiateFeedback, ns: Hakim, asm: Assembly-CSharp}
+      data:
+        Prefab: {fileID: 0}
+    - rid: 1490480471456350251
+      type: {class: InstantiateFeedback, ns: Hakim, asm: Assembly-CSharp}
+      data:
+        Prefab: {fileID: 0}
+    - rid: 1490480471456350252
+      type: {class: InstantiateFeedback, ns: Hakim, asm: Assembly-CSharp}
+      data:
+        Prefab: {fileID: 0}
+    - rid: 1490480471456350253
+      type: {class: InstantiateFeedback, ns: Hakim, asm: Assembly-CSharp}
+      data:
+        Prefab: {fileID: 0}
+    - rid: 1490480498367004672
+      type: {class: InstantiateFeedback, ns: Hakim, asm: Assembly-CSharp}
+      data:
+        Prefab: {fileID: 0}
+    - rid: 1490480498367004673
+      type: {class: InstantiateFeedback, ns: Hakim, asm: Assembly-CSharp}
+      data:
+        Prefab: {fileID: 0}
+    - rid: 1490480498367004674
+      type: {class: WaitFeedback, ns: Hakim, asm: Assembly-CSharp}
+      data:
+        Timer: 0
+    - rid: 1490480498367004675
+      type: {class: WaitFeedback, ns: Hakim, asm: Assembly-CSharp}
+      data:
+        Timer: 0
+    - rid: 1490480498367004676
+      type: {class: InstantiateFeedback, ns: Hakim, asm: Assembly-CSharp}
+      data:
+        Prefab: {fileID: 0}
+    - rid: 1490480498367004677
+      type: {class: WaitFeedback, ns: Hakim, asm: Assembly-CSharp}
+      data:
+        Timer: 0
+    - rid: 1490480498367004678
+      type: {class: InstantiateFeedback, ns: Hakim, asm: Assembly-CSharp}
+      data:
+        Prefab: {fileID: 0}
+    - rid: 1490480501303017472
+      type: {class: InstantiateFeedback, ns: Hakim, asm: Assembly-CSharp}
+      data:
+        Prefab: {fileID: 0}

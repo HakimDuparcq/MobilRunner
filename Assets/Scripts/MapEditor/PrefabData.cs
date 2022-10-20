@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public enum TypeObstacle{cube, barriere}
 
-public class PrefabsCollision : MonoBehaviour
+public class PrefabData : MonoBehaviour
 {
-    public TypeObstacle typeObstacle;
     public int crossNumber; // to know if is not in something
+    public Transform offset;
+    public float size;
     void Start()
     {
 

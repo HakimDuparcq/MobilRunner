@@ -1,0 +1,48 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d208b9bff2ef3244cb845cf008b766ed, type: 3}
+  m_Name: New Game Event 3
+  m_EditorClassIdentifier: 
+  Name: action1
+  GameObject: {fileID: 0}
+  Feedbacks:
+  - rid: 1490480545721745408
+  - rid: 1490480545721745410
+  - rid: 1490480545721745409
+  - rid: 1490480545721745411
+  - rid: 1490480545721745412
+  ColorsType:
+  - {r: 1, g: 1, b: 1, a: 1}
+  - {r: 0, g: 0, b: 0, a: 1}
+  - {r: 0, g: 0, b: 1, a: 1}
+  ColorFeedbacks: []
+  references:
+    version: 2
+    RefIds:
+    - rid: 1490480545721745408
+      type: {class: CameraShake, ns: Hakim, asm: Assembly-CSharp}
+    - rid: 1490480545721745409
+      type: {class: InstantiateFeedback, ns: Hakim, asm: Assembly-CSharp}
+      data:
+        Prefab: {fileID: 3269509414490483889, guid: 4e73a7c059b866740911e06a5b50f89c, type: 3}
+    - rid: 1490480545721745410
+      type: {class: WaitFeedback, ns: Hakim, asm: Assembly-CSharp}
+      data:
+        Timer: 1
+    - rid: 1490480545721745411
+      type: {class: WaitFeedback, ns: Hakim, asm: Assembly-CSharp}
+      data:
+        Timer: 2
+    - rid: 1490480545721745412
+      type: {class: InstantiateFeedback, ns: Hakim, asm: Assembly-CSharp}
+      data:
+        Prefab: {fileID: 4526084579479427248, guid: 601fee12a80061c4a8d2a7d130d7adfd, type: 3}

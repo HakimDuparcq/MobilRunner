@@ -1,0 +1,55 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d208b9bff2ef3244cb845cf008b766ed, type: 3}
+  m_Name: New Game Event
+  m_EditorClassIdentifier: 
+  Name: NewAction
+  GameObject: {fileID: 0}
+  Feedbacks:
+  - rid: 1490480471456350226
+  - rid: 1490480471456350227
+  - rid: 1490480471456350228
+  - rid: 1490480471456350231
+  - rid: 1490480498367004680
+  - rid: 1490480498367004679
+  ColorsType:
+  - {r: 1, g: 1, b: 1, a: 1}
+  - {r: 0, g: 0, b: 0, a: 1}
+  - {r: 0, g: 0, b: 1, a: 1}
+  ColorFeedbacks: []
+  references:
+    version: 2
+    RefIds:
+    - rid: 1490480471456350226
+      type: {class: InstantiateFeedback, ns: Hakim, asm: Assembly-CSharp}
+      data:
+        Prefab: {fileID: 100006, guid: 6e4f498c6a9ad4b4a8967db12a1eb27f, type: 3}
+    - rid: 1490480471456350227
+      type: {class: WaitFeedback, ns: Hakim, asm: Assembly-CSharp}
+      data:
+        Timer: 1.94
+    - rid: 1490480471456350228
+      type: {class: InstantiateFeedback, ns: Hakim, asm: Assembly-CSharp}
+      data:
+        Prefab: {fileID: 4081066004650379104, guid: 29f42efbf216f5c4c802b0abfc3a02f8, type: 3}
+    - rid: 1490480471456350231
+      type: {class: InstantiateFeedback, ns: Hakim, asm: Assembly-CSharp}
+      data:
+        Prefab: {fileID: 3269509414490483889, guid: 4e73a7c059b866740911e06a5b50f89c, type: 3}
+    - rid: 1490480498367004679
+      type: {class: InstantiateFeedback, ns: Hakim, asm: Assembly-CSharp}
+      data:
+        Prefab: {fileID: 4526084579479427248, guid: 601fee12a80061c4a8d2a7d130d7adfd, type: 3}
+    - rid: 1490480498367004680
+      type: {class: WaitFeedback, ns: Hakim, asm: Assembly-CSharp}
+      data:
+        Timer: 2

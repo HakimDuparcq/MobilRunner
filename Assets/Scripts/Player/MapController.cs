@@ -5,7 +5,7 @@ using UnityEngine;
 public class MapController : MonoBehaviour
 {
     public GameObject Map;
-    public Vector3 deplacement;
+    public float speedMap;
     void Start()
     {
         
@@ -13,6 +13,6 @@ public class MapController : MonoBehaviour
 
     void Update()
     {
-        Map.transform.position += deplacement;
+        Map.transform.Translate(Vector3.back * Time.deltaTime * speedMap);
     }
 }
