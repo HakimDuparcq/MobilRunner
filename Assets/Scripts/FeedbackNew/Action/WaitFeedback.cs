@@ -9,7 +9,7 @@ namespace Hakim
     {
         public float Timer;
 
-        public override IEnumerator Execute(GameEvent gameEvent)
+        public override IEnumerator Execute(GameEvent gameEvent, GameObject gameObject)
         {
             yield return new WaitForSeconds(Timer);
         }

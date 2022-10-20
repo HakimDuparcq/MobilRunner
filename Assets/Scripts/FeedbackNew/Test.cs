@@ -13,7 +13,7 @@ namespace Hakim
             GameEventsManager.PlayEvent("NewAction", soldier);
             GameEventsManager.PlayEvent("NewAction", soldier2);
 
-            GameEventsManager.PlayEvent(GameEventsManager.instance.GameEvents[0], soldier2);
+            //GameEventsManager.PlayEvent(GameEventsManager.instance.GameEvents[0], soldier2);
 
         }
 

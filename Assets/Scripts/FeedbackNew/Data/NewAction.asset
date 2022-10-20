@@ -1,0 +1,38 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d208b9bff2ef3244cb845cf008b766ed, type: 3}
+  m_Name: NewAction
+  m_EditorClassIdentifier: 
+  Name: NewAction
+  GameObject: {fileID: 0}
+  Feedbacks:
+  - rid: 1490480832584351744
+  - rid: 1490480832584351745
+  - rid: 1490480832584351746
+  ColorsType:
+  - {r: 1, g: 1, b: 1, a: 1}
+  - {r: 0, g: 0, b: 0, a: 1}
+  - {r: 0, g: 0, b: 1, a: 1}
+  ColorFeedbacks: []
+  references:
+    version: 2
+    RefIds:
+    - rid: 1490480832584351744
+      type: {class: CameraShake, ns: Hakim, asm: Assembly-CSharp}
+    - rid: 1490480832584351745
+      type: {class: WaitFeedback, ns: Hakim, asm: Assembly-CSharp}
+      data:
+        Timer: 1.07
+    - rid: 1490480832584351746
+      type: {class: InstantiateFeedback, ns: Hakim, asm: Assembly-CSharp}
+      data:
+        Prefab: {fileID: 1832220664399794, guid: 180a5d9ad208141468642642ab23e0ad, type: 3}

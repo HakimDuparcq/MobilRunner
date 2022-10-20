@@ -61,6 +61,8 @@ public class MapEditor : MonoBehaviour
 
     public int actualCategory;
 
+#if UNITY_EDITOR
+
     public void Awake()
     {
         instance = this;
@@ -372,4 +374,5 @@ public class MapEditor : MonoBehaviour
     {
         actualObstacle.transform.rotation = Quaternion.Euler(RotationX.value, RotationY.value, RotationZ.value);
     }
+#endif
 }

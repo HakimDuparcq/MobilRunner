@@ -21,6 +21,8 @@ public enum HitZ
 }
 public class Player : MonoBehaviour
 {
+    public static Player instance;
+
     public SIDE side;
     public HitX hitX;
     public HitY hitY;
@@ -30,7 +32,7 @@ public class Player : MonoBehaviour
     [Range(0.1f, 15)] public float timeSwitchSide;
      public float jumpPower, downSpeed, rollPower, ySpeed;
 
-    [HideInInspector] public bool SwipeLeft, SwipeRight, SwipeUp, SwipeDown;
+    [HideInInspector] public bool SwipeLeft, SwipeRight, SwipeUp, SwipeDown, canTouch;
 
     public Rigidbody rb;
     public CapsuleCollider myCollider;
@@ -40,7 +42,6 @@ public class Player : MonoBehaviour
 
     public GameObject cube;
 
-
     public float groundDrag;
     public float playerHeight;
     public LayerMask Ground;
@@ -48,10 +49,19 @@ public class Player : MonoBehaviour
     public float jumpCouldown;
     private bool isJumping = false;
 
+    private Vector3 fp;//First touch position
+    private Vector3 lp;//Last touch position
+    private float dragDistance= Screen.height*15/100;//Minimum distance for a swipe
+
+    public void Awake()
+    {
+        instance = this;
+    }
     void Start()
     {
         y = 2;
         transform.position = new Vector3(0, 2, 0);
+        canTouch = true;
     }
 
     void Update()
@@ -64,14 +74,75 @@ public class Player : MonoBehaviour
     void FixedUpdate()
     {
         Moving();
+
+        
     }
 
     private void GetInput()
     {
+#if UNITY_EDITOR
         SwipeLeft = Input.GetKeyDown(KeyCode.Q) || Input.GetKeyDown(KeyCode.LeftArrow);
         SwipeRight = Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.RightArrow);
         SwipeUp = Input.GetKeyDown(KeyCode.Z) || Input.GetKeyDown(KeyCode.UpArrow);
         SwipeDown = Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.DownArrow);
+#else
+
+        SwipeLeft = SwipeDown = SwipeRight = SwipeUp = false;
+
+        if (Input.touchCount>0)
+        {
+            Touch touch = Input.GetTouch(0);
+            if (touch.phase==TouchPhase.Began)
+            {
+                fp = touch.position;
+                lp = touch.position;
+                canTouch = true;
+                Debug.Log("canTouchBegin");
+            }
+            else if (touch.phase==TouchPhase.Moved)
+            {
+                lp = touch.position;
+            }
+            else if (touch.phase==TouchPhase.Ended)
+            {
+                lp = touch.position;
+            }
+            else if (touch.phase == TouchPhase.Canceled)
+            {
+                lp = touch.position;
+            }
+            if (canTouch && Mathf.Abs(lp.x-fp.x)>dragDistance )
+            {
+                if (lp.x > fp.x)
+                {
+                    SwipeRight= true;
+                    canTouch = false;
+                }
+                else
+                {
+                    SwipeLeft = true;
+                    canTouch = false;
+                }
+
+            }
+            if (canTouch && Mathf.Abs(lp.y - fp.y) > dragDistance)
+            {
+                if (lp.y > fp.y)
+                {
+                    SwipeUp = true;
+                    canTouch = false;
+                }
+                else
+                {
+                    SwipeDown = true;
+                    canTouch = false;
+                }
+
+            }
+        }
+        
+        
+#endif
     }
 
     private void MoveX()
@@ -215,7 +286,6 @@ public class Player : MonoBehaviour
 
     private void GetHit(Collision collision)
     {
-        Debug.Log(collision.transform.name);
 
 
         cube.transform.position = collision.contacts[0].point;
@@ -274,8 +344,6 @@ public class Player : MonoBehaviour
             hitZ = HitZ.Forward;
         }
 
-        Debug.Log("X " + (collision.contacts[0].point.x - gameObject.transform.position.x)
-            + "  Y " + (collision.contacts[0].point.y - gameObject.transform.position.y)
-            + "  Z " + (collision.contacts[0].point.z - gameObject.transform.position.z));
+        
     }
 }

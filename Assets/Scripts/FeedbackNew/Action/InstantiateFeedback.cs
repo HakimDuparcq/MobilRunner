@@ -9,9 +9,9 @@ namespace Hakim
     public class InstantiateFeedback : GameFeedback
     {
         public GameObject Prefab;
-        public override IEnumerator Execute(GameEvent gameEvent)
+        public override IEnumerator Execute(GameEvent gameEvent, GameObject gameObject)
         {
-            GameObject.Instantiate(Prefab, gameEvent.GameObject.transform.position, Quaternion.identity);
+            GameObject.Instantiate(Prefab, gameObject.transform.position, Quaternion.identity);
             yield break;
         }
 

@@ -4,10 +4,10 @@ using UnityEngine;
 
 namespace Hakim
 {
-
+    [Hakim.GameFeedback("CameraShake")]
     public class CameraShake : GameFeedback
     {
-        public override IEnumerator Execute(GameEvent gameEvent)
+        public override IEnumerator Execute(GameEvent gameEvent, GameObject gameObject)
         {
             yield break;
         }
@@ -19,7 +19,7 @@ namespace Hakim
 
         public override Color Coloration()
         {
-            return Color.magenta;
+            return Color.blue;
         }
 
 

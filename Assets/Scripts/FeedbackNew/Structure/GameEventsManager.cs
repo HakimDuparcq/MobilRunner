@@ -25,16 +25,13 @@ namespace Hakim
 
         public static void PlayEvent(string eventName, GameObject gameObject)
         {
-            _events[eventName].GameObject = gameObject;
-            instance.StartCoroutine(_events[eventName].Execute());
-            //_events[eventName].Execute();
+            instance.StartCoroutine( _events[eventName].Execute(gameObject) ); 
         }
 
         public static void PlayEvent(GameEvent _event, GameObject gameObject)
         {
-            _event.GameObject = gameObject;
-            instance.StartCoroutine(_event.Execute());
-            //_events[eventName].Execute();
+            instance.StartCoroutine(_event.Execute(gameObject));
+
         }
     }
 }

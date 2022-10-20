@@ -1,7 +1,6 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditorInternal;
 using UnityEngine;
 
 
@@ -33,17 +32,14 @@ namespace Hakim
         }
 
 
-        public IEnumerator Execute()
+        public IEnumerator Execute(GameObject gameObject)
         {
             foreach (GameFeedback item in Feedbacks)
             {
-                yield return item.Execute(this);
+                yield return item.Execute(this, gameObject);    
             }
-
         }
 
-       
-   
-    
+
     }
 }
