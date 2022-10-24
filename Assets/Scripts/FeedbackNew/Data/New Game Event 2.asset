@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d208b9bff2ef3244cb845cf008b766ed, type: 3}
   m_Name: New Game Event 2
   m_EditorClassIdentifier: 
-  Name: 
+  Name: New Game Event 2
   GameObject: {fileID: 0}
   Feedbacks:
   - rid: 1490480471456350241

@@ -5,11 +5,11 @@ using UnityEngine;
 
 public enum SIDE
 {
-    Left, Middle,Right
+    Left, Middle, Right
 }
 public enum HitX
 {
-    None, Left,Middle,Right
+    None, Left, Middle, Right
 }
 public enum HitY
 {
@@ -19,39 +19,46 @@ public enum HitZ
 {
     None, Forward, Middle, Backward
 }
+public enum AirState
+{
+    Run, RollGround, RollAir, Jump, Down, Downing, NONE
+}
+
 public class Player : MonoBehaviour
 {
     public static Player instance;
 
+    public Rigidbody rb;
+    public CapsuleCollider myCollider;
+    public Animator animator;
+    public CurveMovement curveMovement;
+
+    [HideInInspector] public bool SwipeLeft, SwipeRight, SwipeUp, SwipeDown, canTouch;
+
+    public GameObject cube;
+
+    public AirState airState;
     public SIDE side;
     public HitX hitX;
     public HitY hitY;
     public HitZ hitZ;
 
-    [Range(0.1f, 5)] public float sideDistance;
-    [Range(0.1f, 15)] public float timeSwitchSide;
-     public float jumpPower, downSpeed, rollPower, ySpeed;
+    public float NexPosX, NexPosY;
 
-    [HideInInspector] public bool SwipeLeft, SwipeRight, SwipeUp, SwipeDown, canTouch;
-
-    public Rigidbody rb;
-    public CapsuleCollider myCollider;
-
-    private float NexPosX, NexPosY;
-    private float x, y, z;
-
-    public GameObject cube;
-
-    public float groundDrag;
     public float playerHeight;
     public LayerMask Ground;
-    bool isGrounded;
-    public float jumpCouldown;
-    private bool isJumping = false;
 
-    private Vector3 fp;//First touch position
-    private Vector3 lp;//Last touch position
-    private float dragDistance= Screen.height*15/100;//Minimum distance for a swipe
+    public bool isGrounded;
+    public bool isJumping = false;
+    public bool isDowning = false;
+    public bool isRolling = false;
+
+    private Vector3 fp;//First touch position Phone
+    private Vector3 lp;//Last touch position Phone
+    private float dragDistance = Screen.height * 15 / 100;//Minimum distance for a swipe Phone
+
+    private Vector3 groundHitPosition;
+
 
     public void Awake()
     {
@@ -59,7 +66,8 @@ public class Player : MonoBehaviour
     }
     void Start()
     {
-        y = 2;
+        NexPosX = 0;
+        NexPosY = 2;
         transform.position = new Vector3(0, 2, 0);
         canTouch = true;
     }
@@ -67,15 +75,55 @@ public class Player : MonoBehaviour
     void Update()
     {
         GetInput();
-        MoveX();
-        //Debug.Log(isGrounded);
+        MoveXY();
+        SetAirState();
     }
 
     void FixedUpdate()
     {
         Moving();
 
-        
+
+    }
+
+    public void SetAirState()
+    {
+
+        RaycastHit hit;
+        Vector3 foot = transform.position - new Vector3(0, playerHeight * 0.5f - 0.1f, 0);
+        isGrounded = Physics.Raycast(foot, Vector3.down, out hit, 0.2f, Ground);
+        groundHitPosition = hit.point;
+        Debug.DrawLine(foot, foot + Vector3.down * (0.2f), Color.black,Time.fixedDeltaTime);
+
+        animator.SetBool("Grounded", isGrounded);
+
+        airState = AirState.NONE;
+        if (isGrounded && !isJumping && !isDowning && !isRolling)
+        {
+            airState = AirState.Run;
+        }
+        if (isJumping && !isDowning && !isRolling)
+        {
+            airState = AirState.Jump;
+        }
+        if (!isGrounded && !isJumping  && !isRolling)
+        {
+            airState = AirState.Down;
+        }
+        if (!isGrounded && !isJumping && !isRolling && isDowning)
+        {
+            airState = AirState.Downing;
+        }
+        if (isGrounded && !isJumping && !isDowning && isRolling)
+        {
+            airState = AirState.RollGround;
+        }
+        if (!isGrounded && !isJumping && !isDowning && isRolling)
+        {
+            airState = AirState.RollAir;
+
+        }
+
     }
 
     private void GetInput()
@@ -145,20 +193,9 @@ public class Player : MonoBehaviour
 #endif
     }
 
-    private void MoveX()
+    private void MoveXY()
     {
-
-        isGrounded = Physics.Raycast(transform.position, Vector3.down, playerHeight * 0.5f + 0.2f, Ground);
-        if (isGrounded)
-        {
-            rb.drag = groundDrag;
-        }
-        else
-        {
-            rb.drag = 0;
-        }
-
-        if (SwipeLeft) // Left
+        if (SwipeLeft) 
         {
             if (side == SIDE.Left)
             {
@@ -167,26 +204,30 @@ public class Player : MonoBehaviour
             else if (side == SIDE.Middle)
             {
                 side = SIDE.Left;
-                NexPosX = -sideDistance;
+                StartCoroutine(SwitchSideCurve(curveMovement.sideDistance + transform.position.x ,-1 , side)); 
+                animator.SetTrigger("Left");
             }
             else if (side == SIDE.Right)
             {
                 side = SIDE.Middle;
-                NexPosX = 0;
-
+                StartCoroutine(SwitchSideCurve(Mathf.Abs(transform.position.x), -1,side)); 
+                animator.SetTrigger("Left");
             }
         }
-        else if (SwipeRight) // Right
+        else if (SwipeRight) 
         {
+
             if (side == SIDE.Left)
             {
                 side = SIDE.Middle;
-                NexPosX = 0;
+                StartCoroutine(SwitchSideCurve(Mathf.Abs(transform.position.x), 1,side));
+                animator.SetTrigger("Right");
             }
             else if (side == SIDE.Middle)
             {
                 side = SIDE.Right;
-                NexPosX = sideDistance;
+                StartCoroutine(SwitchSideCurve(curveMovement.sideDistance - transform.position.x, 1, side));  //1
+                animator.SetTrigger("Right");
             }
             else if (side == SIDE.Right)
             {
@@ -202,53 +243,98 @@ public class Player : MonoBehaviour
 
     private void Moving()
     {
-        x = Mathf.Lerp(transform.position.x, NexPosX, Time.fixedDeltaTime * timeSwitchSide);
 
-        y= Mathf.Lerp(transform.position.y, NexPosY, Time.fixedDeltaTime * ySpeed);
-        Vector3 moveVector = new Vector3(x, y , 0);
+        Vector3 moveVector = new Vector3(NexPosX, NexPosY, 0);
 
         rb.MovePosition(moveVector);
     }
 
-    private void Jump()
+
+    public IEnumerator SwitchSideCurve(float sideDistancePlayer, int direction, SIDE actualSide )
     {
-        if (isGrounded && !isJumping)
+        float startPos = gameObject.transform.position.x;
+        float evaluation = 0;
+        curveMovement.switchSideTimer = 0;
+
+        float coeffTime = 0;
+        if (sideDistancePlayer<= curveMovement.sideDistance)
         {
-            NexPosY = transform.position.y;
-            if (SwipeUp)
-            {
-                NexPosY = jumpPower + gameObject.transform.position.y;
-                isJumping = true;
-                StartCoroutine(JumpCouldown(jumpCouldown));
-            }
+            coeffTime = curveMovement.sideDistance / sideDistancePlayer;
+            coeffTime = Mathf.Clamp(coeffTime, 1, curveMovement.speedMax1Side);
+
         }
         else
         {
-            NexPosY -= downSpeed * Time.deltaTime;
+            coeffTime = sideDistancePlayer / curveMovement.sideDistance;
+            coeffTime = Mathf.Clamp(coeffTime, 1, curveMovement.speedMax2Sides);
+
+        }
+
+        for (int i = 0; i < curveMovement.switchSideCurve.keys[curveMovement.switchSideCurve.keys.Length - 1].time / Time.fixedDeltaTime ; i++)
+        {
+            if (actualSide== side)
+            {
+                curveMovement.switchSideTimer += Time.fixedDeltaTime;
+                evaluation = curveMovement.switchSideCurve.Evaluate(curveMovement.switchSideTimer * coeffTime);
+                NexPosX = evaluation * sideDistancePlayer * direction + startPos;
+                yield return new WaitForSeconds(Time.fixedDeltaTime);
+            }
+            else
+            {
+                yield break;
+            }
+            
+
+            
         }
     }
 
 
+    private void Jump()
+    {
+        if (airState == AirState.Run)
+        {
+            NexPosY = groundHitPosition.y + playerHeight / 2f;
+        }
+
+        if (SwipeUp)
+        {
+            if (airState == AirState.Run || airState == AirState.RollGround)
+            {
+                StartCoroutine(JumpCurve());
+            }
+        }
+
+        if (airState == AirState.Down)
+        {
+            isDowning = true;
+            StartCoroutine(GoDown());
+        }
+    }
 
 
     private void Roll()
     {
-        if (SwipeDown)
+        if (SwipeDown)//!animator.GetCurrentAnimatorStateInfo(0).IsName("roll"))
         {
-            StartCoroutine(ColliderSwipeDown());
+            if (airState==AirState.Jump || airState==AirState.Down || airState == AirState.Downing)
+            {
+                StartCoroutine(ColliderSwipeDown());
+                isRolling = true;
+                isJumping = false;
+                isDowning = false;
+                StartCoroutine(RollCurve());
+            }
+
+            if (airState == AirState.Run)
+            {
+                animator.SetTrigger("Roll");
+                StartCoroutine(ColliderSwipeDown());
+                //isRolling = true;
+            }
+
         }
 
-        if (isGrounded)
-        {
-            
-        }
-        else
-        {
-            if (SwipeDown)
-            {
-                NexPosY = 0 + playerHeight/2;
-            }
-        }
     }
 
     private IEnumerator ColliderSwipeDown()
@@ -260,10 +346,87 @@ public class Player : MonoBehaviour
         myCollider.height = 2;
     }
 
-    public IEnumerator JumpCouldown(float time)
+    public IEnumerator RollCurve()
     {
-        yield return new WaitForSeconds(time);
+        animator.SetTrigger("Roll");
+        float startPos = gameObject.transform.position.y;
+        float evaluation = 0;
+        curveMovement.rollTimer = 0;
+        for (int i = 0; i < curveMovement.rollCurve.keys[curveMovement.rollCurve.keys.Length - 1].time / Time.fixedDeltaTime; i++)
+        {
+            if (isRolling)
+            {
+                curveMovement.rollTimer += Time.fixedDeltaTime;
+                evaluation = curveMovement.rollCurve.Evaluate(curveMovement.rollTimer);
+                NexPosY = evaluation + startPos;
+                yield return new WaitForSeconds(Time.fixedDeltaTime);
+
+
+            }
+            if (isGrounded)
+            {
+                isRolling = false;
+                yield break;
+            }
+        }
+        isRolling = false;
+    }
+
+    public IEnumerator GoDown()
+    {
+        isDowning = true;
+        animator.SetTrigger("Falling");
+
+        float startPos = gameObject.transform.position.y;
+        float evaluation = 0;
+        curveMovement.downTimer = 0;
+        for (int i = 0; i < curveMovement.downCurve.keys[curveMovement.downCurve.keys.Length - 1].time / Time.fixedDeltaTime; i++)
+        {
+
+
+            if (!isGrounded && !isJumping)
+            {
+                curveMovement.downTimer += Time.fixedDeltaTime;
+                evaluation = curveMovement.downCurve.Evaluate(curveMovement.downTimer);
+                yield return new WaitForSeconds(Time.fixedDeltaTime);
+                NexPosY = evaluation + startPos;
+
+            }
+            else if (isGrounded)
+            {
+                isDowning = false;
+                yield break;
+            }
+        }
+        isDowning = false;
+    }
+
+    public IEnumerator JumpCurve()
+    {
+        isJumping = true;
+        animator.SetTrigger("Jump");
+
+        float startPos = gameObject.transform.position.y;
+        float evaluation = 0;
+        curveMovement.jumpTimer = 0;
+        for (int i = 0; i < curveMovement.jumpCurve.keys[curveMovement.jumpCurve.keys.Length - 1].time / Time.fixedDeltaTime; i++)
+        {
+            if (isJumping)
+            {
+                curveMovement.jumpTimer += Time.fixedDeltaTime;
+                evaluation = curveMovement.jumpCurve.Evaluate(curveMovement.jumpTimer);
+                NexPosY = evaluation + startPos;
+                yield return new WaitForSeconds(Time.fixedDeltaTime);
+
+            }
+            if (isGrounded && i > curveMovement.jumpCurve.keys[curveMovement.jumpCurve.keys.Length - 1].time / Time.deltaTime * 0.07f)
+            {
+                isJumping = false;
+                yield break;
+            }
+        }
         isJumping = false;
+
 
     }
 
@@ -286,15 +449,14 @@ public class Player : MonoBehaviour
 
     private void GetHit(Collision collision)
     {
-
-
         cube.transform.position = collision.contacts[0].point;
         foreach (ContactPoint contact in collision.contacts)
         {
             Debug.DrawRay(contact.point, contact.normal, Color.red, 2);
+            Debug.Log(contact.normal);
         }
 
-        if (collision.gameObject.name == "Plane")
+        if (collision.contacts[0].normal == Vector3.up) //collision.gameObject.name == "Plane")
         {
             hitX = HitX.None;
             hitY = HitY.None;
@@ -302,6 +464,31 @@ public class Player : MonoBehaviour
             return;
         }
 
+        HitDetectionSide(collision);
+
+        if (hitX == HitX.Left)
+        {
+            animator.SetTrigger("HitSideLeft");
+            side = SIDE.Right;
+            StartCoroutine(SwitchSideCurve(Mathf.Abs(transform.position.x), 1, side));
+        }
+        else if (hitX == HitX.Right)
+        {
+            animator.SetTrigger("HitSideRight");
+            side = SIDE.Left;
+            StartCoroutine(SwitchSideCurve(Mathf.Abs(transform.position.x), -1, side));
+
+        }
+        else if (hitZ == HitZ.Forward && collision.contacts[0].normal == new Vector3(0,0,-1))
+        {
+            animator.SetTrigger("FallForward");
+        }
+
+
+    }
+
+    private void HitDetectionSide(Collision collision)
+    {
         //Debug.Log((collision.contacts[0].point.x - gameObject.transform.position.x));
         if (collision.contacts[0].point.x - gameObject.transform.position.x < -0.17f)  // - 0.17f
         {
@@ -343,7 +530,5 @@ public class Player : MonoBehaviour
         {
             hitZ = HitZ.Forward;
         }
-
-        
     }
 }
