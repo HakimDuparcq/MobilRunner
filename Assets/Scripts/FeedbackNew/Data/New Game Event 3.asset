@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d208b9bff2ef3244cb845cf008b766ed, type: 3}
   m_Name: New Game Event 3
   m_EditorClassIdentifier: 
-  Name: action1
+  Name: New Game Event 3
   GameObject: {fileID: 0}
   Feedbacks:
   - rid: 1490480545721745408
@@ -20,6 +20,7 @@ MonoBehaviour:
   - rid: 1490480545721745409
   - rid: 1490480545721745411
   - rid: 1490480545721745412
+  - rid: 4663531886998978560
   ColorsType:
   - {r: 1, g: 1, b: 1, a: 1}
   - {r: 0, g: 0, b: 0, a: 1}
@@ -33,7 +34,7 @@ MonoBehaviour:
     - rid: 1490480545721745409
       type: {class: InstantiateFeedback, ns: Hakim, asm: Assembly-CSharp}
       data:
-        Prefab: {fileID: 3269509414490483889, guid: 4e73a7c059b866740911e06a5b50f89c, type: 3}
+        Prefab: {fileID: 1559750931334462, guid: 3ca965f160a201a43b9bed2c8721563b, type: 3}
     - rid: 1490480545721745410
       type: {class: WaitFeedback, ns: Hakim, asm: Assembly-CSharp}
       data:
@@ -45,4 +46,8 @@ MonoBehaviour:
     - rid: 1490480545721745412
       type: {class: InstantiateFeedback, ns: Hakim, asm: Assembly-CSharp}
       data:
-        Prefab: {fileID: 4526084579479427248, guid: 601fee12a80061c4a8d2a7d130d7adfd, type: 3}
+        Prefab: {fileID: 1559750931334462, guid: 3ca965f160a201a43b9bed2c8721563b, type: 3}
+    - rid: 4663531886998978560
+      type: {class: WaitFeedback, ns: Hakim, asm: Assembly-CSharp}
+      data:
+        Timer: 2.47

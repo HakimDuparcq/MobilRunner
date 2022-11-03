@@ -3,12 +3,22 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
+public enum ObstacleType {None, Move, Start, End, startMove}
+
 
 public class PrefabData : MonoBehaviour
 {
+    public ObstacleType obstacleType;
     public int crossNumber; // to know if is not in something
     public Transform offset;
+
+    [Tooltip("Size for mode grille")]
     public float size;
+
+
+    [Header("Speed if Move")]
+    public float speed;
+
     void Start()
     {
 

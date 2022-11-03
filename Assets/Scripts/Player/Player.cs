@@ -5,7 +5,7 @@ using UnityEngine;
 
 public enum SIDE
 {
-    Left, Middle, Right
+    Left, Middle, Right, ExtraLeft, ExtraRight
 }
 public enum HitX
 {
@@ -197,21 +197,25 @@ public class Player : MonoBehaviour
     {
         if (SwipeLeft) 
         {
-            if (side == SIDE.Left)
+            if (side == SIDE.Left && transform.position.x <-curveMovement.sideDistance +0.1f)
             {
-
+                side = SIDE.ExtraLeft;
+                StartCoroutine(HitSideCurve(1, -1, side));
+                animator.SetTrigger("HitSideLeft");
             }
             else if (side == SIDE.Middle)
             {
                 side = SIDE.Left;
-                StartCoroutine(SwitchSideCurve(curveMovement.sideDistance + transform.position.x ,-1 , side)); 
-                animator.SetTrigger("Left");
+                StartCoroutine(SwitchSideCurve(curveMovement.sideDistance + transform.position.x ,-1 , side));
+                if (!animator.GetCurrentAnimatorStateInfo(0).IsName("roll")) { animator.SetTrigger("Left"); }
+
             }
             else if (side == SIDE.Right)
             {
                 side = SIDE.Middle;
-                StartCoroutine(SwitchSideCurve(Mathf.Abs(transform.position.x), -1,side)); 
-                animator.SetTrigger("Left");
+                StartCoroutine(SwitchSideCurve(Mathf.Abs(transform.position.x), -1,side));
+                if (!animator.GetCurrentAnimatorStateInfo(0).IsName("roll")) { animator.SetTrigger("Left"); }
+
             }
         }
         else if (SwipeRight) 
@@ -221,17 +225,21 @@ public class Player : MonoBehaviour
             {
                 side = SIDE.Middle;
                 StartCoroutine(SwitchSideCurve(Mathf.Abs(transform.position.x), 1,side));
-                animator.SetTrigger("Right");
+                if (!animator.GetCurrentAnimatorStateInfo(0).IsName("roll")) { animator.SetTrigger("Right"); }
+
             }
             else if (side == SIDE.Middle)
             {
                 side = SIDE.Right;
-                StartCoroutine(SwitchSideCurve(curveMovement.sideDistance - transform.position.x, 1, side));  //1
-                animator.SetTrigger("Right");
-            }
-            else if (side == SIDE.Right)
-            {
+                StartCoroutine(SwitchSideCurve(curveMovement.sideDistance - transform.position.x, 1, side));
+                if (!animator.GetCurrentAnimatorStateInfo(0).IsName("roll")) { animator.SetTrigger("Right"); }
 
+            }
+            else if (side == SIDE.Right && transform.position.x  >  curveMovement.sideDistance - 0.1f)
+            {
+                side = SIDE.ExtraRight;
+                StartCoroutine(HitSideCurve(1, 1, side));
+                animator.SetTrigger("HitSideRight");
             }
         }
 
@@ -283,12 +291,53 @@ public class Player : MonoBehaviour
             {
                 yield break;
             }
-            
-
-            
         }
     }
 
+    public IEnumerator HitSideCurve(float sideDistancePlayer, int direction, SIDE actualSide)
+    {
+        float startPos = gameObject.transform.position.x;
+        float evaluation = 0;
+        curveMovement.sideHitTimer = 0;
+
+        float coeffTime = 0;
+        if (sideDistancePlayer <= curveMovement.sideDistance)
+        {
+            coeffTime = curveMovement.sideDistance / sideDistancePlayer;
+            coeffTime = Mathf.Clamp(coeffTime, 1, curveMovement.speedMax1Side);
+
+        }
+        else
+        {
+            coeffTime = sideDistancePlayer / curveMovement.sideDistance;
+            coeffTime = Mathf.Clamp(coeffTime, 1, curveMovement.speedMax2Sides);
+
+        }
+
+        for (int i = 0; i < curveMovement.sideHitCurve.keys[curveMovement.sideHitCurve.keys.Length - 1].time / Time.fixedDeltaTime; i++)
+        {
+            if (actualSide == side)
+            {
+                curveMovement.sideHitTimer += Time.fixedDeltaTime;
+                evaluation = curveMovement.sideHitCurve.Evaluate(curveMovement.sideHitTimer);// * coeffTime);
+                NexPosX = evaluation * sideDistancePlayer * direction + startPos;
+                yield return new WaitForSeconds(Time.fixedDeltaTime);
+            }
+            else
+            {
+                yield break;
+            }
+        }
+        if (actualSide == SIDE.ExtraLeft)
+        {
+            side = SIDE.Left;
+        }
+        else if (actualSide == SIDE.ExtraRight)
+        {
+            side = SIDE.Right;
+        }
+
+    }
 
     private void Jump()
     {
@@ -481,7 +530,8 @@ public class Player : MonoBehaviour
         }
         else if (hitZ == HitZ.Forward && collision.contacts[0].normal == new Vector3(0,0,-1))
         {
-            animator.SetTrigger("FallForward");
+            animator.SetTrigger("FallBackward");
+            MapController.instance.speedMap = 0;
         }
 
 

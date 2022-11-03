@@ -5,6 +5,8 @@ using UnityEngine.UI;
 using TMPro;
 using UnityEditor;
 using System.Linq;
+using System;
+using System.IO;
 
 public enum State { None, Selection, Placement, Rotation}
 
@@ -13,15 +15,19 @@ public class MapEditor : MonoBehaviour
 {
     public static MapEditor instance;
 
+    public State state;
+
     public Camera worldCamera;
     public Category[] catalog;
 
+    public GameObject Canvas;
     public Button Selector;
     public Button Save;
     public Button Load;
     public Button ResetPattern;
     public Button DestroyObjectScene;
     public Toggle GrilleMap;
+    public Toggle OverPose;
     public Button NextPattern;
     public Button PreviousPattern;
     public TextMeshProUGUI TextpatternNumber;
@@ -29,11 +35,14 @@ public class MapEditor : MonoBehaviour
     public Slider RotationX;
     public Slider RotationY;
     public Slider RotationZ;
+    public Button StartPattern;
+    public Button EndPattern;
+    public Button StartMove;
 
-    public GameObject plane;
+    //public GameObject plane;
     public GameObject contener;
     public float sizeXmap;
-
+    public float hitDistance;
 
     public List<GameObject> obstaclesOnMap = new List<GameObject>();
 
@@ -41,25 +50,29 @@ public class MapEditor : MonoBehaviour
     public GameObject newObstacle;
     public GameObject followObstacle;
 
+    public GameObject startPattern;
+    public GameObject endPattern;
+    public GameObject startMove;
+
+    public GameObject startPatternOnMap;
+    public GameObject endPatternOnMap;
+    public GameObject startMoveOnMap;
+
     public Material previouPlaceMaterial;
     public Material canPlaceMaterial;
     public Material canNotPlaceMaterial;
+    public Material greenMaterial;
 
     public LayerMask layerGround;
     public LayerMask layerObstacle;
     public LayerMask layerGroundObstacle;
 
-    public float hitDistance;
-
-
     public Pattern[] patterns;
-    public int patternNumber;
-    public State state;
+    private int patternNumber;
+    private int actualCategory;
 
-    public bool isGrillMode;
-
-
-    public int actualCategory;
+    private bool isGrillMode;
+    private bool isOverPose;
 
 #if UNITY_EDITOR
 
@@ -69,39 +82,9 @@ public class MapEditor : MonoBehaviour
     }
     void Start()
     {
-        for (int i = 0; i < catalog.Length; i++)
-        {
-            for (int ii = 0; ii < catalog[i].prefabsButton.Length  && ii < catalog[i].prefabsObject.Length; ii++)
-            {
-                int x = ii;
-                catalog[i].prefabsButton[ii].onClick.AddListener(delegate { ClickButtonPrefabs(x); });
-                catalog[i].prefabsButton[ii].GetComponent<RawImage>().texture = AssetPreview.GetAssetPreview(catalog[i].prefabsObject[ii]);
-            }
-            
-        }
-        Selector.onClick.AddListener(OnSelection);
-        Save.onClick.AddListener(OnSave);
-        Load.onClick.AddListener(OnLoad);
-        ResetPattern.onClick.AddListener(OnResetPattern);
-        DestroyObjectScene.onClick.AddListener(OnDestroyObjectScene);
-        GrilleMap.onValueChanged.AddListener(delegate {GrilleModeActivation();});
 
-            ShowCategory(-1);
-        for (int i = 0; i < catalog.Length; i++)
-        {
+        ListenerUI();
 
-            int x = i;
-            catalog[i].categoryButton.onClick.AddListener(delegate { ShowCategory(x); });
-
-        }
-        OnClickNExtPattern(0);
-        NextPattern.onClick.AddListener(delegate { OnClickNExtPattern(1); });
-        PreviousPattern.onClick.AddListener(delegate { OnClickNExtPattern(-1); });
-
-        RotationModeButton.onClick.AddListener(()=>state = State.Rotation);
-        RotationX.onValueChanged.AddListener(delegate { OnRotation(); });
-        RotationY.onValueChanged.AddListener(delegate { OnRotation(); });
-        RotationZ.onValueChanged.AddListener(delegate { OnRotation(); });
     }
 
     void Update()
@@ -119,6 +102,64 @@ public class MapEditor : MonoBehaviour
             RotationMode();
         }
 
+        
+
+    }
+
+    public void ListenerUI()
+    {
+        for (int i = 0; i < catalog.Length; i++)
+        {
+            for (int ii = 0; ii < catalog[i].prefabsButton.Length && ii < catalog[i].prefabsObject.Length; ii++)
+            {
+                int x = ii;
+                catalog[i].prefabsButton[ii].onClick.AddListener(delegate { ClickButtonPrefabs(x); });
+                catalog[i].prefabsButton[ii].GetComponent<RawImage>().texture = AssetPreview.GetAssetPreview(catalog[i].prefabsObject[ii]);
+            }
+
+        }
+        Selector.onClick.AddListener(OnSelection);
+        Save.onClick.AddListener(OnSave);
+        Load.onClick.AddListener(OnLoad);
+        ResetPattern.onClick.AddListener(OnResetPattern);
+        DestroyObjectScene.onClick.AddListener(OnDestroyObjectScene);
+        GrilleMap.onValueChanged.AddListener(delegate { GrilleModeActivation(); });
+        OverPose.onValueChanged.AddListener(delegate { isOverPose = OverPose.isOn; });
+
+        ShowCategory(-1);
+        for (int i = 0; i < catalog.Length; i++)
+        {
+
+            int x = i;
+            catalog[i].categoryButton.onClick.AddListener(delegate { ShowCategory(x); });
+
+        }
+        OnClickNExtPattern(0);
+        NextPattern.onClick.AddListener(delegate { OnClickNExtPattern(1); });
+        PreviousPattern.onClick.AddListener(delegate { OnClickNExtPattern(-1); });
+
+        RotationModeButton.onClick.AddListener(() => state = State.Rotation);
+        RotationX.onValueChanged.AddListener(delegate { OnRotation(); });
+        RotationY.onValueChanged.AddListener(delegate { OnRotation(); });
+        RotationZ.onValueChanged.AddListener(delegate { OnRotation(); });
+
+        StartPattern.onClick.AddListener(delegate { OnPoseStartPattern(); });
+        EndPattern.onClick.AddListener(delegate { OnPoseEndPattern(); });
+        StartMove.onClick.AddListener(delegate { OnPoseStartMovePattern(); });
+
+    }
+
+    public IEnumerator TakeScreenShot()
+    {
+        Canvas.SetActive(false);
+        Texture2D screenCapture = new Texture2D(Screen.width, Screen.height, TextureFormat.RGB24, false);
+        yield return new WaitForEndOfFrame();
+        Rect regionToRead = new Rect(0, 0, Screen.width, Screen.height);
+        screenCapture.ReadPixels(regionToRead, 0, 0, false);
+        screenCapture.Apply();
+        //Sprite photoSprite = Sprite.Create(screenCapture, new Rect(0, 0, screenCapture.width, screenCapture.height), new Vector2(0.5f, 0.5f), 100);
+        AssetDatabase.CreateAsset(screenCapture, "Assets/Scripts/MapEditor/Data/preview/" + patterns[patternNumber].name +"preview.asset");
+        Canvas.SetActive(true);
     }
 
     public void RotationMode()
@@ -262,7 +303,7 @@ public class MapEditor : MonoBehaviour
             //materials
             Material[] matArray = { followObstacle.GetComponent<MeshRenderer>().material, null };
 
-            if (followObstacle.GetComponent<PrefabData>().crossNumber == 0)
+            if (followObstacle.GetComponent<PrefabData>().crossNumber == 0  || isOverPose)
             {
                 matArray[1] = previouPlaceMaterial;
             }
@@ -271,12 +312,33 @@ public class MapEditor : MonoBehaviour
                 matArray[1] = canNotPlaceMaterial;
             }
 
-            if (Input.GetMouseButtonDown(0) && followObstacle.GetComponent<PrefabData>().crossNumber==0)
+            if (Input.GetMouseButtonDown(0) )
             {
-                newObstacle = Instantiate(actualObstacle, positionObject, Quaternion.identity);
-                newObstacle.transform.parent = contener.transform;
-                matArray[1] = canPlaceMaterial;
-                obstaclesOnMap.Add(newObstacle);
+                if (followObstacle.GetComponent<PrefabData>().crossNumber == 0  || isOverPose)
+                {
+                    newObstacle = Instantiate(actualObstacle, positionObject, Quaternion.identity);
+                    newObstacle.transform.parent = contener.transform;
+                    matArray[1] = canPlaceMaterial;
+
+                    if (followObstacle.GetComponent<PrefabData>().obstacleType == ObstacleType.Start)
+                    {
+                        startPatternOnMap = newObstacle;
+                    }
+                    else if (followObstacle.GetComponent<PrefabData>().obstacleType == ObstacleType.End)
+                    {
+                        endPatternOnMap = newObstacle;
+                    }
+                    else if (followObstacle.GetComponent<PrefabData>().obstacleType == ObstacleType.startMove)
+                    {
+                        startMoveOnMap = newObstacle;
+                    }
+                    else
+                    {
+                        obstaclesOnMap.Add(newObstacle);
+                    }
+                }
+                
+
             }
             followObstacle.GetComponent<MeshRenderer>().materials = matArray;
 
@@ -299,7 +361,7 @@ public class MapEditor : MonoBehaviour
     public void OnSave()
     {
         OnResetPattern();
-        patterns[patternNumber].sizePattern = 100;
+        patterns[patternNumber].sizePattern = endPatternOnMap.transform.position.z-startPatternOnMap.transform.position.z ;
 
         for (int i = 0; i < obstaclesOnMap.Count; i++)
         {
@@ -310,15 +372,15 @@ public class MapEditor : MonoBehaviour
                     if (catalog[ii].prefabsObject[iii].name+"(Clone)" == obstaclesOnMap[i].name)
                     {
                         patterns[patternNumber].gameObjects.Add(catalog[ii].prefabsObject[iii]);
-                        patterns[patternNumber].positions.Add(obstaclesOnMap[i].transform.position);
+                        patterns[patternNumber].positions.Add(obstaclesOnMap[i].transform.position - Vector3.forward * startPatternOnMap.transform.position.z);
                         patterns[patternNumber].rotation.Add(obstaclesOnMap[i].transform.rotation);
                         EditorUtility.SetDirty(patterns[patternNumber]);
                     }
                 }
             }
-
-
         }
+
+        StartCoroutine(TakeScreenShot());
         AssetDatabase.SaveAssets();
 
     }
@@ -375,4 +437,24 @@ public class MapEditor : MonoBehaviour
         actualObstacle.transform.rotation = Quaternion.Euler(RotationX.value, RotationY.value, RotationZ.value);
     }
 #endif
+
+    public void OnPoseStartPattern()
+    {
+        actualObstacle = startPattern;
+        state = State.Placement;
+    }
+
+
+    public void OnPoseEndPattern()
+    {
+        actualObstacle = endPattern;
+        state = State.Placement;
+    }
+
+    public void OnPoseStartMovePattern()
+    {
+        actualObstacle = startMove;
+        state = State.Placement;
+    }
+
 }

@@ -26,6 +26,8 @@ public class CurveMovement : ScriptableObject
     public AnimationCurve rollCurve;
     [HideInInspector] public float rollTimer;
 
-
+    [Header("Side Hit Settings")]
+    public AnimationCurve sideHitCurve;
+    [HideInInspector] public float sideHitTimer;
 
 }

@@ -40,20 +40,24 @@ public class PatternManager : MonoBehaviour
         
         for (int i = 0; i < patterns.Length; i++)
         {
-            OnLoadPattern(i);
+            GameObject patterni = Instantiate(new GameObject());
+            patterni.name = patterns[i].name;
+            patterni.transform.parent = contener.transform;
+
+            OnLoadPattern(patterni, i);
         }
 
     }
 
 
 
-    public void OnLoadPattern(int number)
+    public void OnLoadPattern(GameObject patterni,int number)
     {
         offset += patterns[number].sizePattern;
         for (int ii = 0; ii < patterns[number].gameObjects.Count; ii++)
         {
             GameObject obstacle = Instantiate(patterns[number].gameObjects[ii], patterns[number].positions[ii]+  Vector3.forward * offset   , Quaternion.identity);
-            obstacle.transform.parent = contener.transform;
+            obstacle.transform.parent = patterni.transform;
         }
     }
 
