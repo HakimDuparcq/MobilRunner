@@ -15,6 +15,8 @@ public class CameraMovement : MonoBehaviour
 
     public CinemachineVirtualCamera cinemachineVCamInGame;
     public CinemachineVirtualCamera cinemachineVCamGameMenu;
+    public CinemachineVirtualCamera cinemachineVCamGameMenuTransition;
+
 
     public Vector3 cameraRotationStart;
     public Vector3 cameraRotationGame;
@@ -44,12 +46,16 @@ public class CameraMovement : MonoBehaviour
             {
                 if (hit.transform.GetComponent<PrefabData>().montable == Montable.Yes)
                 {
-                    yCamFollow = hit.point.y;
+                    yCamFollow = hit.point.y + 1;
                     Debug.Log("monte");
                 }
-                else
+                else if(hit.transform.GetComponent<PrefabData>().montable == Montable.Ground && Player.instance.gameObject.transform.position.y<2)
                 {
-                    yCamFollow = Mathf.Lerp(yCamFollow, Player.instance.gameObject.transform.position.y, Time.deltaTime * speedFollow);
+                    yCamFollow = Mathf.Lerp(yCamFollow, 1, Time.deltaTime * speedFollow);
+                }
+                else if (hit.transform.GetComponent<PrefabData>().montable == Montable.No)
+                {
+                    //dont move cam
                 }
             }
         }
@@ -70,9 +76,17 @@ public class CameraMovement : MonoBehaviour
     {
         cinemachineVCamInGame.Priority = 0;
         cinemachineVCamGameMenu.Priority = 0;
+        cinemachineVCamGameMenuTransition.Priority = 0;
         activeCam.Priority = 10;
     }
 
+    public IEnumerator SetCamGameMenuToGame()
+    {
+        SetMainCamera(cinemachineVCamGameMenuTransition);
+        yield return new WaitForSeconds(1);
+        SetMainCamera(cinemachineVCamInGame);
+
+    }
 
 
 }

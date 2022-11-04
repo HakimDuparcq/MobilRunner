@@ -24,7 +24,7 @@ public class GameManager : MonoBehaviour
         {
             gameState = GameState.InGame;
             Player.instance.animator.SetTrigger("Run");
-            CameraMovement.instance.SetMainCamera(CameraMovement.instance.cinemachineVCamInGame);
+            StartCoroutine( CameraMovement.instance.SetCamGameMenuToGame());
         }
     }
 }
