@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Skin : MonoBehaviour
 {
+    public static Skin instance;
+
     public int bonus;
     public int bonusMax;
 
@@ -20,7 +22,15 @@ public class Skin : MonoBehaviour
     public int skinNumber;
 
     public ParticleSystem FxTourbillonBleu;
+    public ParticleSystem FxHeadStars;
     public Vector3 TourbillonBleuOffset;
+
+    public Transform head;
+
+    private void Awake()
+    {
+        instance = this;
+    }
 
     void Start()
     {
@@ -66,12 +76,27 @@ public class Skin : MonoBehaviour
 
         if (actualSkin != previousSkin)
         {
-            StartCoroutine(PlayParticle());
+            StartCoroutine(PlayParticleSkinChange());
         }
-
     }
 
-    public IEnumerator PlayParticle() // En faire un Feedback
+    public IEnumerator PlayParticleHeadStars()
+    {
+        //Debug.Log("PlayParticleHeadStars");
+        ParticleSystem FxHeadStarss = Instantiate(FxHeadStars, gameObject.transform);
+        //FxSkinChange.gameObject.transform.localPosition = TourbillonBleuOffset;
+        FxHeadStarss.Play();
+        int counter = 0;
+        while (counter<3)
+        {
+            FxHeadStarss.gameObject.transform.position = head.position;
+            yield return new WaitForSeconds(Time.deltaTime);
+        }
+        Destroy(FxHeadStarss.gameObject);
+    }
+
+
+    public IEnumerator PlayParticleSkinChange() // En faire un Feedback
     {
         ParticleSystem FxSkinChange = Instantiate(FxTourbillonBleu, gameObject.transform);
         FxSkinChange.gameObject.transform.localPosition = TourbillonBleuOffset;

@@ -5,10 +5,12 @@ using UnityEngine.Events;
 
 public enum ObstacleType {None, Move, Start, End, startMove}
 
+public enum Montable { No, Yes}
 
 public class PrefabData : MonoBehaviour
 {
     public ObstacleType obstacleType;
+    public Montable montable;
     public int crossNumber; // to know if is not in something
     public Transform offset;
 

@@ -52,6 +52,7 @@ public class Player : MonoBehaviour
     public bool isJumping = false;
     public bool isDowning = false;
     public bool isRolling = false;
+    public bool isHitSide = false;
 
     private Vector3 fp;//First touch position Phone
     private Vector3 lp;//Last touch position Phone
@@ -77,6 +78,7 @@ public class Player : MonoBehaviour
         GetInput();
         MoveXY();
         SetAirState();
+
     }
 
     void FixedUpdate()
@@ -202,6 +204,8 @@ public class Player : MonoBehaviour
                 side = SIDE.ExtraLeft;
                 StartCoroutine(HitSideCurve(1, -1, side));
                 animator.SetTrigger("HitSideLeft");
+                StartCoroutine(Skin.instance.PlayParticleHeadStars());
+
             }
             else if (side == SIDE.Middle)
             {
@@ -240,6 +244,8 @@ public class Player : MonoBehaviour
                 side = SIDE.ExtraRight;
                 StartCoroutine(HitSideCurve(1, 1, side));
                 animator.SetTrigger("HitSideRight");
+                StartCoroutine(Skin.instance.PlayParticleHeadStars());
+
             }
         }
 
@@ -280,7 +286,7 @@ public class Player : MonoBehaviour
 
         for (int i = 0; i < curveMovement.switchSideCurve.keys[curveMovement.switchSideCurve.keys.Length - 1].time / Time.fixedDeltaTime ; i++)
         {
-            if (actualSide== side)
+            if (actualSide== side )//|| !isHitSide)
             {
                 curveMovement.switchSideTimer += Time.fixedDeltaTime;
                 evaluation = curveMovement.switchSideCurve.Evaluate(curveMovement.switchSideTimer * coeffTime);
@@ -294,7 +300,7 @@ public class Player : MonoBehaviour
         }
     }
 
-    public IEnumerator HitSideCurve(float sideDistancePlayer, int direction, SIDE actualSide)
+    public IEnumerator HitSideCurve(float sideDistancePlayer, int direction, SIDE actualSide)  //Extra Left Extra Right
     {
         float startPos = gameObject.transform.position.x;
         float evaluation = 0;
@@ -336,7 +342,6 @@ public class Player : MonoBehaviour
         {
             side = SIDE.Right;
         }
-
     }
 
     private void Jump()
@@ -502,7 +507,7 @@ public class Player : MonoBehaviour
         foreach (ContactPoint contact in collision.contacts)
         {
             Debug.DrawRay(contact.point, contact.normal, Color.red, 2);
-            Debug.Log(contact.normal);
+            //Debug.Log(contact.normal);
         }
 
         if (collision.contacts[0].normal == Vector3.up) //collision.gameObject.name == "Plane")
@@ -519,13 +524,17 @@ public class Player : MonoBehaviour
         {
             animator.SetTrigger("HitSideLeft");
             side = SIDE.Right;
-            StartCoroutine(SwitchSideCurve(Mathf.Abs(transform.position.x), 1, side));
+            StartCoroutine(SwitchSideCurve(curveMovement.sideDistance - Mathf.Abs( transform.position.x), 1, side));
+            StartCoroutine(Skin.instance.PlayParticleHeadStars());
+            StartCoroutine(CameraMovement.instance.ShakeCamera(2,0.5f));
         }
         else if (hitX == HitX.Right)
         {
             animator.SetTrigger("HitSideRight");
             side = SIDE.Left;
-            StartCoroutine(SwitchSideCurve(Mathf.Abs(transform.position.x), -1, side));
+            StartCoroutine(SwitchSideCurve(curveMovement.sideDistance - Mathf.Abs(transform.position.x), -1, side));
+            StartCoroutine(CameraMovement.instance.ShakeCamera(2,0.5f));
+            StartCoroutine(Skin.instance.PlayParticleHeadStars());
 
         }
         else if (hitZ == HitZ.Forward && collision.contacts[0].normal == new Vector3(0,0,-1))
@@ -533,7 +542,10 @@ public class Player : MonoBehaviour
             animator.SetTrigger("FallBackward");
             MapController.instance.speedMap = 0;
         }
-
+        else
+        {
+            
+        }
 
     }
 
