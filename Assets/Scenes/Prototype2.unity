@@ -1507,7 +1507,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!1 &358715626
 GameObject:
   m_ObjectHideFlags: 0
@@ -1541,7 +1541,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &358715630
 GameObject:
   m_ObjectHideFlags: 0
@@ -5267,15 +5267,15 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 613036893}
-  m_LocalRotation: {x: 0.2287305, y: -0, z: -0, w: 0.9734898}
-  m_LocalPosition: {x: 0.46, y: 5.69, z: -7.1178336}
+  m_LocalRotation: {x: 0.18880607, y: 0.22419813, z: -0.044322193, w: 0.95505136}
+  m_LocalPosition: {x: -1.9300001, y: 2.8880002, z: -2.672}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 699136029}
   m_Father: {fileID: 1913002407}
   m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 26.8, y: 0, z: 0}
 --- !u!1 &625394596
 GameObject:
   m_ObjectHideFlags: 0
@@ -5403,7 +5403,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Damping: {x: 0, y: 0.5, z: 0.3}
-  ShoulderOffset: {x: 0, y: 4.97, z: -5.33}
+  ShoulderOffset: {x: 2.39, y: 2.44, z: -0.61}
   VerticalArmLength: 0.4
   CameraSide: 0
   CameraDistance: 2
@@ -5699,14 +5699,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_LocalRotation: {x: 0.2287305, y: -0, z: -0, w: 0.9734898}
-  m_LocalPosition: {x: 0.46, y: 5.69, z: -7.1178336}
+  m_LocalRotation: {x: 0.18880607, y: 0.22419813, z: -0.044322193, w: 0.95505136}
+  m_LocalPosition: {x: -1.9300001, y: 2.8880002, z: -2.672}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1913002407}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: -0.453, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 27.1, y: 0, z: 0}
 --- !u!114 &963194229
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5783,7 +5783,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1101629105}
-  - component: {fileID: 1101629104}
   m_Layer: 0
   m_Name: AudioManager
   m_TagString: Untagged
@@ -5791,27 +5790,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1101629104
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1101629103}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3e1c8dbdf956154478e1ba5e874580b2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MusicVolume: 1
-  FXVolume: 1
-  volumeMusicSlider: {fileID: 0}
-  volumeMusicValue: {fileID: 0}
-  volumeMusicText: {fileID: 0}
-  volumeFXSlider: {fileID: 0}
-  volumeFXValue: {fileID: 0}
-  volumeFXText: {fileID: 0}
-  sounds: []
 --- !u!4 &1101629105
 Transform:
   m_ObjectHideFlags: 0
@@ -6320,7 +6298,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1738229761}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.48, y: 2.14, z: 0}
+  m_LocalPosition: {x: 0.48, y: 0.99, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -6379,6 +6357,7 @@ MonoBehaviour:
   SwipeRight: 0
   SwipeUp: 0
   SwipeDown: 0
+  Tap: 0
   canTouch: 0
   cube: {fileID: 545627328}
   airState: 0
@@ -6493,7 +6472,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1922277744}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.46, y: 0.32, z: 0.21216631}
+  m_LocalPosition: {x: 0.46, y: 0.048, z: -0.062}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -6510,6 +6489,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1972171197}
   - component: {fileID: 1972171196}
+  - component: {fileID: 1972171199}
   - component: {fileID: 1972171198}
   m_Layer: 0
   m_Name: SCRIPTS
@@ -6537,6 +6517,8 @@ MonoBehaviour:
     m_Bits: 8
   followCam: {fileID: 1922277745}
   cinemachineVirtualCamera: {fileID: 613036894}
+  cameraRotationStart: {x: 0, y: 0, z: 0}
+  cameraRotationGame: {x: 0, y: 4.97, z: -5.33}
 --- !u!4 &1972171197
 Transform:
   m_ObjectHideFlags: 0
@@ -6593,6 +6575,18 @@ MonoBehaviour:
     richText: sdd
     textAreaObjectFields: []
     objectIdPairs: []
+--- !u!114 &1972171199
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1972171195}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6234987ad5e0cd44e926aaf9db9ba794, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &2682667869506398903
 PrefabInstance:
   m_ObjectHideFlags: 0

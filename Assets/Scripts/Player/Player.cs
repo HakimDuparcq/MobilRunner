@@ -33,7 +33,7 @@ public class Player : MonoBehaviour
     public Animator animator;
     public CurveMovement curveMovement;
 
-    [HideInInspector] public bool SwipeLeft, SwipeRight, SwipeUp, SwipeDown, canTouch;
+    [HideInInspector] public bool SwipeLeft, SwipeRight, SwipeUp, SwipeDown, Tap, canTouch;
 
     public GameObject cube;
 
@@ -56,7 +56,7 @@ public class Player : MonoBehaviour
 
     private Vector3 fp;//First touch position Phone
     private Vector3 lp;//Last touch position Phone
-    private float dragDistance = Screen.height * 15 / 100;//Minimum distance for a swipe Phone
+    private float dragDistance = Screen.width * 7 / 100;//Minimum distance for a swipe Phone
 
     private Vector3 groundHitPosition;
 
@@ -68,8 +68,7 @@ public class Player : MonoBehaviour
     void Start()
     {
         NexPosX = 0;
-        NexPosY = 2;
-        transform.position = new Vector3(0, 2, 0);
+        NexPosY = gameObject.transform.position.y;
         canTouch = true;
     }
 
@@ -131,13 +130,14 @@ public class Player : MonoBehaviour
     private void GetInput()
     {
 #if UNITY_EDITOR
+        Tap = Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.Return);
         SwipeLeft = Input.GetKeyDown(KeyCode.Q) || Input.GetKeyDown(KeyCode.LeftArrow);
         SwipeRight = Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.RightArrow);
         SwipeUp = Input.GetKeyDown(KeyCode.Z) || Input.GetKeyDown(KeyCode.UpArrow);
         SwipeDown = Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.DownArrow);
 #else
 
-        SwipeLeft = SwipeDown = SwipeRight = SwipeUp = false;
+        SwipeLeft = SwipeDown = SwipeRight = SwipeUp = Tap  = false;
 
         if (Input.touchCount>0)
         {
@@ -187,7 +187,11 @@ public class Player : MonoBehaviour
                     SwipeDown = true;
                     canTouch = false;
                 }
+            }
 
+            if (canTouch && Mathf.Abs(lp.y - fp.y) < dragDistance && Mathf.Abs(lp.x - fp.x) < dragDistance)
+            {
+                Tap = true;
             }
         }
         
@@ -362,7 +366,10 @@ public class Player : MonoBehaviour
         if (airState == AirState.Down)
         {
             isDowning = true;
+            Debug.Log("error1");
+            Debug.Log(airState);
             StartCoroutine(GoDown());
+            
         }
     }
 
@@ -429,6 +436,8 @@ public class Player : MonoBehaviour
     public IEnumerator GoDown()
     {
         isDowning = true;
+        Debug.Log("error2");
+
         animator.SetTrigger("Falling");
 
         float startPos = gameObject.transform.position.y;

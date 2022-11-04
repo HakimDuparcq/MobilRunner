@@ -120,13 +120,13 @@ public class Skin : MonoBehaviour
 
     public void OnTriggerEnter(Collider other)
     {
-        if (other.GetComponent<Coin>())
+        if (other.GetComponent<PrefabData>())
         {
-            if (other.GetComponent<Coin>().camp==Camp.good)
+            if (other.GetComponent<PrefabData>().obstacleType== ObstacleType.GoodCoin)
             {
                 bonus += 25;
             }
-            else
+            else if (other.GetComponent<PrefabData>().obstacleType == ObstacleType.BadCoin)
             {
                 bonus += -25;
             }

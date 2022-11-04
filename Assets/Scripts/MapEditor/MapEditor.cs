@@ -328,7 +328,7 @@ public class MapEditor : MonoBehaviour
                     {
                         endPatternOnMap = newObstacle;
                     }
-                    else if (followObstacle.GetComponent<PrefabData>().obstacleType == ObstacleType.startMove)
+                    else if (followObstacle.GetComponent<PrefabData>().obstacleType == ObstacleType.StartMove)
                     {
                         startMoveOnMap = newObstacle;
                     }

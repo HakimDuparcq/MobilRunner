@@ -15,6 +15,9 @@ public class CameraMovement : MonoBehaviour
 
     public CinemachineVirtualCamera cinemachineVirtualCamera;
 
+    public Vector3 cameraRotationStart;
+    public Vector3 cameraRotationGame;
+
     private void Awake()
     {
         instance = this;
@@ -35,7 +38,6 @@ public class CameraMovement : MonoBehaviour
         if (Physics.Raycast(Player.instance.gameObject.transform.position + new Vector3(0,2,0), Vector3.down, out hit, Mathf.Infinity, Ground))
         {
             Debug.DrawRay(Player.instance.gameObject.transform.position + new Vector3(0, 2, 0), Vector3.down, Color.red, 2);
-            Debug.Log(hit.transform.name);
             if (hit.transform.GetComponent<PrefabData>())
             {
                 if (hit.transform.GetComponent<PrefabData>().montable == Montable.Yes)
@@ -61,6 +63,12 @@ public class CameraMovement : MonoBehaviour
         cinemachineVirtualCamera.GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>().m_AmplitudeGain = 0;
 
     }
+
+    public void SetRotationCamera(Vector3 offset)
+    {
+        cinemachineVirtualCamera.GetCinemachineComponent<Cinemachine3rdPersonFollow>().ShoulderOffset = offset; 
+    }
+
 
 
 }
