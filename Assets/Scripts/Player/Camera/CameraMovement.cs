@@ -13,7 +13,8 @@ public class CameraMovement : MonoBehaviour
 
     public Transform followCam;
 
-    public CinemachineVirtualCamera cinemachineVirtualCamera;
+    public CinemachineVirtualCamera cinemachineVCamInGame;
+    public CinemachineVirtualCamera cinemachineVCamGameMenu;
 
     public Vector3 cameraRotationStart;
     public Vector3 cameraRotationGame;
@@ -25,6 +26,7 @@ public class CameraMovement : MonoBehaviour
 
     void Start()
     {
+        SetMainCamera(cinemachineVCamGameMenu);
     }
 
     void Update()
@@ -58,15 +60,17 @@ public class CameraMovement : MonoBehaviour
 
     public IEnumerator ShakeCamera(float intensity, float time)
     {
-        cinemachineVirtualCamera.GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>().m_AmplitudeGain = intensity;
+        cinemachineVCamInGame.GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>().m_AmplitudeGain = intensity;
         yield return new WaitForSeconds(time);
-        cinemachineVirtualCamera.GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>().m_AmplitudeGain = 0;
+        cinemachineVCamInGame.GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>().m_AmplitudeGain = 0;
 
     }
 
-    public void SetRotationCamera(Vector3 offset)
+    public void SetMainCamera(CinemachineVirtualCamera activeCam)
     {
-        cinemachineVirtualCamera.GetCinemachineComponent<Cinemachine3rdPersonFollow>().ShoulderOffset = offset; 
+        cinemachineVCamInGame.Priority = 0;
+        cinemachineVCamGameMenu.Priority = 0;
+        activeCam.Priority = 10;
     }
 
 

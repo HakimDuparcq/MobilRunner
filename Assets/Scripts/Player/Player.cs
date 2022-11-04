@@ -64,12 +64,14 @@ public class Player : MonoBehaviour
     public void Awake()
     {
         instance = this;
+        animator.SetTrigger("Dance");
     }
     void Start()
     {
         NexPosX = 0;
         NexPosY = gameObject.transform.position.y;
         canTouch = true;
+
     }
 
     void Update()
@@ -253,7 +255,9 @@ public class Player : MonoBehaviour
             }
         }
 
+        
 
+        
 
         Jump();
         Roll();
@@ -549,7 +553,8 @@ public class Player : MonoBehaviour
         else if (hitZ == HitZ.Forward && collision.contacts[0].normal == new Vector3(0,0,-1))
         {
             animator.SetTrigger("FallBackward");
-            MapController.instance.speedMap = 0;
+            //MapController.instance.speedMap = 0;
+            GameManager.instance.gameState = GameState.EndGame;
         }
         else
         {

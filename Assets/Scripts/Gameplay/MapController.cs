@@ -20,6 +20,11 @@ public class MapController : MonoBehaviour
 
     void Update()
     {
-        Map.transform.Translate(Vector3.back * Time.deltaTime * speedMap);
+        if (GameManager.instance.gameState == GameState.InGame)
+        {
+            Map.transform.Translate(Vector3.back * Time.deltaTime * speedMap);
+        }
+        
+
     }
 }
