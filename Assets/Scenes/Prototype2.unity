@@ -290,9 +290,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_NoiseProfile: {fileID: 11400000, guid: 69ce8388f6785dd4c8c39915efece2f4, type: 2}
-  m_PivotOffset: {x: 0, y: 0, z: 0}
-  m_AmplitudeGain: 0
-  m_FrequencyGain: 1
+  m_PivotOffset: {x: 10, y: 7.08, z: 5.86}
+  m_AmplitudeGain: 4.55
+  m_FrequencyGain: 0.005
   mNoiseOffsets: {x: 0, y: 0, z: 0}
 --- !u!114 &163382362
 MonoBehaviour:
@@ -6936,7 +6936,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1972171195}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.0144674, y: 2.4702702, z: 4.232478}
+  m_LocalPosition: {x: 1.74, y: 2.4702702, z: -8.25}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

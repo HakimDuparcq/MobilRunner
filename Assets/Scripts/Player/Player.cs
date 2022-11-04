@@ -77,8 +77,12 @@ public class Player : MonoBehaviour
     void Update()
     {
         GetInput();
-        MoveXY();
-        SetAirState();
+        if (GameManager.instance.gameState == GameState.InGame)
+        {
+            MoveXY();
+            SetAirState();
+        }
+
 
     }
 
@@ -395,13 +399,15 @@ public class Player : MonoBehaviour
             {
                 animator.SetTrigger("Roll");
                 StartCoroutine(ColliderSwipeDown());
-                //isRolling = true;
+                isRolling = true;  // bug ?
+
             }
 
         }
 
     }
 
+  
     private IEnumerator ColliderSwipeDown()
     {
         myCollider.center = new Vector3(0, -0.5f, 0);
@@ -409,6 +415,7 @@ public class Player : MonoBehaviour
         yield return new WaitForSeconds(2);
         myCollider.center = new Vector3(0, 0, 0);
         myCollider.height = 2;
+        isRolling = false;
     }
 
     public IEnumerator RollCurve()
@@ -430,11 +437,11 @@ public class Player : MonoBehaviour
             }
             if (isGrounded)
             {
-                isRolling = false;
+                //isRolling = false;
                 yield break;
             }
         }
-        isRolling = false;
+        //isRolling = false;
     }
 
     public IEnumerator GoDown()

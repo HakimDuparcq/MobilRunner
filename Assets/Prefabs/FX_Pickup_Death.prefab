@@ -9775,7 +9775,6 @@ GameObject:
   - component: {fileID: 56584994533602052}
   - component: {fileID: 146083122193273448}
   - component: {fileID: 144275908566315886}
-  - component: {fileID: 7785306442995972084}
   m_Layer: 1
   m_Name: FX_Pickup_Death
   m_TagString: Untagged
@@ -14587,18 +14586,6 @@ ParticleSystemRenderer:
   m_MeshWeighting2: 1
   m_MeshWeighting3: 1
   m_MaskInteraction: 0
---- !u!114 &7785306442995972084
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 55166677777312482}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 27ab6324580b636479a4916703143819, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &55493954583379004
 GameObject:
   m_ObjectHideFlags: 0

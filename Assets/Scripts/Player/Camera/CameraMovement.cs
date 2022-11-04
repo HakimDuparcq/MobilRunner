@@ -47,7 +47,6 @@ public class CameraMovement : MonoBehaviour
                 if (hit.transform.GetComponent<PrefabData>().montable == Montable.Yes)
                 {
                     yCamFollow = hit.point.y + 1;
-                    Debug.Log("monte");
                 }
                 else if(hit.transform.GetComponent<PrefabData>().montable == Montable.Ground && Player.instance.gameObject.transform.position.y<2)
                 {
@@ -69,8 +68,8 @@ public class CameraMovement : MonoBehaviour
         cinemachineVCamInGame.GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>().m_AmplitudeGain = intensity;
         yield return new WaitForSeconds(time);
         cinemachineVCamInGame.GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>().m_AmplitudeGain = 0;
-
     }
+    
 
     public void SetMainCamera(CinemachineVirtualCamera activeCam)
     {
