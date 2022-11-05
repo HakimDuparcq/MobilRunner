@@ -358,7 +358,7 @@ public class Player : MonoBehaviour
 
     private void Jump()
     {
-        if (airState == AirState.Run)
+        if (airState == AirState.Run || airState==AirState.RollGround )
         {
             NexPosY = groundHitPosition.y + playerHeight / 2f;
         }
@@ -371,12 +371,11 @@ public class Player : MonoBehaviour
             }
         }
 
-        if (airState == AirState.Down)
+        if (airState == AirState.Down )
         {
             isDowning = true;
-            Debug.Log("error1");
             Debug.Log(airState);
-            StartCoroutine(GoDown());
+            StartCoroutine(GoDown(true));
             
         }
     }
@@ -397,11 +396,20 @@ public class Player : MonoBehaviour
 
             if (airState == AirState.Run)
             {
+                isRolling = true;
                 animator.SetTrigger("Roll");
                 StartCoroutine(ColliderSwipeDown());
-                isRolling = true;  // bug ?
+                StartCoroutine(RollCurve());
+
+                //StartCoroutine(GoDown(false));
+                 
 
             }
+
+        }
+
+        if (airState == AirState.RollAir)
+        {
 
         }
 
@@ -415,7 +423,7 @@ public class Player : MonoBehaviour
         yield return new WaitForSeconds(2);
         myCollider.center = new Vector3(0, 0, 0);
         myCollider.height = 2;
-        isRolling = false;
+        //isRolling = false;
     }
 
     public IEnumerator RollCurve()
@@ -426,7 +434,12 @@ public class Player : MonoBehaviour
         curveMovement.rollTimer = 0;
         for (int i = 0; i < curveMovement.rollCurve.keys[curveMovement.rollCurve.keys.Length - 1].time / Time.fixedDeltaTime; i++)
         {
-            if (isRolling)
+            if (isGrounded)
+            {
+                //isRolling = false;
+               // yield break;
+            }
+            else if (isRolling)
             {
                 curveMovement.rollTimer += Time.fixedDeltaTime;
                 evaluation = curveMovement.rollCurve.Evaluate(curveMovement.rollTimer);
@@ -435,19 +448,14 @@ public class Player : MonoBehaviour
 
 
             }
-            if (isGrounded)
-            {
-                //isRolling = false;
-                yield break;
-            }
+            
         }
-        //isRolling = false;
+        isRolling = false;
     }
 
-    public IEnumerator GoDown()
+    public IEnumerator GoDown(bool isDowningValue)
     {
-        isDowning = true;
-        Debug.Log("error2");
+        isDowning = isDowningValue;
 
         animator.SetTrigger("Falling");
 
@@ -457,8 +465,12 @@ public class Player : MonoBehaviour
         for (int i = 0; i < curveMovement.downCurve.keys[curveMovement.downCurve.keys.Length - 1].time / Time.fixedDeltaTime; i++)
         {
 
-
-            if (!isGrounded && !isJumping)
+            if (isGrounded)
+            {
+                isDowning = false;
+                yield break;
+            }
+            else if (!isGrounded && !isJumping)
             {
                 curveMovement.downTimer += Time.fixedDeltaTime;
                 evaluation = curveMovement.downCurve.Evaluate(curveMovement.downTimer);
@@ -466,11 +478,7 @@ public class Player : MonoBehaviour
                 NexPosY = evaluation + startPos;
 
             }
-            else if (isGrounded)
-            {
-                isDowning = false;
-                yield break;
-            }
+            
         }
         isDowning = false;
     }
@@ -485,7 +493,12 @@ public class Player : MonoBehaviour
         curveMovement.jumpTimer = 0;
         for (int i = 0; i < curveMovement.jumpCurve.keys[curveMovement.jumpCurve.keys.Length - 1].time / Time.fixedDeltaTime; i++)
         {
-            if (isJumping)
+            if (isGrounded && i > curveMovement.jumpCurve.keys[curveMovement.jumpCurve.keys.Length - 1].time / Time.deltaTime * 0.07f)
+            {
+                isJumping = false;
+                yield break;
+            }
+            else if (isJumping)
             {
                 curveMovement.jumpTimer += Time.fixedDeltaTime;
                 evaluation = curveMovement.jumpCurve.Evaluate(curveMovement.jumpTimer);
@@ -493,11 +506,7 @@ public class Player : MonoBehaviour
                 yield return new WaitForSeconds(Time.fixedDeltaTime);
 
             }
-            if (isGrounded && i > curveMovement.jumpCurve.keys[curveMovement.jumpCurve.keys.Length - 1].time / Time.deltaTime * 0.07f)
-            {
-                isJumping = false;
-                yield break;
-            }
+            
         }
         isJumping = false;
 

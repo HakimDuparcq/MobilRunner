@@ -26,7 +26,8 @@ public class MapEditor : MonoBehaviour
     public Button Load;
     public Button ResetPattern;
     public Button DestroyObjectScene;
-    public Toggle GrilleMap;
+    public Toggle GrilleMapZ;
+    public Toggle GrilleMapX;
     public Toggle OverPose;
     public Button NextPattern;
     public Button PreviousPattern;
@@ -71,7 +72,8 @@ public class MapEditor : MonoBehaviour
     private int patternNumber;
     private int actualCategory;
 
-    private bool isGrillMode;
+    private bool isGrillModeZ;
+    private bool isGrillModeX;
     private bool isOverPose;
 
 #if UNITY_EDITOR
@@ -123,7 +125,10 @@ public class MapEditor : MonoBehaviour
         Load.onClick.AddListener(OnLoad);
         ResetPattern.onClick.AddListener(OnResetPattern);
         DestroyObjectScene.onClick.AddListener(OnDestroyObjectScene);
-        GrilleMap.onValueChanged.AddListener(delegate { GrilleModeActivation(); });
+        GrilleMapZ.onValueChanged.AddListener(delegate { GrilleModeZActivation(); });
+        GrilleModeZActivation();
+        GrilleMapX.onValueChanged.AddListener(delegate { GrilleModeXActivation(); });
+        GrilleModeXActivation();
         OverPose.onValueChanged.AddListener(delegate { isOverPose = OverPose.isOn; });
 
         ShowCategory(-1);
@@ -257,10 +262,10 @@ public class MapEditor : MonoBehaviour
             }
 
             
-            //if (layerGroundObstacle == (layerGroundObstacle | (1 << hit.transform.gameObject.layer)))  //si layermash contient layer;
 
             float zPos = 0;
-            if (isGrillMode) //GRILLE
+            float xPos = 0;
+            if (isGrillModeZ) //GRILLE
             {
                 if (followObstacle.GetComponent<PrefabData>().size == 0 )
                 {
@@ -276,19 +281,28 @@ public class MapEditor : MonoBehaviour
                 zPos = hit.point.z;
             }
 
-            if (hit.point.x < - sizeXmap * 0.33f )
+            if (isGrillModeX)
             {
-                
-                positionObject = new Vector3(-sizeXmap/2, hit.point.y, zPos);  //hit.point.y
+                if (hit.point.x < -sizeXmap * 0.33f)
+                {
+                    xPos = -sizeXmap / 2;
+                }
+                else if (hit.point.x > -sizeXmap * 0.33f && hit.point.x < sizeXmap * 0.33f)
+                {
+                    xPos = 0;
+                }
+                else if (hit.point.x > sizeXmap * 0.33f)
+                {
+                    xPos = sizeXmap / 2;
+                }
             }
-            else if (hit.point.x > - sizeXmap * 0.33f && hit.point.x < sizeXmap * 0.33f)
+            else
             {
-                positionObject = new Vector3(0, hit.point.y, zPos);
+                xPos = hit.point.x;
             }
-            else if(hit.point.x > sizeXmap*0.33f)
-            {
-                positionObject = new Vector3(sizeXmap/2, hit.point.y, zPos);
-            }
+
+            positionObject = new Vector3(xPos, hit.point.y, zPos);
+
 
             if (followObstacle!= null && followObstacle.GetComponent<PrefabData>().offset != null)
             {
@@ -413,9 +427,14 @@ public class MapEditor : MonoBehaviour
         obstaclesOnMap.RemoveRange(0, obstaclesOnMap.Count);
     }
 
-    public void GrilleModeActivation()
+    public void GrilleModeZActivation()
     {
-        isGrillMode = GrilleMap.isOn;
+        isGrillModeZ = GrilleMapZ.isOn;
+    }
+
+    public void GrilleModeXActivation()
+    {
+        isGrillModeX = GrilleMapX.isOn;
     }
 
     public void OnClickNExtPattern(int numberAdd)
