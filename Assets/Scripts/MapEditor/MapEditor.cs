@@ -377,6 +377,8 @@ public class MapEditor : MonoBehaviour
         OnResetPattern();
         patterns[patternNumber].sizePattern = endPatternOnMap.transform.position.z-startPatternOnMap.transform.position.z ;
 
+        patterns[patternNumber].startMove = startMoveOnMap.transform.position.z - startPatternOnMap.transform.position.z;
+
         for (int i = 0; i < obstaclesOnMap.Count; i++)
         {
             for (int ii = 0; ii < catalog.Length; ii++)
@@ -409,6 +411,16 @@ public class MapEditor : MonoBehaviour
             obstacle.transform.parent = contener.transform;
             obstaclesOnMap.Add(obstacle);
         }
+
+        GameObject startPatternOnMap = Instantiate(startPattern, new Vector3(0,0,0), Quaternion.identity);
+        startPatternOnMap.transform.parent = contener.transform;
+
+        GameObject endPatternOnMap = Instantiate(startPattern, new Vector3(0, 0, patterns[patternNumber].sizePattern), Quaternion.identity);
+        endPatternOnMap.transform.parent = contener.transform;
+
+        GameObject startMoveOnMap = Instantiate(startMove, new Vector3(0, 0, patterns[patternNumber].startMove), Quaternion.identity);
+        startMoveOnMap.transform.parent = contener.transform;
+
     }
 
     public void OnResetPattern()
@@ -425,6 +437,11 @@ public class MapEditor : MonoBehaviour
             Destroy(obstaclesOnMap[i]);
         }
         obstaclesOnMap.RemoveRange(0, obstaclesOnMap.Count);
+
+        foreach (Transform child in contener.transform)
+        {
+            Destroy(child.gameObject);
+        }
     }
 
     public void GrilleModeZActivation()

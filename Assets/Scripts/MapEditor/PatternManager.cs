@@ -9,6 +9,7 @@ public class PatternManager : MonoBehaviour
     public GameObject contener;
     public bool createMap;
 
+    public GameObject startMoveObject;
 
 
     public float offset;
@@ -40,12 +41,16 @@ public class PatternManager : MonoBehaviour
         
         for (int i = 0; i < patterns.Length; i++)
         {
-            GameObject patterni = Instantiate(new GameObject());
+            GameObject patterni = new GameObject();
             patterni.name = patterns[i].name;
             patterni.transform.parent = contener.transform;
 
             OnLoadPattern(patterni, i);
+
+            MapController.instance.patternsSpeed.Add(0.0f);
         }
+
+        
 
     }
 
@@ -54,13 +59,25 @@ public class PatternManager : MonoBehaviour
     public void OnLoadPattern(GameObject patterni,int number)
     {
         offset += patterns[number].sizePattern;
+
+        //Start Move
+        GameObject startMove = Instantiate(startMoveObject,  Vector3.forward * (offset + patterns[number].startMove), Quaternion.identity);  
+        startMove.transform.parent = patterni.transform;
+        startMove.GetComponent<BoxCollider>().enabled = true;
+        startMove.GetComponent<BoxCollider>().isTrigger = true;
+        //startMove.GetComponent<MeshRenderer>().enabled = false;
+
         for (int ii = 0; ii < patterns[number].gameObjects.Count; ii++)
         {
             GameObject obstacle = Instantiate(patterns[number].gameObjects[ii], patterns[number].positions[ii]+  Vector3.forward * offset   , Quaternion.identity);
             obstacle.transform.parent = patterni.transform;
         }
+
+        
+
+
     }
 
-
+   
 
 }

@@ -10,6 +10,7 @@ public enum DifficultyLevel { Easy, Normal, Expert, Legendaire }
 public class Pattern : ScriptableObject
 {
     public float sizePattern;
+    public float startMove;
 
     public DifficultyLevel difficulty;
 

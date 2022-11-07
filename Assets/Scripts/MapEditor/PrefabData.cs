@@ -32,7 +32,7 @@ public class PrefabData : MonoBehaviour
 
     public void OnTriggerEnter(Collider other)
     {
-        if (MapEditor.instance.obstaclesOnMap.Contains(other.gameObject))
+        if (MapEditor.instance!= null && MapEditor.instance.obstaclesOnMap.Contains(other.gameObject))
         {
             crossNumber++;
 
@@ -42,7 +42,7 @@ public class PrefabData : MonoBehaviour
 
     public void OnTriggerExit(Collider other)
     {
-        if (MapEditor.instance.obstaclesOnMap.Contains(other.gameObject))
+        if (MapEditor.instance!=null  && MapEditor.instance.obstaclesOnMap.Contains(other.gameObject))
         {
             crossNumber--;
 

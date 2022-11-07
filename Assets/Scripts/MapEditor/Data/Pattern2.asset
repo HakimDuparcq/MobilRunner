@@ -12,26 +12,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3faf23a613ef7204f8fd2bb909b0a442, type: 3}
   m_Name: Pattern2
   m_EditorClassIdentifier: 
-  sizePattern: 22.370834
+  sizePattern: 20
+  startMove: 4
   difficulty: 0
   gameObjects:
-  - {fileID: 103834, guid: e1d591a8f2f69f047ba3bdd96192ccde, type: 3}
-  - {fileID: 103834, guid: e1d591a8f2f69f047ba3bdd96192ccde, type: 3}
-  - {fileID: 103834, guid: e1d591a8f2f69f047ba3bdd96192ccde, type: 3}
-  - {fileID: 103834, guid: e1d591a8f2f69f047ba3bdd96192ccde, type: 3}
-  - {fileID: 103834, guid: e1d591a8f2f69f047ba3bdd96192ccde, type: 3}
-  - {fileID: 103834, guid: e1d591a8f2f69f047ba3bdd96192ccde, type: 3}
+  - {fileID: 137298, guid: 9830f561f80768b4f92139c1c15bc835, type: 3}
+  - {fileID: 137298, guid: 9830f561f80768b4f92139c1c15bc835, type: 3}
+  - {fileID: 137298, guid: 9830f561f80768b4f92139c1c15bc835, type: 3}
   positions:
-  - {x: -5.005, y: 2.93, z: 5.7414246}
-  - {x: -5.005, y: 2.93, z: 9.674377}
-  - {x: 0, y: 2.93, z: 10.002121}
-  - {x: 0, y: 2.93, z: 6.5279846}
-  - {x: 5.005, y: 2.93, z: 5.2825317}
-  - {x: 5.005, y: 2.93, z: 9.477722}
+  - {x: -2.505, y: 7.675937e-17, z: 13.5}
+  - {x: 2.5, y: 1.2652998e-17, z: 8.5}
+  - {x: 7.505, y: -6.4949454e-17, z: 13.5}
   rotation:
-  - {x: -0, y: -0, z: -0, w: 1}
-  - {x: -0, y: -0, z: -0, w: 1}
-  - {x: -0, y: -0, z: -0, w: 1}
   - {x: -0, y: -0, z: -0, w: 1}
   - {x: -0, y: -0, z: -0, w: 1}
   - {x: -0, y: -0, z: -0, w: 1}

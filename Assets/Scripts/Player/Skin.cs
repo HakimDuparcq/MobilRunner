@@ -125,15 +125,19 @@ public class Skin : MonoBehaviour
             if (other.GetComponent<PrefabData>().obstacleType== ObstacleType.GoodCoin)
             {
                 bonus += 25;
+                UpdateStats();
+                Destroy(other.gameObject);
+                //AudioManager.instance.Play("Coin");
             }
             else if (other.GetComponent<PrefabData>().obstacleType == ObstacleType.BadCoin)
             {
                 bonus += -25;
+                UpdateStats();
+                Destroy(other.gameObject);
+                //AudioManager.instance.Play("Coin");
             }
-            
-            UpdateStats();
-            Destroy(other.gameObject);
-            AudioManager.instance.Play("Coin");
+
+
         }
     }
 

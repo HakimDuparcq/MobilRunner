@@ -112,9 +112,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae861be614bf2424e92bd1323d5b1542, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  obstacleType: 0
+  montable: 2
   crossNumber: 0
   offset: {fileID: 7354923249241028839}
   size: 5
+  speed: 0
 --- !u!1 &124113883616851089
 GameObject:
   m_ObjectHideFlags: 0
