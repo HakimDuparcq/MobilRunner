@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5631347041137788943}
   - component: {fileID: 1948556130042028588}
   - component: {fileID: 4224334289472347420}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Wall Swipe Down
   m_TagString: Untagged
   m_Icon: {fileID: 0}

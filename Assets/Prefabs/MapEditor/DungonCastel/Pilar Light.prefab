@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 581296706870263286}
   - component: {fileID: -2406994775204480224}
   - component: {fileID: 5714985566373212325}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Pilar Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -131,7 +131,7 @@ GameObject:
   - component: {fileID: 1044189646141282360}
   - component: {fileID: 5737738249453533386}
   - component: {fileID: 6872661869041008578}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Point light 12 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -258,6 +258,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 581296706872217066}
     m_Modifications:
+    - target: {fileID: 103198, guid: f65b497ff807d95439b38e7da2fab667, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 103198, guid: f65b497ff807d95439b38e7da2fab667, type: 3}
       propertyPath: m_IsActive
       value: 1

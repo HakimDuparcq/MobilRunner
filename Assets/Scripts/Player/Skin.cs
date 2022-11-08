@@ -25,6 +25,9 @@ public class Skin : MonoBehaviour
     public ParticleSystem FxHeadStars;
     public Vector3 TourbillonBleuOffset;
 
+    public ParticleSystem FxGoodCoin;
+    public ParticleSystem FxBadCoin;
+
     public Transform head;
 
     private void Awake()

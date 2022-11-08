@@ -12,13 +12,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3faf23a613ef7204f8fd2bb909b0a442, type: 3}
   m_Name: Pattern0
   m_EditorClassIdentifier: 
-  sizePattern: 14
-  startMove: 7
-  difficulty: 0
+  sizePattern: 8
+  startMove: -1
+  difficulty: -1
   gameObjects:
+  - {fileID: 3766887080798190216, guid: aa7e265bb6d0be049aa4af62a7f92c4a, type: 3}
+  - {fileID: 3766887080798190216, guid: aa7e265bb6d0be049aa4af62a7f92c4a, type: 3}
   - {fileID: 137298, guid: 9830f561f80768b4f92139c1c15bc835, type: 3}
+  - {fileID: 5897652362624140176, guid: a740f352f7f25a24d87803922367dd49, type: 3}
   positions:
-  - {x: 2.6870615, y: -2.6819472e-18, z: 4.809372}
+  - {x: -5.005, y: 8.0719063e-17, z: 5}
+  - {x: 5.005, y: -9.562025e-17, z: 6}
+  - {x: 7.505, y: -7.947647e-17, z: -2.5}
+  - {x: 0, y: -1.2750865e-18, z: 5}
   rotation:
+  - {x: -0, y: -0, z: -0, w: 1}
+  - {x: -0, y: -0, z: -0, w: 1}
+  - {x: -0, y: -0, z: -0, w: 1}
   - {x: -0, y: -0, z: -0, w: 1}
   preview2D: {fileID: 0}

@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4673630622959148419}
   - component: {fileID: 4673630622957761493}
   - component: {fileID: 4673630622960094856}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SM_Env_Wall_Pillar_Large_10 (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -110,7 +110,7 @@ GameObject:
   - component: {fileID: 4673630622972997131}
   - component: {fileID: 4673630622972346461}
   - component: {fileID: 4673630622970019088}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SM_Env_Wall_Pillar_Large_10 (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -208,7 +208,7 @@ GameObject:
   - component: {fileID: 4673630623233278609}
   - component: {fileID: 4673630623232158919}
   - component: {fileID: 4673630623230299770}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SM_Env_Wall_Pillar_Large_10 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -306,7 +306,7 @@ GameObject:
   - component: {fileID: 4673630623462094866}
   - component: {fileID: 4673630623461447236}
   - component: {fileID: 4673630623463303943}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SM_Env_Wall_Pillar_Large_10 (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -404,7 +404,7 @@ GameObject:
   - component: {fileID: 4673630623494794585}
   - component: {fileID: 4673630623495979791}
   - component: {fileID: 4673630623497846338}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SM_Env_Wall_Pillar_Large_10 (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -501,7 +501,7 @@ GameObject:
   - component: {fileID: 4673630623735940493}
   - component: {fileID: 7799181726326401197}
   - component: {fileID: 6121012336654393844}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Blocs
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -574,7 +574,7 @@ GameObject:
   - component: {fileID: 4673630623991237180}
   - component: {fileID: 4673630623992407146}
   - component: {fileID: 4673630623990028589}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SM_Env_Wall_Pillar_Large_10 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -672,7 +672,7 @@ GameObject:
   - component: {fileID: 4673630624163974205}
   - component: {fileID: 4673630624164651627}
   - component: {fileID: 4673630624162832174}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SM_Env_Wall_Pillar_Large_10 (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -770,7 +770,7 @@ GameObject:
   - component: {fileID: 4673630624218671462}
   - component: {fileID: 4673630624217958192}
   - component: {fileID: 4673630624215628403}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SM_Env_Wall_Pillar_Large_10 (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}

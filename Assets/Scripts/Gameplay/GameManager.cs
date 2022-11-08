@@ -27,4 +27,86 @@ public class GameManager : MonoBehaviour
             StartCoroutine( CameraMovement.instance.SetCamGameMenuToGame());
         }
     }
+
+
+
+
+    public void EndGameStateAction()
+    {
+        MapController.instance.speedMap = 0;
+        gameState = GameState.EndGame;
+
+        CameraMovement.instance.SetMainCamera(CameraMovement.instance.cinemachineVCamEndGame);
+
+        PlayAnimation("Magic", 0.5f);
+        PlayAnimation("Idl", 3);
+
+        StartCoroutine(SpawnParticle());
+        StartCoroutine(ChestAnimation());
+        StartCoroutine(PlayDefeatVictoryAnim());
+
+
+    }
+
+    public IEnumerator SpawnParticle()
+    {
+        List<GameObject> particles = new List<GameObject>();
+
+        for (int i = 0; i < Skin.instance.skinNumber; i++)
+        {
+            particles.Add(Instantiate(Skin.instance.FxBadCoin.gameObject, Player.instance.gameObject.transform.position, Quaternion.identity));
+            StartCoroutine(MoveParticleEnd(particles[particles.Count - 1]));
+            yield return new WaitForSeconds(0.5f);
+
+        }
+    }
+
+    public IEnumerator MoveParticleEnd(GameObject particle)
+    {
+        float speed = 10;
+        for (int i = 0; i < 100; i++)
+        {
+            Vector3 endPos = GameObject.FindGameObjectsWithTag("Chest")[0].transform.position;
+            particle.transform.position = Vector3.Lerp(particle.transform.position, endPos, Time.deltaTime*speed);
+            yield return new WaitForSeconds(Time.deltaTime);
+        }
+        Destroy(particle);
+
+    }
+
+    public IEnumerator ChestAnimation()
+    {
+        GameObject chest = GameObject.FindGameObjectsWithTag("Chest")[0];
+        yield return new WaitForSeconds(1);
+        chest.GetComponent<Animator>().SetTrigger("Surprise");
+
+        if (Skin.instance.skinNumber>=2)
+        {
+            yield return new WaitForSeconds(1);
+            chest.GetComponent<Animator>().SetTrigger("Open");
+        }
+
+    }
+
+    public IEnumerator PlayDefeatVictoryAnim()
+    {
+        yield return new WaitForSeconds(1);
+        if (Skin.instance.skinNumber >= 2)
+        {
+            Player.instance.animator.SetTrigger("Victory");
+        }
+        else
+        {
+            Player.instance.animator.SetTrigger("Defeat");
+        }
+        
+        
+    }
+
+    public IEnumerator PlayAnimation(string name, float time)
+    {
+        yield return new WaitForSeconds(time);
+        Player.instance.animator.SetTrigger(name);
+    }
+
 }

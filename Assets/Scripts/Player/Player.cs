@@ -630,19 +630,22 @@ public class Player : MonoBehaviour
         {
             GameObject enfantTrigger = other.gameObject;
             GameObject parentTrigger = enfantTrigger.transform.parent.gameObject;
-            GameObject Contener = parentTrigger.transform.parent.gameObject;
 
-            int numberChild = 0;
-            for (int i = 0; i < Contener.transform.childCount; i++)
+            if (enfantTrigger.tag != "Finish")
             {
-                if (parentTrigger.transform == Contener.transform.GetChild(i)) 
-                {
-                    numberChild = i;
-                    MapController.instance.patternsSpeed[numberChild] = 1;
-                    break;
-                }
+                PatternManager.instance.SetMovePatterns(parentTrigger);
+
+            }
+            else
+            {
+                
+
+                GameManager.instance.EndGameStateAction();
+
             }
 
         }
+
+        
     }
 }

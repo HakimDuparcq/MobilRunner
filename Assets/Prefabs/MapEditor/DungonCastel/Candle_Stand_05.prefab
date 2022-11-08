@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 1069464495419042161}
   - component: {fileID: 1069464495419042174}
   - component: {fileID: 2125413500272514455}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Candle_Stand_05
   m_TagString: Untagged
   m_Icon: {fileID: 0}

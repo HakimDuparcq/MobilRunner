@@ -8,8 +8,6 @@ public class MapController : MonoBehaviour
     public GameObject Map;
     public float speedMap;
 
-    //public List<GameObject> patterns = new List<GameObject>();
-    public List<float> patternsSpeed = new List<float>();
 
     private void Awake()
     {
@@ -39,26 +37,9 @@ public class MapController : MonoBehaviour
 
         }
 
-        SetSpeedPatterns(PatternManager.instance.contener);
     }
 
 
-    public void SetSpeedPatterns(GameObject contener)
-    {
-        for (int i = 0; i < contener.transform.childCount; i++) //parcour pattern
-        {
-            for (int ii = 0; ii < contener.transform.GetChild(i).transform.childCount; ii++)  //parcour obstacle
-            {
-                if (contener.transform.GetChild(i).transform.GetChild(ii).GetComponent<PrefabData>().obstacleType == ObstacleType.Move 
-                    && patternsSpeed[i]!=0)
-                {
-                    contener.transform.GetChild(i).transform.GetChild(ii).Translate(Vector3.back * Time.deltaTime * speedMap);
-                }
-                 
-            }
-        }
-
-
-    }
+    
 
 }

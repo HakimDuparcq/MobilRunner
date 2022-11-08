@@ -412,13 +412,13 @@ public class MapEditor : MonoBehaviour
             obstaclesOnMap.Add(obstacle);
         }
 
-        GameObject startPatternOnMap = Instantiate(startPattern, new Vector3(0,0,0), Quaternion.identity);
+        startPatternOnMap = Instantiate(startPattern, new Vector3(0,0,0), Quaternion.identity);
         startPatternOnMap.transform.parent = contener.transform;
 
-        GameObject endPatternOnMap = Instantiate(startPattern, new Vector3(0, 0, patterns[patternNumber].sizePattern), Quaternion.identity);
+        endPatternOnMap = Instantiate(startPattern, new Vector3(0, 0, patterns[patternNumber].sizePattern), Quaternion.identity);
         endPatternOnMap.transform.parent = contener.transform;
 
-        GameObject startMoveOnMap = Instantiate(startMove, new Vector3(0, 0, patterns[patternNumber].startMove), Quaternion.identity);
+        startMoveOnMap = Instantiate(startMove, new Vector3(0, 0, patterns[patternNumber].startMove), Quaternion.identity);
         startMoveOnMap.transform.parent = contener.transform;
 
     }

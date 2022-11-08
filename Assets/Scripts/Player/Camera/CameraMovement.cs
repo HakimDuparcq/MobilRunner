@@ -16,6 +16,7 @@ public class CameraMovement : MonoBehaviour
     public CinemachineVirtualCamera cinemachineVCamInGame;
     public CinemachineVirtualCamera cinemachineVCamGameMenu;
     public CinemachineVirtualCamera cinemachineVCamGameMenuTransition;
+    public CinemachineVirtualCamera cinemachineVCamEndGame;
 
 
     public Vector3 cameraRotationStart;
@@ -76,6 +77,7 @@ public class CameraMovement : MonoBehaviour
         cinemachineVCamInGame.Priority = 0;
         cinemachineVCamGameMenu.Priority = 0;
         cinemachineVCamGameMenuTransition.Priority = 0;
+        cinemachineVCamEndGame.Priority = 0;
         activeCam.Priority = 10;
     }
 

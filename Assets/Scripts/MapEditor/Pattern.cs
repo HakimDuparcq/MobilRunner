@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public enum DifficultyLevel { Easy, Normal, Expert, Legendaire }
+public enum DifficultyLevel {  Easy, Normal, Expert, Legendaire, End=-1 }
 
 
 [CreateAssetMenu(fileName = "Pattern")]
