@@ -5,9 +5,12 @@ using Unity.Notifications.Android;
 
 public class NotificationSystemPerso : MonoBehaviour
 {
-    AndroidNotification notification = new AndroidNotification();
+    AndroidNotification[] notification = new AndroidNotification[4];
     void Start()
     {
+        // REmove notif that have been display
+        AndroidNotificationCenter.CancelAllDisplayedNotifications();
+        
         var channel = new AndroidNotificationChannel()
         {
             Id = "channel_id",
@@ -16,29 +19,22 @@ public class NotificationSystemPerso : MonoBehaviour
             Description = "Generic notification",
         };
         AndroidNotificationCenter.RegisterNotificationChannel(channel);
+
+        for (int i = 0; i < notification.Length; i++)
+        {
+            notification[i].Title = "Mobil Runner";
+            notification[i].Text = "Come to Run";
+            //notification.SmallIcon = "icon";
+            notification[i].LargeIcon = "logo";
+            notification[i].FireTime = System.DateTime.Now.AddSeconds(10*i+1); //Time
+            var id =  AndroidNotificationCenter.SendNotification(notification[i], "channel_id");
+        }
         
-        notification.Title = "Mobil Runner";
-        notification.Text = "Come to Run";
-        //notification.SmallIcon = "icon";
-        notification.LargeIcon = "logo";
-
-        notification.FireTime = System.DateTime.Now.AddMinutes(10); //Time
-        AndroidNotificationCenter.SendNotification(notification, "channel_id");
-
 
 
 
     }
 
-    void Update()
-    {
-        
-    }
-
-    private void OnApplicationQuit()
-    {
-
-    }
-
+    
 
 }

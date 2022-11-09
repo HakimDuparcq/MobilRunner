@@ -8,15 +8,38 @@ namespace Hakim
     public class AnimationFeedback : GameFeedback
     {
         public string animationName;
+        public bool isEndGame;
         public override IEnumerator Execute(GameEvent gameEvent, GameObject gameObject)
         {
+            if (isEndGame)
+            {
+                if (Skin.instance.skinNumber >= 2)
+                {
+                    Player.instance.animator.SetTrigger("Victory");
+                    yield break;
+                }
+                else
+                {
+                    Player.instance.animator.SetTrigger("Defeat");
+                    yield break;
+                }
+            }
+
             Player.instance.animator.SetTrigger(animationName);
             yield break;
         }
 
         public override string ToString()
         {
-            return $"Animation :  { animationName}";
+            if (isEndGame)
+            {
+                return $"Player Animation EndGame";
+            }
+            else
+            {
+                return $"Player Animation :  { animationName}";
+
+            }
         }
 
         public override Color Coloration()

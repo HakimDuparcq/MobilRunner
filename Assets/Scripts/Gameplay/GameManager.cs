@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using Hakim;
 public enum GameState { Menu, GameMenu, InGame, EndGame}
 
 public class GameManager : MonoBehaviour
@@ -36,16 +36,16 @@ public class GameManager : MonoBehaviour
         MapController.instance.speedMap = 0;
         gameState = GameState.EndGame;
 
-        CameraMovement.instance.SetMainCamera(CameraMovement.instance.cinemachineVCamEndGame);
 
-        PlayAnimation("Magic", 0.5f);
-        PlayAnimation("Idl", 3);
+        GameEventsManager.PlayEvent("End Game Event", gameObject);
 
+
+
+    }
+
+    public void SpawnParticleEvent()
+    {
         StartCoroutine(SpawnParticle());
-        StartCoroutine(ChestAnimation());
-        StartCoroutine(PlayDefeatVictoryAnim());
-
-
     }
 
     public IEnumerator SpawnParticle()
