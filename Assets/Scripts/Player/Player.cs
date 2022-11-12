@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public enum SIDE
 {
@@ -33,7 +34,7 @@ public class Player : MonoBehaviour
     public Animator animator;
     public CurveMovement curveMovement;
 
-    [HideInInspector] public bool SwipeLeft, SwipeRight, SwipeUp, SwipeDown, Tap, canTouch;
+    [HideInInspector] public bool SwipeLeft, SwipeRight, SwipeUp, SwipeDown, canTouch;
 
     public GameObject cube;
 
@@ -64,14 +65,20 @@ public class Player : MonoBehaviour
     public void Awake()
     {
         instance = this;
-        animator.SetTrigger("Dance");
+        
     }
     void Start()
+    {
+        ResetPlayer();
+
+    }
+
+    public void ResetPlayer()
     {
         NexPosX = 0;
         NexPosY = gameObject.transform.position.y;
         canTouch = true;
-
+        animator.SetTrigger("Dance");
     }
 
     void Update()
@@ -100,7 +107,7 @@ public class Player : MonoBehaviour
         Vector3 foot = transform.position - new Vector3(0, playerHeight * 0.5f - 0.1f, 0);
         isGrounded = Physics.Raycast(foot, Vector3.down, out hit, 0.2f, Ground);
         groundHitPosition = hit.point;
-        Debug.DrawLine(foot, foot + Vector3.down * (0.2f), Color.black,Time.fixedDeltaTime);
+        //Debug.DrawLine(foot, foot + Vector3.down * (0.2f), Color.black,Time.fixedDeltaTime);
 
         animator.SetBool("Grounded", isGrounded);
 
@@ -136,19 +143,18 @@ public class Player : MonoBehaviour
     private void GetInput()
     {
 #if UNITY_EDITOR
-        Tap = Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.Return);
         SwipeLeft = Input.GetKeyDown(KeyCode.Q) || Input.GetKeyDown(KeyCode.LeftArrow);
         SwipeRight = Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.RightArrow);
         SwipeUp = Input.GetKeyDown(KeyCode.Z) || Input.GetKeyDown(KeyCode.UpArrow);
         SwipeDown = Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.DownArrow);
 #else
 
-        SwipeLeft = SwipeDown = SwipeRight = SwipeUp = Tap  = false;
+        SwipeLeft = SwipeDown = SwipeRight = SwipeUp = false;
 
         if (Input.touchCount>0)
         {
             Touch touch = Input.GetTouch(0);
-            if (touch.phase==TouchPhase.Began)
+            if (touch.phase==TouchPhase.Began )
             {
                 fp = touch.position;
                 lp = touch.position;
@@ -195,10 +201,7 @@ public class Player : MonoBehaviour
                 }
             }
 
-            if (canTouch && Mathf.Abs(lp.y - fp.y) < dragDistance && Mathf.Abs(lp.x - fp.x) < dragDistance)
-            {
-                Tap = true;
-            }
+           
         }
         
         
@@ -552,25 +555,25 @@ public class Player : MonoBehaviour
         if (hitX == HitX.Left)
         {
             animator.SetTrigger("HitSideLeft");
-            side = SIDE.Right;
-            StartCoroutine(SwitchSideCurve(curveMovement.sideDistance - Mathf.Abs( transform.position.x), 1, side));
+            side = SIDE.Middle;
+            StartCoroutine(SwitchSideCurve( Mathf.Abs( transform.position.x), 1, side));
             StartCoroutine(Skin.instance.PlayParticleHeadStars());
             StartCoroutine(CameraMovement.instance.ShakeCamera(2,0.5f));
         }
         else if (hitX == HitX.Right)
         {
             animator.SetTrigger("HitSideRight");
-            side = SIDE.Left;
-            StartCoroutine(SwitchSideCurve(curveMovement.sideDistance - Mathf.Abs(transform.position.x), -1, side));
+            side = SIDE.Middle;
+            StartCoroutine(SwitchSideCurve(Mathf.Abs(transform.position.x), -1, side));
             StartCoroutine(CameraMovement.instance.ShakeCamera(2,0.5f));
             StartCoroutine(Skin.instance.PlayParticleHeadStars());
 
         }
-        else if (hitZ == HitZ.Forward && collision.contacts[0].normal == new Vector3(0,0,-1))
+        else if (hitZ == HitZ.Forward && collision.gameObject.GetComponent<PrefabData>()
+            && collision.gameObject.GetComponent<PrefabData>().montable == Montable.No )  
         {
             animator.SetTrigger("FallBackward");
-            //MapController.instance.speedMap = 0;
-            GameManager.instance.gameState = GameState.EndGame;
+            GameManager.instance.EndGameStateAction(isFinishMap: false);
         }
         else
         {
@@ -634,14 +637,10 @@ public class Player : MonoBehaviour
             if (enfantTrigger.tag != "Finish")
             {
                 PatternManager.instance.SetMovePatterns(parentTrigger);
-
             }
             else
             {
-                
-
-                GameManager.instance.EndGameStateAction();
-
+                GameManager.instance.EndGameStateAction(isFinishMap: true);
             }
 
         }

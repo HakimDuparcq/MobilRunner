@@ -20,27 +20,43 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
-        if (Player.instance.Tap && gameState==GameState.GameMenu)
+
+    }
+
+    public void StartGame()
+    {
+        if (gameState == GameState.GameMenu)
         {
             gameState = GameState.InGame;
             Player.instance.animator.SetTrigger("Run");
-            StartCoroutine( CameraMovement.instance.SetCamGameMenuToGame());
+            StartCoroutine(CameraMovement.instance.SetCamGameMenuToGame());
+            StartCoroutine(UiManager.instance.MenuToGame());
         }
     }
 
-
-
-
-    public void EndGameStateAction()
+    public void EndGameStateAction(bool isFinishMap)
     {
         MapController.instance.speedMap = 0;
         gameState = GameState.EndGame;
+        if (isFinishMap)
+        {
+            GameEventsManager.PlayEvent("End Finish Game Event", gameObject);
+        }
+        else
+        {
+            GameEventsManager.PlayEvent("End Dead Game Event", gameObject);
+        }
 
+    }
 
-        GameEventsManager.PlayEvent("End Game Event", gameObject);
-
-
-
+    public void ResetGame()
+    {
+        gameState = GameState.GameMenu;
+        PatternManager.instance.ResetMap();
+        Player.instance.ResetPlayer();
+        MapController.instance.speedMap = 3;
+        CameraMovement.instance.SetMainCamera(CameraMovement.instance.cinemachineVCamGameMenu);
+        PlayerStats.instance.actualScore = 0;
     }
 
     public void SpawnParticleEvent()

@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
 
 public class Skin : MonoBehaviour
 {
@@ -29,6 +31,9 @@ public class Skin : MonoBehaviour
     public ParticleSystem FxBadCoin;
 
     public Transform head;
+
+    public TextMeshProUGUI goldText;
+   
 
     private void Awake()
     {
@@ -76,11 +81,13 @@ public class Skin : MonoBehaviour
             actualSkin = badSkins[-skinNumber - 1];
         }
 
-
         if (actualSkin != previousSkin)
         {
             StartCoroutine(PlayParticleSkinChange());
         }
+
+        goldText.text = bonus.ToString();
+
     }
 
     public IEnumerator PlayParticleHeadStars()

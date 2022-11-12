@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sizePattern: 8
   startMove: -1
-  difficulty: -1
+  difficulty: 0
   gameObjects:
   - {fileID: 3766887080798190216, guid: aa7e265bb6d0be049aa4af62a7f92c4a, type: 3}
   - {fileID: 3766887080798190216, guid: aa7e265bb6d0be049aa4af62a7f92c4a, type: 3}

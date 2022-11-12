@@ -42,7 +42,7 @@ public class CameraMovement : MonoBehaviour
         RaycastHit hit;
         if (Physics.Raycast(Player.instance.gameObject.transform.position + new Vector3(0,2,0), Vector3.down, out hit, Mathf.Infinity, Ground))
         {
-            Debug.DrawRay(Player.instance.gameObject.transform.position + new Vector3(0, 2, 0), Vector3.down, Color.red, 2);
+            //Debug.DrawRay(Player.instance.gameObject.transform.position + new Vector3(0, 2, 0), Vector3.down, Color.red, 2);
             if (hit.transform.GetComponent<PrefabData>())
             {
                 if (hit.transform.GetComponent<PrefabData>().montable == Montable.Yes)

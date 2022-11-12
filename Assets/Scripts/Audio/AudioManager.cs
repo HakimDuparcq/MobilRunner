@@ -12,17 +12,13 @@ public class AudioManager : MonoBehaviour
     public float MusicVolume =1f;
     
     [Range(0f, 1f)]
-    public float FXVolume;
+    public float FXVolume =1f;
 
     [Space]
     public Slider volumeMusicSlider;
-    public TextMeshProUGUI volumeMusicValue;
-    public TextMeshProUGUI volumeMusicText;
 
     [Space]
     public Slider volumeFXSlider;
-    public TextMeshProUGUI volumeFXValue;
-    public TextMeshProUGUI volumeFXText;
 
     [Space]
     public Sound[] sounds;
@@ -53,11 +49,9 @@ public class AudioManager : MonoBehaviour
 
         }
         volumeMusicSlider.value = MusicVolume;
-        volumeMusicValue.text = Math.Round(volumeMusicSlider.value ,  1 ).ToString();
         volumeMusicSlider.onValueChanged.AddListener(delegate { ValueChangeSliderCheck(); });
 
         volumeFXSlider.value = FXVolume;
-        volumeFXValue.text = Math.Round(volumeFXSlider.value, 1).ToString();
         volumeFXSlider.onValueChanged.AddListener(delegate { ValueChangeSliderCheck(); });
     }
     public void Start()
@@ -70,10 +64,8 @@ public class AudioManager : MonoBehaviour
     public void ValueChangeSliderCheck()
     {
         MusicVolume = volumeMusicSlider.value ;
-        volumeMusicValue.text = Math.Round(volumeMusicSlider.value, 1).ToString();
 
         FXVolume = volumeFXSlider.value;
-        volumeFXValue.text = Math.Round(volumeFXSlider.value, 1).ToString();
 
         foreach (Sound s in sounds)
         {

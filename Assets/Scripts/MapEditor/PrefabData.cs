@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
-public enum ObstacleType {None, Move, Start, End, StartMove, GoodCoin, BadCoin}
+public enum ObstacleType {Collision, NoCollision, Move, Start, End, StartMove, GoodCoin, BadCoin}
 public enum Montable { No, Yes, Ground}
 
 public class PrefabData : MonoBehaviour

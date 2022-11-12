@@ -19,6 +19,9 @@ public class PatternManager : MonoBehaviour
 
     public float speedMove;
 
+    public GameObject plane;
+    public Transform startPlanePos;
+
     private void Awake()
     {
         instance = this;
@@ -43,7 +46,7 @@ public class PatternManager : MonoBehaviour
 
     public void CreateMap()
     {
-        
+        offset = 0;
         for (int i = 0; i < patterns.Length; i++)
         {
             GameObject patterni = new GameObject();
@@ -53,8 +56,6 @@ public class PatternManager : MonoBehaviour
             OnLoadPattern(patterni, i);
 
         }
-
-        
 
     }
 
@@ -67,8 +68,8 @@ public class PatternManager : MonoBehaviour
         //Start Move
         GameObject startMove = Instantiate(startMoveObject,  Vector3.forward * (offset + patterns[number].startMove), Quaternion.identity);  
         startMove.transform.parent = patterni.transform;
-        startMove.GetComponent<BoxCollider>().enabled = true;
-        startMove.GetComponent<BoxCollider>().isTrigger = true;
+        startMove.GetComponent<Collider>().enabled = true;
+        startMove.GetComponent<Collider>().isTrigger = true;
         //startMove.GetComponent<MeshRenderer>().enabled = false;
 
         if (patterns[number].difficulty==DifficultyLevel.End) {startMove.tag = "Finish";}
@@ -77,10 +78,11 @@ public class PatternManager : MonoBehaviour
         {
             GameObject obstacle = Instantiate(patterns[number].gameObjects[ii], patterns[number].positions[ii]+  Vector3.forward * offset   , Quaternion.identity);
             obstacle.transform.parent = patterni.transform;
+            if (obstacle.GetComponent<PrefabData>().obstacleType==ObstacleType.NoCollision)
+            {
+                obstacle.GetComponent<Collider>().enabled = false;
+            }
         }
-
-        
-
 
     }
 
@@ -117,5 +119,16 @@ public class PatternManager : MonoBehaviour
 
     }
 
+
+    public void ResetMap()
+    {
+        for (int i = 0; i < contener.transform.childCount; i++)
+        {
+            Destroy(contener.transform.GetChild(i).gameObject);
+        }
+        movePatterns = new List<ListGameObject>();
+        plane.transform.position = startPlanePos.position;
+        CreateMap();
+    }
 
 }

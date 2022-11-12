@@ -26,7 +26,7 @@ public class NotificationSystemPerso : MonoBehaviour
             notification[i].Text = "Come to Run";
             //notification.SmallIcon = "icon";
             notification[i].LargeIcon = "logo";
-            notification[i].FireTime = System.DateTime.Now.AddSeconds(10*i+1); //Time
+            notification[i].FireTime = System.DateTime.Now.AddHours(10*i+1); //Time
             var id =  AndroidNotificationCenter.SendNotification(notification[i], "channel_id");
         }
         

@@ -9,6 +9,7 @@ public class MapController : MonoBehaviour
     public float speedMap;
 
 
+
     private void Awake()
     {
         instance = this;
