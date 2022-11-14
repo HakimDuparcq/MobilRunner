@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2323000}
   - component: {fileID: -1438930338208504410}
   - component: {fileID: 897179996696392743}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SM_Prop_Goblin_Spikes_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}

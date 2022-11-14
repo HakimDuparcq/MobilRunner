@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 6958843474953871364}
   - component: {fileID: 1239076768506839062}
   - component: {fileID: 1553511268767975454}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SM_Env_Wood_Bridge_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2311790}
   - component: {fileID: 4745570403334815770}
   - component: {fileID: -4715582316209632587}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SM_Prop_Torch_Ornate_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}

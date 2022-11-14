@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4025289498827020}
   - component: {fileID: 198808156537696746}
   - component: {fileID: 199970288371183238}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FX_Pickup_Glow_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4896,7 +4896,7 @@ GameObject:
   - component: {fileID: 199536504798512130}
   - component: {fileID: -4022039133789032293}
   - component: {fileID: -4699797586572108153}
-  m_Layer: 1
+  m_Layer: 6
   m_Name: FX_Pickup_Ammo_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9751,7 +9751,7 @@ GameObject:
   - component: {fileID: 4787244354013590}
   - component: {fileID: 198304423127689714}
   - component: {fileID: 199259370876401832}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FX_Pickup_Beams_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14634,7 +14634,7 @@ GameObject:
   - component: {fileID: 4299035999436686}
   - component: {fileID: 198523932949753784}
   - component: {fileID: 199508864148846702}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FX_Pickup_Sparkles_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}

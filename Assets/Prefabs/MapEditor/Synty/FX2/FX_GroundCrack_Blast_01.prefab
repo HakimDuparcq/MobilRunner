@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4081845586369450}
   - component: {fileID: 198361330790749672}
   - component: {fileID: 199194582083050806}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FX_GroundCrack_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4896,7 +4896,7 @@ GameObject:
   - component: {fileID: 199139856173615580}
   - component: {fileID: -9041710823125799628}
   - component: {fileID: 1982823367213973424}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FX_GroundCrack_Blast_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9813,7 +9813,7 @@ GameObject:
   - component: {fileID: 4604871029248272}
   - component: {fileID: 198190894420298430}
   - component: {fileID: 199750870103157044}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FX_GroundCrack_Dust_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}

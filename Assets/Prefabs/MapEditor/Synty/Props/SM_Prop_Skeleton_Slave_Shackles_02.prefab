@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2302310}
   - component: {fileID: 8533041271605756405}
   - component: {fileID: 8572233092702804499}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SM_Prop_Skeleton_Slave_Shackles_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2301520}
   - component: {fileID: 1040639792953031483}
   - component: {fileID: 7457736131634007739}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SM_Trap_AcidHead_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}

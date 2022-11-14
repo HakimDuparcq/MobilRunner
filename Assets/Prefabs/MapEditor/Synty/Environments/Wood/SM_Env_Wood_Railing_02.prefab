@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2309136}
   - component: {fileID: -307175081919703389}
   - component: {fileID: -564637994100633647}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SM_Env_Wood_Railing_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}

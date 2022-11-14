@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 199275442585009818}
   - component: {fileID: 6926599030648469874}
   - component: {fileID: 5354449445772344492}
-  m_Layer: 1
+  m_Layer: 6
   m_Name: FX_GlowSpot_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}

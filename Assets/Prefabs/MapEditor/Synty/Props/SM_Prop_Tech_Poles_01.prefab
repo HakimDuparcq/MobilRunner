@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2380650}
   - component: {fileID: 7581327012271896460}
   - component: {fileID: 1536149917697172064}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SM_Prop_Tech_Poles_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}

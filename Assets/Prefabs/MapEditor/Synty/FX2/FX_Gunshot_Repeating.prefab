@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4172853290860164}
   - component: {fileID: 108853099234326160}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FX_Gunshot_Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -107,7 +107,7 @@ GameObject:
   - component: {fileID: 199030177319574186}
   - component: {fileID: 4099309759249810611}
   - component: {fileID: -3899959403668688042}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FX_Gunshot_Repeating
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4825,7 +4825,7 @@ GameObject:
   - component: {fileID: 4177220983113826}
   - component: {fileID: 198400803439506004}
   - component: {fileID: 199757056052916014}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FX_Gunshot_Flash
   m_TagString: Untagged
   m_Icon: {fileID: 0}

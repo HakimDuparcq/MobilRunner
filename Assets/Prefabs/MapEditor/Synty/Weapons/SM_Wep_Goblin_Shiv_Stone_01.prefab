@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2369090}
   - component: {fileID: -4075547383331134965}
   - component: {fileID: 5843075723155931017}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SM_Wep_Goblin_Shiv_Stone_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}

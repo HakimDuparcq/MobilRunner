@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 19982614}
   - component: {fileID: -6274832586685437461}
   - component: {fileID: -1120276383791133993}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FX_Dust_Large_Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}

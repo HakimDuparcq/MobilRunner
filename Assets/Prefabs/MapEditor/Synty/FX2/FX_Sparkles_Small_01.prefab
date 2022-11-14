@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 199224435024146190}
   - component: {fileID: 285434641834457867}
   - component: {fileID: 1641921238663159977}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FX_Sparkles_Small_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}

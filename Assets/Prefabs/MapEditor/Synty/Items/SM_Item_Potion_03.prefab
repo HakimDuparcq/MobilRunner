@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2391754}
   - component: {fileID: 1596425732975523715}
   - component: {fileID: 4557422507149499225}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SM_Item_Potion_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}

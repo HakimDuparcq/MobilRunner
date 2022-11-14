@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2310560}
   - component: {fileID: -7815406561841512926}
   - component: {fileID: 3361535852954014628}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SM_Wep_Greatsword_Curved_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}

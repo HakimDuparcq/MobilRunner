@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2379868}
   - component: {fileID: -4235852264201718008}
   - component: {fileID: 7380203064813641126}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SM_Prop_Skeleton_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}

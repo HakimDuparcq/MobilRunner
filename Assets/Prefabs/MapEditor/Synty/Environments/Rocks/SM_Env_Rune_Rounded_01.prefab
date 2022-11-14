@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2347554}
   - component: {fileID: -740986021857996608}
   - component: {fileID: 4566791842743118908}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SM_Env_Rune_Rounded_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}

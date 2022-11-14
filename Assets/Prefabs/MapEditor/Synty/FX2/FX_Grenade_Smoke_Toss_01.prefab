@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 199702511855154614}
   - component: {fileID: -6310026190732858623}
   - component: {fileID: -8666148229339769642}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FX_Grenade_Smoke_Toss_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4935,7 +4935,7 @@ GameObject:
   - component: {fileID: 4171449562953842}
   - component: {fileID: 198667137073904320}
   - component: {fileID: 199357008361002890}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FX_Grenade_Smoke_Delayed_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9782,7 +9782,7 @@ GameObject:
   - component: {fileID: 4422268414494712}
   - component: {fileID: 198621715444455144}
   - component: {fileID: 199571531074206178}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FX_Grenade_Smoke_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}

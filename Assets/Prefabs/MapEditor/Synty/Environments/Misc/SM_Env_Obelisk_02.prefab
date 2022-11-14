@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2389220}
   - component: {fileID: -6537198980733177491}
   - component: {fileID: 4889224222123608391}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SM_Env_Obelisk_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}

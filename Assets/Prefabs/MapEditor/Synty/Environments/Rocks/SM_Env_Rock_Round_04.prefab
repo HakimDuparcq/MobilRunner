@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2341196}
   - component: {fileID: 7309756926905860245}
   - component: {fileID: -7876406341191578866}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SM_Env_Rock_Round_04
   m_TagString: Untagged
   m_Icon: {fileID: 0}

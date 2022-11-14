@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4541371531073384}
   - component: {fileID: 198190609188049062}
   - component: {fileID: 199748811617243038}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FX_Rain_Collision_Splash_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4905,7 +4905,7 @@ GameObject:
   - component: {fileID: 199188353248746556}
   - component: {fileID: 160586479912700574}
   - component: {fileID: 8214207244292139882}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FX_Rain_Collision_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}

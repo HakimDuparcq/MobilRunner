@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 23665255620596102}
   - component: {fileID: 64727776313689766}
   - component: {fileID: 1751415756594070608}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SM_Env_Cave_Hole_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}

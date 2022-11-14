@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2300706}
   - component: {fileID: -4638314273258480892}
   - component: {fileID: 1530516891438845028}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SM_Env_Cave_Curved_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}

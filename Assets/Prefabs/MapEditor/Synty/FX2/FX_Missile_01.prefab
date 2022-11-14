@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4145702680975920}
   - component: {fileID: 198357811499372172}
   - component: {fileID: 199896730050137956}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FX_Missile_Explosion_Smoke_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4633,7 +4633,7 @@ GameObject:
   - component: {fileID: 4821204927084100}
   - component: {fileID: 198791376269305928}
   - component: {fileID: 199506766131711274}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FX_Missile_Explosion_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9467,7 +9467,7 @@ GameObject:
   - component: {fileID: 4293766142176300}
   - component: {fileID: 198811123410408712}
   - component: {fileID: 199085120479420894}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FX_Missile_Explosion_Flash_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14261,7 +14261,7 @@ GameObject:
   - component: {fileID: 4987059440552568}
   - component: {fileID: 198236908249064976}
   - component: {fileID: 199562430889480910}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FX_Missile_Explosion_Blast_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19090,7 +19090,7 @@ GameObject:
   - component: {fileID: 4040028020007240}
   - component: {fileID: 198566513606834512}
   - component: {fileID: 199319496894011822}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FX_Missile_Explosion_Smoke_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23712,7 +23712,7 @@ GameObject:
   - component: {fileID: 4741767859949648}
   - component: {fileID: 198473088015680172}
   - component: {fileID: 199183842162010658}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FX_Missile_Smoke_Trail_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28554,7 +28554,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4605132435072240}
   - component: {fileID: 108349316341619792}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FX_Missile_Explosion_Light_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28651,7 +28651,7 @@ GameObject:
   - component: {fileID: 199269372346044020}
   - component: {fileID: 9060464478143877388}
   - component: {fileID: -5140093237960412420}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FX_Missile_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33607,7 +33607,7 @@ GameObject:
   - component: {fileID: 4452097346205616}
   - component: {fileID: 198223632399977178}
   - component: {fileID: 199012464380259174}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FX_Missile_Explosion_Debris_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}

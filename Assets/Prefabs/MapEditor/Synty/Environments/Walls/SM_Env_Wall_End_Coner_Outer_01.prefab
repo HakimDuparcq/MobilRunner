@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2364552}
   - component: {fileID: -1252938115439796719}
   - component: {fileID: 6061614147619169892}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SM_Env_Wall_End_Coner_Outer_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}

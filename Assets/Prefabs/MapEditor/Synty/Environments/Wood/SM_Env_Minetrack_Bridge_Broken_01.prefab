@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2320124}
   - component: {fileID: 818911086412589033}
   - component: {fileID: 7518298888083633824}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SM_Env_Minetrack_Bridge_Broken_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2329182}
   - component: {fileID: 7003822693021808543}
   - component: {fileID: -6517950280068624019}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SM_Env_Volcanic_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}

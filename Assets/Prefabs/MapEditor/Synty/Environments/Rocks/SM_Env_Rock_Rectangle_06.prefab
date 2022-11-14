@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2340888}
   - component: {fileID: 7123897248876818092}
   - component: {fileID: 3391651406862913542}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SM_Env_Rock_Rectangle_06
   m_TagString: Untagged
   m_Icon: {fileID: 0}

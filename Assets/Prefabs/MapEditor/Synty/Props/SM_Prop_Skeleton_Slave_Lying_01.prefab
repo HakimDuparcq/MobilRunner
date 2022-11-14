@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2350820}
   - component: {fileID: 8402997673495788817}
   - component: {fileID: 2794539114693375323}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SM_Prop_Skeleton_Slave_Lying_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}

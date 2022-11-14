@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2333968}
   - component: {fileID: 8742119192126065501}
   - component: {fileID: -5006252437876388307}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SM_Env_Basement_Ceiling_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}

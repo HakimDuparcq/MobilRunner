@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4768504045832088}
   - component: {fileID: 198459030071756234}
   - component: {fileID: 199840853454880242}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FX_RainbowSparkle_Sparkles_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4896,7 +4896,7 @@ GameObject:
   - component: {fileID: 199373562077506922}
   - component: {fileID: -5158738353498732027}
   - component: {fileID: -4279739427571177311}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FX_RainbowSparkle_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9823,7 +9823,7 @@ GameObject:
   - component: {fileID: 4685052389516264}
   - component: {fileID: 198129111802126280}
   - component: {fileID: 199108782438343974}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FX_RainbowSparkle_Ring_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14706,7 +14706,7 @@ GameObject:
   - component: {fileID: 4874770442503366}
   - component: {fileID: 198067790099617112}
   - component: {fileID: 199813169925685132}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FX_RainbowSparkle_Ring_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2329274}
   - component: {fileID: 5730670398108380174}
   - component: {fileID: -8161187337464052915}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SM_Env_Wall_DoorFrame_Round_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}

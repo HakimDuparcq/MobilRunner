@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2330460}
   - component: {fileID: 2913644146002901838}
   - component: {fileID: 3516511052923121334}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SM_Env_Wall_Archway_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2389296}
   - component: {fileID: -4651952053295791543}
   - component: {fileID: 5550762050468295476}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SM_Prop_Vase_Broken_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}

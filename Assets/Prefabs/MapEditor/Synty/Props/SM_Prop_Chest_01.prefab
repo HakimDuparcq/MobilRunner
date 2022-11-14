@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 400406}
   - component: {fileID: 3373012}
   - component: {fileID: 2351152}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SM_Prop_Chest_01_Lid
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -96,7 +96,7 @@ GameObject:
   - component: {fileID: 2322192}
   - component: {fileID: -8109683313620318531}
   - component: {fileID: 1639374521238933213}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SM_Prop_Chest_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}

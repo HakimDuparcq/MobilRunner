@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 23335870552687084}
   - component: {fileID: 65158901288634028}
   - component: {fileID: -3772633416629498658}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SM_Prop_Book_Stand_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}

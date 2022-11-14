@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2328142}
   - component: {fileID: -3276937812020164687}
   - component: {fileID: -5770010963171399027}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SM_Env_Wall_DoorFrame_Double_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}

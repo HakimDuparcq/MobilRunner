@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2353176}
   - component: {fileID: -3816267664124797294}
   - component: {fileID: 520456263042268728}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SM_Env_Rock_Pillar_06
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2372488}
   - component: {fileID: 6471070278196216849}
   - component: {fileID: 1959469135867962913}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SM_Item_Vial_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}

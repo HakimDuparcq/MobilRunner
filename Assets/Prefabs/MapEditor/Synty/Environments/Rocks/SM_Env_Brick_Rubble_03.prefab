@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2366178}
   - component: {fileID: -5743001375553846395}
   - component: {fileID: 2811944571630244304}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SM_Env_Brick_Rubble_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}

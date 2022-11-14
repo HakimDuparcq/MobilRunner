@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2364494}
   - component: {fileID: -4957733443962967728}
   - component: {fileID: -1000309555880795166}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SM_Wep_Goblin_Machete_Spikes_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}

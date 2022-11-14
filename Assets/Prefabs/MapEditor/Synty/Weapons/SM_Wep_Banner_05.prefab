@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2303252}
   - component: {fileID: -4901423670351282547}
   - component: {fileID: 5394556451936432874}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SM_Wep_Banner_05
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4833338709728564}
   - component: {fileID: 198488942651934914}
   - component: {fileID: 199876811225564316}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FX_LevelUp_Beams_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4894,7 +4894,7 @@ GameObject:
   - component: {fileID: 4547359319027860}
   - component: {fileID: 198756768194489796}
   - component: {fileID: 199845324410913130}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FX_LevelUp_Swirl_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9786,7 +9786,7 @@ GameObject:
   - component: {fileID: 4855435021788038}
   - component: {fileID: 198457394227140346}
   - component: {fileID: 199596037950806276}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FX_LevelUp_Sparkles_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14671,7 +14671,7 @@ GameObject:
   - component: {fileID: 199056527070751096}
   - component: {fileID: -8663559096635895046}
   - component: {fileID: -1333990934717958512}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FX_LevelUp_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2327360}
   - component: {fileID: 6309403163176877162}
   - component: {fileID: -5989415755713833567}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SM_Env_Minetrack_Straight_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}

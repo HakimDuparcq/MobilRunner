@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2358610}
   - component: {fileID: 8745367962693397893}
   - component: {fileID: -2216253102749878788}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SM_Prop_Candle_Stand_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}

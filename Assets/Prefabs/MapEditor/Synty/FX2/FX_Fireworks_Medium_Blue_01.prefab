@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4702028864252846}
   - component: {fileID: 198069424884980432}
   - component: {fileID: 199251785300211672}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FX_Fireworks_Trail_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4584,7 +4584,7 @@ GameObject:
   - component: {fileID: 4765279795263644}
   - component: {fileID: 198444634388247846}
   - component: {fileID: 199625128983478890}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FX_Fireworks_Spark_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9296,7 +9296,7 @@ GameObject:
   - component: {fileID: 4066635277126214}
   - component: {fileID: 198475452607885232}
   - component: {fileID: 199686403756951662}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FX_Fireworks_Smoke_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14010,7 +14010,7 @@ GameObject:
   - component: {fileID: 199445863673751028}
   - component: {fileID: 4273501814440559359}
   - component: {fileID: -4269428925258499219}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FX_Fireworks_Medium_Blue_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18956,7 +18956,7 @@ GameObject:
   - component: {fileID: 4494760884448640}
   - component: {fileID: 198268598796057722}
   - component: {fileID: 199962810603918500}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FX_Fireworks_Explode_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23860,7 +23860,7 @@ GameObject:
   - component: {fileID: 4340884986550448}
   - component: {fileID: 198849889304873564}
   - component: {fileID: 199152499877091464}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FX_Fireworks_Trail_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}

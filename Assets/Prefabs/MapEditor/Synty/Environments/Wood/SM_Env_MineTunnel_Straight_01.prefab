@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2361274}
   - component: {fileID: 104633942051260783}
   - component: {fileID: 1669048197825869073}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SM_Env_MineTunnel_Straight_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}

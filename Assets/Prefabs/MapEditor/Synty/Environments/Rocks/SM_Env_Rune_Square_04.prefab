@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2300500}
   - component: {fileID: 4174579219369619321}
   - component: {fileID: 5481597743340187351}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SM_Env_Rune_Square_04
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 199719811051971104}
   - component: {fileID: 6957503565299930708}
   - component: {fileID: -7577672148336875210}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FX_BloodSplat_Small_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}

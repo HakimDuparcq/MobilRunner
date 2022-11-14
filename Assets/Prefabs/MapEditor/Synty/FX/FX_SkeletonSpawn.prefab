@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 19955574}
   - component: {fileID: 6004283192481978807}
   - component: {fileID: -1669870642916971931}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FX_SkeletonSpawn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4845,7 +4845,7 @@ GameObject:
   - component: {fileID: 468570}
   - component: {fileID: 19842370}
   - component: {fileID: 19902986}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FX_Dirt_Dust
   m_TagString: Untagged
   m_Icon: {fileID: 0}

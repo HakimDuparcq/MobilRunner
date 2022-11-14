@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4917527170376572}
   - component: {fileID: 198895903975920690}
   - component: {fileID: 199596507630167450}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FX_CannonShot_Flash_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4804,7 +4804,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4111489680486726}
   - component: {fileID: 108389683496496954}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FX_CannonShot_Light_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4899,7 +4899,7 @@ GameObject:
   - component: {fileID: 4668433595102260}
   - component: {fileID: 198702482492739210}
   - component: {fileID: 199421524802141276}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FX_CannonShot_Smoke_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9521,7 +9521,7 @@ GameObject:
   - component: {fileID: 4979627823083282}
   - component: {fileID: 198680702921247706}
   - component: {fileID: 199277649451710960}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FX_CannonShot_Blast_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14352,7 +14352,7 @@ GameObject:
   - component: {fileID: 199399342436014006}
   - component: {fileID: 6772629546765697036}
   - component: {fileID: 1822234241146527403}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FX_CannonShot_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2323500}
   - component: {fileID: 8644239954256706800}
   - component: {fileID: 4891944598971111841}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SM_Env_Wall_Fireplace_Entrance_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 199855085707483186}
   - component: {fileID: -5901133374079979900}
   - component: {fileID: 3017535731055411184}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FX_Ritual_Circle_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4804,7 +4804,7 @@ GameObject:
   - component: {fileID: 4396697787028894}
   - component: {fileID: 198517173316420940}
   - component: {fileID: 199897110710365382}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FX_Portal_Dots_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9638,7 +9638,7 @@ GameObject:
   - component: {fileID: 4879113751103120}
   - component: {fileID: 198835356494683118}
   - component: {fileID: 199247359886102162}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FX_Electricity_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}

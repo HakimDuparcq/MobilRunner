@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2370496}
   - component: {fileID: -1906282695877678062}
   - component: {fileID: -4939911487464551242}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SM_Wep_Ornate_Spikes_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}

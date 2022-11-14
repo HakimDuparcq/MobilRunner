@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 199319671110171668}
   - component: {fileID: 2933184424727432112}
   - component: {fileID: -4324869135992911144}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FX_Smoke_Black_Small_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}

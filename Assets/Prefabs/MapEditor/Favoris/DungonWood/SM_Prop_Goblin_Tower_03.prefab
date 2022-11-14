@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2654215120768198302}
   - component: {fileID: -425280388560531959}
   - component: {fileID: 3623448395055075507}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SM_Prop_Goblin_Tower_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2386342}
   - component: {fileID: -4399970474402471005}
   - component: {fileID: -2749374821094495423}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SM_Env_Mushroom_Small_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}

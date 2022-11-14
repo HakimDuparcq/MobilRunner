@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 199494924148919436}
   - component: {fileID: -4086115617311294728}
   - component: {fileID: -2979379035039611783}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FX_Shell_Ejection_Repeating_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}

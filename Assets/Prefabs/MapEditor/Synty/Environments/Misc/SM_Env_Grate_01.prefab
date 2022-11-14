@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2348562}
   - component: {fileID: -3940042206319210768}
   - component: {fileID: 4323286349704920726}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SM_Env_Grate_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}

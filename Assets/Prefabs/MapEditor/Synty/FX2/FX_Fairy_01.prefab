@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 199042730207760950}
   - component: {fileID: -5848174194192550480}
   - component: {fileID: -7033740818343101031}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FX_Fairy_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}

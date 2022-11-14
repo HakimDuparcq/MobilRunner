@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2300506}
   - component: {fileID: -5756031980862760423}
   - component: {fileID: -4063724994064275912}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SM_Env_Railing_Angle_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}

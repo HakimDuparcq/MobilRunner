@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2356012}
   - component: {fileID: 4526230874321098506}
   - component: {fileID: -3657780671194511665}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SM_Env_Tree_Dandelion_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -12,8 +12,10 @@ GameObject:
   - component: {fileID: 7211842768021613730}
   - component: {fileID: 7211842768022666040}
   - component: {fileID: 7500024862186688262}
-  - component: {fileID: -63340644246194303}
-  m_Layer: 0
+  - component: {fileID: 8554311211509513692}
+  - component: {fileID: 8063329802746434611}
+  - component: {fileID: 3393437073874650462}
+  m_Layer: 6
   m_Name: Gate
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -103,8 +105,8 @@ MonoBehaviour:
   offset: {fileID: 0}
   size: 0
   speed: 0
---- !u!64 &-63340644246194303
-MeshCollider:
+--- !u!65 &8554311211509513692
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -113,7 +115,32 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4300000, guid: 0f26e08c252f5a14fb4725f9bc1851bb, type: 3}
+  serializedVersion: 2
+  m_Size: {x: 0.284698, y: 2.1695518, z: 0.5718689}
+  m_Center: {x: 0.7846453, y: 1.0847759, z: -0.0000038146973}
+--- !u!65 &8063329802746434611
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7211842768020643066}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.28140116, y: 2.2894769, z: 0.5718689}
+  m_Center: {x: -0.7863014, y: 1.1447384, z: -0.000003814697}
+--- !u!65 &3393437073874650462
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7211842768020643066}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.1826477, y: 0.35855198, z: 0.5718689}
+  m_Center: {x: 0.020218343, y: 2.5010867, z: -0.0000038146973}

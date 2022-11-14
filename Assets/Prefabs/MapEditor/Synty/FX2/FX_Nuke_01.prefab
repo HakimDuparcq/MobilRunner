@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4987766675101762}
   - component: {fileID: 198054249377712322}
   - component: {fileID: 199256869915583014}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FX_Nuke_CloudBig
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4896,7 +4896,7 @@ GameObject:
   - component: {fileID: 199266808749592206}
   - component: {fileID: -3003420770764938929}
   - component: {fileID: 6037085344482571797}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FX_Nuke_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9720,7 +9720,7 @@ GameObject:
   - component: {fileID: 4430516176910832}
   - component: {fileID: 198894710553487248}
   - component: {fileID: 199559159683653290}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FX_Nuke_FirstWave
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14521,7 +14521,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4015262861944432}
   - component: {fileID: 108631369501175736}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Nuke_light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14616,7 +14616,7 @@ GameObject:
   - component: {fileID: 4118546639248030}
   - component: {fileID: 198465014536305508}
   - component: {fileID: 199172319150445288}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FX_Nuke_BigBang
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19418,7 +19418,7 @@ GameObject:
   - component: {fileID: 4438624029411086}
   - component: {fileID: 198968939458493798}
   - component: {fileID: 199613607963004310}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FX_Nuke_SecondWave
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24211,7 +24211,7 @@ GameObject:
   - component: {fileID: 4265579229065172}
   - component: {fileID: 198639240705320588}
   - component: {fileID: 199655376138007498}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FX_Nuke_CloudStart
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29094,7 +29094,7 @@ GameObject:
   - component: {fileID: 4327901661122400}
   - component: {fileID: 198938622846565216}
   - component: {fileID: 199550888082571188}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FX_Nuke_Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33888,7 +33888,7 @@ GameObject:
   - component: {fileID: 4753754055776160}
   - component: {fileID: 198685699651680588}
   - component: {fileID: 199649482580821350}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FX_Nuke_CloudRing
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38708,7 +38708,7 @@ GameObject:
   - component: {fileID: 4291920221997004}
   - component: {fileID: 198837432902669574}
   - component: {fileID: 199800938358517614}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FX_Nuke_Rings
   m_TagString: Untagged
   m_Icon: {fileID: 0}

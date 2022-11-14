@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 199744047377747860}
   - component: {fileID: -1191600732465343603}
   - component: {fileID: 3587237638257976648}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FX_Flies_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 199180711093822318}
   - component: {fileID: 2627283928010844832}
   - component: {fileID: 7721283572515374540}
-  m_Layer: 1
+  m_Layer: 6
   m_Name: FX_Sparkle_Orbit_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2311850}
   - component: {fileID: 3464474119297850510}
   - component: {fileID: -2235947760327469445}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SM_Env_Rubble_Plank_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}

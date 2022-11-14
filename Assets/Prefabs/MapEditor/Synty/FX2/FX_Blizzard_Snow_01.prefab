@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 198692531370721068}
   - component: {fileID: 589603382953446513}
   - component: {fileID: -3278124862393195647}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FX_Blizzard_Snow_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4781,7 +4781,7 @@ GameObject:
   - component: {fileID: 4272880342782192}
   - component: {fileID: 199362116421442864}
   - component: {fileID: 198637889697170250}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FX_Blizzard_Cloud_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}

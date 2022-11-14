@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 199806933437478562}
   - component: {fileID: 7510247867136759184}
   - component: {fileID: 5982982155519979285}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FX_MagicBlast_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4938,7 +4938,7 @@ GameObject:
   - component: {fileID: 4606900197771750}
   - component: {fileID: 198224009598360954}
   - component: {fileID: 199326538133792364}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FX_MagicBlast_Ground_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}

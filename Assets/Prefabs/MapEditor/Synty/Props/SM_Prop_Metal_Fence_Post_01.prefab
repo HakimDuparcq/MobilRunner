@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2320388}
   - component: {fileID: -4284404491651477839}
   - component: {fileID: -5177331822602651734}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SM_Prop_Metal_Fence_Post_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}

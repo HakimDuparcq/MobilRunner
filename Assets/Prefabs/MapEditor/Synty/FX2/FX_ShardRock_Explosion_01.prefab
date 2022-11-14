@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4905443152670804}
   - component: {fileID: 198431382792385192}
   - component: {fileID: 199426666686023256}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FX_ShardRock_Dust_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4642,7 +4642,7 @@ GameObject:
   - component: {fileID: 4457136824131610}
   - component: {fileID: 198755996505729506}
   - component: {fileID: 199320249532719782}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FX_ShardRock_Smaller_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9574,7 +9574,7 @@ GameObject:
   - component: {fileID: 4266492438196682}
   - component: {fileID: 198003136798717704}
   - component: {fileID: 199135240046822038}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FX_ShardRock_Dust_End_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14205,7 +14205,7 @@ GameObject:
   - component: {fileID: 4769743382710836}
   - component: {fileID: 198597593609667400}
   - component: {fileID: 199089739131629040}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FX_ShardRock_Dust_End_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18838,7 +18838,7 @@ GameObject:
   - component: {fileID: 199684519965282764}
   - component: {fileID: -4894400190029348273}
   - component: {fileID: 2174190767907750017}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FX_ShardRock_Explosion_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23806,7 +23806,7 @@ GameObject:
   - component: {fileID: 4280753935467632}
   - component: {fileID: 198894771778003164}
   - component: {fileID: 199413397520067084}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FX_ShardRock_Debris_End_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28698,7 +28698,7 @@ GameObject:
   - component: {fileID: 4718936372261374}
   - component: {fileID: 198087751715648712}
   - component: {fileID: 199080853333425592}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FX_ShardRock_Blast_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33581,7 +33581,7 @@ GameObject:
   - component: {fileID: 4761197258001074}
   - component: {fileID: 198619439489578000}
   - component: {fileID: 199655476127818588}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FX_ShardRock_Embers_End_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38203,7 +38203,7 @@ GameObject:
   - component: {fileID: 4991619098575310}
   - component: {fileID: 198512756932455728}
   - component: {fileID: 199479416394140444}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FX_ShardRock_Embers_End_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -42825,7 +42825,7 @@ GameObject:
   - component: {fileID: 4807041616463978}
   - component: {fileID: 198295372914127614}
   - component: {fileID: 199021703122216766}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FX_ShardRock_Debris_End_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -47717,7 +47717,7 @@ GameObject:
   - component: {fileID: 4045848684341672}
   - component: {fileID: 198071242480981100}
   - component: {fileID: 199581020021578496}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FX_ShardRock_Embers_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}

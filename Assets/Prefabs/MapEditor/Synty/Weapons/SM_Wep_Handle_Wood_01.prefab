@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2351470}
   - component: {fileID: -8347178486019654150}
   - component: {fileID: 6685498236835485806}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SM_Wep_Handle_Wood_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}

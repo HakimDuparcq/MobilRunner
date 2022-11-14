@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2380360}
   - component: {fileID: 595797461649385444}
   - component: {fileID: 9127415943609116507}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SM_Env_Background_Black_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}

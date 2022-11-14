@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2380292}
   - component: {fileID: 5256104651132783}
   - component: {fileID: 5379978150174419416}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SM_Env_Cave_Background_02_DoubleSided
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 199875814902542284}
   - component: {fileID: 9196020503024836389}
   - component: {fileID: 6558550868851973431}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FX_Fireflies_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}

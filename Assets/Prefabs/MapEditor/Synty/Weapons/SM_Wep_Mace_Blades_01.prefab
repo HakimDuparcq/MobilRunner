@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2369950}
   - component: {fileID: -4488858614217359974}
   - component: {fileID: 5461017104440346918}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SM_Wep_Mace_Blades_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2354004}
   - component: {fileID: 7940356045732215486}
   - component: {fileID: 5332902244351683997}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SM_Trap_Swing_Blade_Housing_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2333460}
   - component: {fileID: 1346651631352553567}
   - component: {fileID: 4034730145885190495}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SM_Prop_Tech_Pipe_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}

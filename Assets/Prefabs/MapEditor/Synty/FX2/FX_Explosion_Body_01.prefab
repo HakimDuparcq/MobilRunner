@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4776144301168184}
   - component: {fileID: 198692212603397436}
   - component: {fileID: 199359729031618630}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FX_Explosion_Body_Fire_Core_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4642,7 +4642,7 @@ GameObject:
   - component: {fileID: 4760354754704274}
   - component: {fileID: 198315289735427592}
   - component: {fileID: 199123247298560388}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FX_Explosion_Body_Blood_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9264,7 +9264,7 @@ GameObject:
   - component: {fileID: 4767743506718596}
   - component: {fileID: 198602353585704898}
   - component: {fileID: 199764931591023610}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FX_Explosion_Body_Embers_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13888,7 +13888,7 @@ GameObject:
   - component: {fileID: 199032388029592334}
   - component: {fileID: 7038064743884180483}
   - component: {fileID: -5204657883761160774}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FX_Explosion_Body_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18566,7 +18566,7 @@ GameObject:
   - component: {fileID: 4922505269675074}
   - component: {fileID: 198325438601009056}
   - component: {fileID: 199588215105935524}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FX_Explosion_Body_Chunk_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23224,7 +23224,7 @@ GameObject:
   - component: {fileID: 4787154357417446}
   - component: {fileID: 198500592339807626}
   - component: {fileID: 199604702627220248}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FX_Explosion_Body_Fire_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27945,7 +27945,7 @@ GameObject:
   - component: {fileID: 4267212410996426}
   - component: {fileID: 198734669907147586}
   - component: {fileID: 199343943383414538}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FX_Explosion_Body_Body_Fire_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}

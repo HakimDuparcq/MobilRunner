@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2308570}
   - component: {fileID: 2704682179114453747}
   - component: {fileID: 3099218731519820855}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SM_Prop_Jewel_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}

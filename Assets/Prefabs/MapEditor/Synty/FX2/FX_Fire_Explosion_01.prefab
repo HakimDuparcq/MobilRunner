@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4043991619771602}
   - component: {fileID: 198212443826252400}
   - component: {fileID: 199039252766279906}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FX_Fire_Explosion_Embers_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4633,7 +4633,7 @@ GameObject:
   - component: {fileID: 4304314170427634}
   - component: {fileID: 198192500169632356}
   - component: {fileID: 199019332059290098}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FX_Fire_Explosion_Core_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9266,7 +9266,7 @@ GameObject:
   - component: {fileID: 199942670210766882}
   - component: {fileID: 5221905744977217563}
   - component: {fileID: 5963983546219639659}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FX_Fire_Explosion_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}

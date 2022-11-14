@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2387366}
   - component: {fileID: 3326504701503906026}
   - component: {fileID: -8569976150846958957}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SM_Env_Ceiling_Stone_Pillar_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}

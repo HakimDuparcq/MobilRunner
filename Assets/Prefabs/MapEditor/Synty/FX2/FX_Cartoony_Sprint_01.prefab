@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 199785920267046076}
   - component: {fileID: 7660429603592607171}
   - component: {fileID: -7963926148943247543}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FX_Cartoony_Sprint_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}

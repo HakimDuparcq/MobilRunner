@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 23523403265105732}
   - component: {fileID: 65927275812275158}
   - component: {fileID: -4668711404675111219}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SM_Prop_Bookcase_Grand_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}

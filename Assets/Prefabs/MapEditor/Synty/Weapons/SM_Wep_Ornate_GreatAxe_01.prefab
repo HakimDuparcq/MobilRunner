@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2360410}
   - component: {fileID: -7796803424449955518}
   - component: {fileID: 4658680555176601334}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SM_Wep_Ornate_GreatAxe_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2345164}
   - component: {fileID: 4223052295849442521}
   - component: {fileID: -922227185977429982}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SM_Prop_WeaponRack_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}

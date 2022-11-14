@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 199429679119627092}
   - component: {fileID: 630921004122785651}
   - component: {fileID: -647368189398195082}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FX_Impact_Large_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4929,7 +4929,7 @@ GameObject:
   - component: {fileID: 4406674034569288}
   - component: {fileID: 198230014477507630}
   - component: {fileID: 199769956689167726}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FX_Impact_Large_Dust_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}

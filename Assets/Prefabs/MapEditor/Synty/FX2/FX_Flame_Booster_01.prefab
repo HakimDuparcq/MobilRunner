@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4845176455782310}
   - component: {fileID: 198911688229030356}
   - component: {fileID: 199280525087405178}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FX_Flame_Booster_Embers_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4635,7 +4635,7 @@ GameObject:
   - component: {fileID: 199876713702356702}
   - component: {fileID: 8350640871151216450}
   - component: {fileID: -7586931695858806153}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FX_Flame_Booster_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}

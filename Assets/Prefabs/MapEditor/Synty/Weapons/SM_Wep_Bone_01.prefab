@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2349206}
   - component: {fileID: 208206552936108630}
   - component: {fileID: -6904932842173254096}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SM_Wep_Bone_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}

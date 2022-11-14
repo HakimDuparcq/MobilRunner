@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 199413298348980380}
   - component: {fileID: 5678625269992278569}
   - component: {fileID: -3390640803853927625}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FX_Shell_Ejection_Large_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}

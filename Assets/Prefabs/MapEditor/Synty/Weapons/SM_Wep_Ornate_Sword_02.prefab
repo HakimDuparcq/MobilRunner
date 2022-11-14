@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2384120}
   - component: {fileID: -211702756020733374}
   - component: {fileID: -327073643636561174}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SM_Wep_Ornate_Sword_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}

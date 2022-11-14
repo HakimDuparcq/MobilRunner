@@ -16,7 +16,7 @@ public class MapEditor : MonoBehaviour
     public static MapEditor instance;
 
     public State state;
-
+    public Pattern[] patterns;
     public Camera worldCamera;
     public Category[] catalog;
 
@@ -68,7 +68,7 @@ public class MapEditor : MonoBehaviour
     public LayerMask layerObstacle;
     public LayerMask layerGroundObstacle;
 
-    public Pattern[] patterns;
+
     private int patternNumber;
     private int actualCategory;
 
@@ -146,7 +146,6 @@ public class MapEditor : MonoBehaviour
             {
                 int x = ii;
                 catalog[i].prefabsButton[ii].onClick.AddListener(delegate { ClickButtonPrefabs(x); });
-                //catalog[i].prefabsButton[ii].GetComponent<RawImage>().texture = AssetPreview.GetAssetPreview(catalog[i].prefabsObject[ii]);
             }
         }
 
@@ -192,7 +191,6 @@ public class MapEditor : MonoBehaviour
         Rect regionToRead = new Rect(0, 0, Screen.width, Screen.height);
         screenCapture.ReadPixels(regionToRead, 0, 0, false);
         screenCapture.Apply();
-        //Sprite photoSprite = Sprite.Create(screenCapture, new Rect(0, 0, screenCapture.width, screenCapture.height), new Vector2(0.5f, 0.5f), 100);
         AssetDatabase.CreateAsset(screenCapture, "Assets/Scripts/MapEditor/Data/preview/" + patterns[patternNumber].name +"preview.asset");
         Canvas.SetActive(true);
     }
@@ -283,11 +281,11 @@ public class MapEditor : MonoBehaviour
             //createobject
             if (followObstacle == null)
             {
-                followObstacle = Instantiate(actualObstacle, positionObject, Quaternion.identity);
+                followObstacle = Instantiate(actualObstacle, positionObject, Quaternion.identity * Quaternion.Euler(0, 180, 0));
                 followObstacle.AddComponent<Rigidbody>();
                 followObstacle.GetComponent<Rigidbody>().isKinematic = true;
                 followObstacle.GetComponent<Rigidbody>().useGravity = false;
-                followObstacle.GetComponent<Collider>().isTrigger = true;
+                foreach (var collider in followObstacle.GetComponents<Collider>()){ collider.isTrigger = true; }
                 followObstacle.layer = 0; //Default
             }
 
@@ -336,7 +334,7 @@ public class MapEditor : MonoBehaviour
 
             if (followObstacle!= null && followObstacle.GetComponent<PrefabData>().offset != null)
             {
-                positionObject -= followObstacle.GetComponent<PrefabData>().offset.localPosition;
+                positionObject += followObstacle.GetComponent<PrefabData>().offset.localPosition;
             }
             
 
@@ -360,25 +358,25 @@ public class MapEditor : MonoBehaviour
             {
                 if (followObstacle.GetComponent<PrefabData>().crossNumber == 0  || isOverPose)
                 {
-                    newObstacle = Instantiate(actualObstacle, positionObject, Quaternion.identity);
+                    newObstacle = Instantiate(actualObstacle, positionObject, Quaternion.identity * Quaternion.Euler(0, 180, 0));
                     newObstacle.transform.parent = contener.transform;
                     matArray[1] = canPlaceMaterial;
 
                     if (followObstacle.GetComponent<PrefabData>().obstacleType == ObstacleType.Start)
                     {
                         startPatternOnMap = newObstacle;
-                        Debug.Log("StartOnmap");
+                        //Debug.Log("StartOnmap");
                     }
                     else if (followObstacle.GetComponent<PrefabData>().obstacleType == ObstacleType.End)
                     {
                         endPatternOnMap = newObstacle;
-                        Debug.Log("ENdOnmap");
+                        //Debug.Log("ENdOnmap");
 
                     }
                     else if (followObstacle.GetComponent<PrefabData>().obstacleType == ObstacleType.StartMove)
                     {
                         startMoveOnMap = newObstacle;
-                        Debug.Log("MoveOnmap");
+                        //Debug.Log("MoveOnmap");
 
                     }
                     else
@@ -441,7 +439,7 @@ public class MapEditor : MonoBehaviour
         OnDestroyObjectScene();
         for (int i = 0; i < patterns[patternNumber].gameObjects.Count; i++)
         {
-            GameObject obstacle = Instantiate(patterns[patternNumber].gameObjects[i], patterns[patternNumber].positions[i], patterns[patternNumber].rotation[i]);
+            GameObject obstacle = Instantiate(patterns[patternNumber].gameObjects[i], patterns[patternNumber].positions[i], patterns[patternNumber].rotation[i] );
 
             obstacle.transform.parent = contener.transform;
             obstaclesOnMap.Add(obstacle);

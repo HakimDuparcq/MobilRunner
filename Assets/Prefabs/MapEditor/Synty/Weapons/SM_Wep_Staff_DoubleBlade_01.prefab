@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2377048}
   - component: {fileID: 7139668999450887489}
   - component: {fileID: -3208530747428498524}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SM_Wep_Staff_DoubleBlade_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 199354876190539710}
   - component: {fileID: -5849760281516531682}
   - component: {fileID: -3824055607092180299}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FX_Wind_Hard_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}

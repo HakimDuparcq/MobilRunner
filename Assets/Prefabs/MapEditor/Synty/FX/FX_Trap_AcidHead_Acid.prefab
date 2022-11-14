@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 19972394}
   - component: {fileID: -3533440548750036112}
   - component: {fileID: 5551405442112916622}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FX_Trap_AcidHead_Acid
   m_TagString: Untagged
   m_Icon: {fileID: 0}

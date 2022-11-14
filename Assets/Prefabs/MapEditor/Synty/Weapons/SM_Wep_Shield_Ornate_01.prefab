@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2319804}
   - component: {fileID: 7786265622397034702}
   - component: {fileID: -5993384499602403895}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SM_Wep_Shield_Ornate_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}

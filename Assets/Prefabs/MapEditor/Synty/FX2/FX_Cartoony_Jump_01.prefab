@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 199843303328931898}
   - component: {fileID: -3531553034603461611}
   - component: {fileID: 7821930690235115920}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FX_Cartoony_Jump_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}

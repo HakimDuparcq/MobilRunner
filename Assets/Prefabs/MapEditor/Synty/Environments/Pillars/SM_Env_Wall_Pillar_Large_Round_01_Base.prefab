@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2309202}
   - component: {fileID: 1569095204399027639}
   - component: {fileID: -1949117977770386758}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SM_Env_Wall_Pillar_Large_Round_01_Base
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 23117776972170396}
   - component: {fileID: 65079262949515062}
   - component: {fileID: -1267324246263586249}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SM_Prop_Book_Open_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}

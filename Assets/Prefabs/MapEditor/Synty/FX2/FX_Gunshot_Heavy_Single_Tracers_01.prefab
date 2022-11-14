@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4113986340581718}
   - component: {fileID: 198433154002263402}
   - component: {fileID: 199068053901769020}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FX_Gunshot_Heavy_Flash_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4832,7 +4832,7 @@ GameObject:
   - component: {fileID: 4789217224995878}
   - component: {fileID: 198251319911848504}
   - component: {fileID: 199193900846059138}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FX_Gunshot_Tracer_Single_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9751,7 +9751,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4997825235370356}
   - component: {fileID: 108244790287746036}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FX_Gunshot_Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9848,7 +9848,7 @@ GameObject:
   - component: {fileID: 199428832327523654}
   - component: {fileID: 3253436209289643738}
   - component: {fileID: 4626867675509679493}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FX_Gunshot_Heavy_Single_Tracers_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14603,7 +14603,7 @@ GameObject:
   - component: {fileID: 4859418823085240}
   - component: {fileID: 198694891347678144}
   - component: {fileID: 199629780736139302}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FX_Gunshot_Tracer_Single_Smoke_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2386208}
   - component: {fileID: -1876788669236939189}
   - component: {fileID: -5064975425244813378}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SM_Prop_StoneTable_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}

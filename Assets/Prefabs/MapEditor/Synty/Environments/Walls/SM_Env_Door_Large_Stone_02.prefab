@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2395864}
   - component: {fileID: 3548220213590325044}
   - component: {fileID: -7936351849609632804}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SM_Env_Door_Large_Stone_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}

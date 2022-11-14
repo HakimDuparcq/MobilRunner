@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2341998}
   - component: {fileID: -2017006295919042024}
   - component: {fileID: -6964926799908030411}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SM_Env_Trap_Wallslab_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}

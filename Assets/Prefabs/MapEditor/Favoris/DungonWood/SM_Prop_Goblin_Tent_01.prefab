@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 6748466807229339937}
   - component: {fileID: 9134686541364566087}
   - component: {fileID: 6613950281938689474}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SM_Prop_Goblin_Tent_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}

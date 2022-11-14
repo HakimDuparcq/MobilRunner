@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2312278}
   - component: {fileID: 1358635865620975976}
   - component: {fileID: 5336573163343952461}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SM_Env_Portcullis_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}

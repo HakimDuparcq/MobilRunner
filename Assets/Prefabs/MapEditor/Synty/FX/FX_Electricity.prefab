@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 19976840}
   - component: {fileID: 8619565723373620808}
   - component: {fileID: 3859216668519007230}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FX_Electricity
   m_TagString: Untagged
   m_Icon: {fileID: 0}

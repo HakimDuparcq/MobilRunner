@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 199764036948596754}
   - component: {fileID: -6894464815555553072}
   - component: {fileID: 4753272722610695942}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FX_Rain_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4534932472867364}
   - component: {fileID: 198446813117039234}
   - component: {fileID: 199323227718160314}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FX_ArtilleryStrike_Debris_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4842,7 +4842,7 @@ GameObject:
   - component: {fileID: 199297709008719046}
   - component: {fileID: 8905725865452900943}
   - component: {fileID: 1321574453906359943}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FX_ArtilleryShell_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9783,7 +9783,7 @@ GameObject:
   - component: {fileID: 4779394102323784}
   - component: {fileID: 198806150531819626}
   - component: {fileID: 199954160204082804}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FX_ArtilleryStrike_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14615,7 +14615,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4267406190313254}
   - component: {fileID: 108792715916298410}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FX_ArtilleryStrike_Light01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14710,7 +14710,7 @@ GameObject:
   - component: {fileID: 4231782743784930}
   - component: {fileID: 198638172338776194}
   - component: {fileID: 199533601693587406}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FX_ArtilleryStrike_Smoke_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19332,7 +19332,7 @@ GameObject:
   - component: {fileID: 4889391144826884}
   - component: {fileID: 198545274592865784}
   - component: {fileID: 199018272754990564}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FX_ArtilleryStrike_Flash_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24126,7 +24126,7 @@ GameObject:
   - component: {fileID: 4272070799207886}
   - component: {fileID: 198987068603361628}
   - component: {fileID: 199134412095665732}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FX_ArtilleryStrike_Blast_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}

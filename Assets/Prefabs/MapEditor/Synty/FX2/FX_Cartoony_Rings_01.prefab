@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4402709524630548}
   - component: {fileID: 198090347653509178}
   - component: {fileID: 199457836687042498}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FX_Cartoony_Ring_Lines_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4896,7 +4896,7 @@ GameObject:
   - component: {fileID: 199407513997841910}
   - component: {fileID: -6491307349872021038}
   - component: {fileID: -4364241287219494202}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FX_Cartoony_Rings_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}

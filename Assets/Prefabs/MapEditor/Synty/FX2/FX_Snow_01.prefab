@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 198641420387918128}
   - component: {fileID: -2543869910976462771}
   - component: {fileID: -7793009646854964204}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FX_Snow_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}

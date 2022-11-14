@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4431640528790678}
   - component: {fileID: 198501221783949146}
   - component: {fileID: 199590957770045842}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FX_Fire_Huge_Smoke_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4775,7 +4775,7 @@ GameObject:
   - component: {fileID: 199732200907856660}
   - component: {fileID: -6925466980550272313}
   - component: {fileID: -4439791310579604285}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FX_Fire_Huge_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}

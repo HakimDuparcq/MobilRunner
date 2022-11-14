@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4012544851483140}
   - component: {fileID: 198424119032380806}
   - component: {fileID: 199940705928113672}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Explosion_Large_Dark_Debris_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4905,7 +4905,7 @@ GameObject:
   - component: {fileID: 199802392133735146}
   - component: {fileID: 990820700910770835}
   - component: {fileID: 7206510806253973442}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FX_Explosion_Large_Dark_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9841,7 +9841,7 @@ GameObject:
   - component: {fileID: 4036701706273704}
   - component: {fileID: 198314923554681370}
   - component: {fileID: 199167130600116412}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Explosion_Large_Dark_Embers_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14463,7 +14463,7 @@ GameObject:
   - component: {fileID: 4623890105509478}
   - component: {fileID: 198213746276310512}
   - component: {fileID: 199819885978416856}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Explosion_Large_Dark_Debris_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}

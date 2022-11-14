@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2360018}
   - component: {fileID: -9012325975379066287}
   - component: {fileID: 4111132557011342645}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SM_Prop_Tech_Crystal_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}

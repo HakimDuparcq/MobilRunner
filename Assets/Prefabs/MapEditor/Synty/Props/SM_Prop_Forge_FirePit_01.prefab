@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2381860}
   - component: {fileID: 7233140858800087519}
   - component: {fileID: -1500031609569460787}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SM_Prop_Forge_FirePit_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}

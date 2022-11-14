@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 23750973225589380}
   - component: {fileID: 65737777129425866}
   - component: {fileID: -7938020105607594987}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SM_Prop_KnightStand_Royal_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}

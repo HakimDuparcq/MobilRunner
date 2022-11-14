@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2394750}
   - component: {fileID: 9093867409392714359}
   - component: {fileID: -3045075248573780142}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SM_Prop_Brazier_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}

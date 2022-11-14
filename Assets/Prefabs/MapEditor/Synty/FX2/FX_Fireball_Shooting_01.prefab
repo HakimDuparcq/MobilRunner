@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4857358969220396}
   - component: {fileID: 198637104516772040}
   - component: {fileID: 199155253815856424}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FX_Fireball_Embers_Trail_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4577,7 +4577,7 @@ GameObject:
   - component: {fileID: 199876777505720080}
   - component: {fileID: 1464363383248547760}
   - component: {fileID: 3142360353362322536}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FX_Fireball_Shooting_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9514,7 +9514,7 @@ GameObject:
   - component: {fileID: 4494238628918742}
   - component: {fileID: 198724899444574882}
   - component: {fileID: 199441320129912260}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FX_Fireball_Shooting_Explosion_Embers_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14136,7 +14136,7 @@ GameObject:
   - component: {fileID: 4484882947167774}
   - component: {fileID: 198695468871771774}
   - component: {fileID: 199527545617816476}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FX_Fireball_Shooting_Trail_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18701,7 +18701,7 @@ GameObject:
   - component: {fileID: 4452152205725640}
   - component: {fileID: 198470882161409126}
   - component: {fileID: 199158374116295652}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FX_Fireball_Shooting_Explosion_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23334,7 +23334,7 @@ GameObject:
   - component: {fileID: 4182479617742492}
   - component: {fileID: 198766299176698516}
   - component: {fileID: 199901236955734732}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FX_Fireball_Shooting_Explosion_Core_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}

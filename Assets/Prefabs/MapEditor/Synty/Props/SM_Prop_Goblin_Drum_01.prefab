@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2378728}
   - component: {fileID: 7838726844175037733}
   - component: {fileID: 5552117999184588096}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SM_Prop_Goblin_Drum_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}

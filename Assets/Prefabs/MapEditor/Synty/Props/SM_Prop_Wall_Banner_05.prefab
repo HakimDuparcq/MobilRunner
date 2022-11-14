@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2369984}
   - component: {fileID: -8961214220318917380}
   - component: {fileID: -3635996210465930257}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SM_Prop_Wall_Banner_05
   m_TagString: Untagged
   m_Icon: {fileID: 0}

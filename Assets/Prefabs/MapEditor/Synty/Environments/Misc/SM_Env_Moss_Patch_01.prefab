@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2310860}
   - component: {fileID: -3479026721763102197}
   - component: {fileID: 1601301333537655908}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SM_Env_Moss_Patch_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 199791329920045484}
   - component: {fileID: 7135034054854710790}
   - component: {fileID: 7528762137641767234}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FX_Hexagon_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}

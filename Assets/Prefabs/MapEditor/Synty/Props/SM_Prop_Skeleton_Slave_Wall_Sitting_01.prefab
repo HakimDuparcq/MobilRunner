@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2323176}
   - component: {fileID: 594949609709916051}
   - component: {fileID: -1634748855864103620}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SM_Prop_Skeleton_Slave_Wall_Sitting_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}

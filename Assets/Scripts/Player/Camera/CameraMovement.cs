@@ -8,8 +8,8 @@ public class CameraMovement : MonoBehaviour
     public static CameraMovement instance;
     public  float yCamFollow;
     public float speedFollow;
-
-    public LayerMask Ground;
+    [Header("0:dont move side cam, 1 full move")] public float coeffMoveSideCam;
+    public LayerMask ObstacleGround;
 
     public Transform followCam;
 
@@ -19,8 +19,6 @@ public class CameraMovement : MonoBehaviour
     public CinemachineVirtualCamera cinemachineVCamEndGame;
 
 
-    public Vector3 cameraRotationStart;
-    public Vector3 cameraRotationGame;
 
     private void Awake()
     {
@@ -40,9 +38,9 @@ public class CameraMovement : MonoBehaviour
     public void LateUpdate()
     {
         RaycastHit hit;
-        if (Physics.Raycast(Player.instance.gameObject.transform.position + new Vector3(0,2,0), Vector3.down, out hit, Mathf.Infinity, Ground))
+        if (Physics.Raycast(Player.instance.gameObject.transform.position + new Vector3(0,2,0), Vector3.down, out hit, Mathf.Infinity, ObstacleGround))
         {
-            //Debug.DrawRay(Player.instance.gameObject.transform.position + new Vector3(0, 2, 0), Vector3.down, Color.red, 2);
+            Debug.DrawRay(Player.instance.gameObject.transform.position + new Vector3(0, 2, 0), Vector3.down, Color.red, 2);
             if (hit.transform.GetComponent<PrefabData>())
             {
                 if (hit.transform.GetComponent<PrefabData>().montable == Montable.Yes)
@@ -60,7 +58,7 @@ public class CameraMovement : MonoBehaviour
             }
         }
 
-        followCam.position = new Vector3(Player.instance.gameObject.transform.position.x / 2f, yCamFollow, Player.instance.gameObject.transform.position.z);
+        followCam.position = new Vector3(Player.instance.gameObject.transform.position.x * coeffMoveSideCam, yCamFollow, Player.instance.gameObject.transform.position.z);
     }
 
 

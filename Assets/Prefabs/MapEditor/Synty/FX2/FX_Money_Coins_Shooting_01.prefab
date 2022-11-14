@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 199131339167383538}
   - component: {fileID: 5981850891046932214}
   - component: {fileID: -9206521596007675261}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FX_Money_Coins_Shooting_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}

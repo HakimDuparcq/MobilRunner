@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 199223508220104442}
   - component: {fileID: 7693839616780946752}
   - component: {fileID: -725133356267661286}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FX_Bubbles_Float_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}

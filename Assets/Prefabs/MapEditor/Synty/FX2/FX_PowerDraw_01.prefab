@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 199816333619576516}
   - component: {fileID: 1263179691739631748}
   - component: {fileID: -5505075912955089361}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FX_PowerDraw_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4956,7 +4956,7 @@ GameObject:
   - component: {fileID: 4674319506223028}
   - component: {fileID: 198841082715856408}
   - component: {fileID: 199520221616954730}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FX_PowerDraw_Electricity_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}

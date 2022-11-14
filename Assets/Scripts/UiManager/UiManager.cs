@@ -20,7 +20,7 @@ public class UiManager : MonoBehaviour
     public Button SettingsButton;
     public Button SettingsReturn;
     public Button ScoreViewNext;
-
+    public Button HomeInGame;
 
 
     private void Awake()
@@ -48,6 +48,7 @@ public class UiManager : MonoBehaviour
         SettingsButton.onClick.AddListener(()=>ShowSettings(true));
         SettingsReturn.onClick.AddListener(()=>ShowSettings(false));
         ScoreViewNext.onClick.AddListener(() => ShowMenuResetGame());
+        HomeInGame.onClick.AddListener(() => ShowMenuResetGame());
     }
     
     public void ShowSettings(bool show)

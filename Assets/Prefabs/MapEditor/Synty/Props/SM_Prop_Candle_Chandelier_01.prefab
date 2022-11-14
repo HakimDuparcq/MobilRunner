@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2321326}
   - component: {fileID: -8004687216838540285}
   - component: {fileID: -6042598706932151870}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SM_Prop_Candle_Chandelier_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 199336483875064752}
   - component: {fileID: 1328941868003258357}
   - component: {fileID: -1887523997395865099}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FX_Trail_Exhaust_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}

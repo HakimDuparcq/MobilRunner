@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2344164}
   - component: {fileID: -5439352793728026524}
   - component: {fileID: -478419526046272626}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SM_Env_Vine_Spikes_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}

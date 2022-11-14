@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 199486003124206914}
   - component: {fileID: -1871558190546098556}
   - component: {fileID: -9086589175452488923}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FX_Leaves_Green_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}

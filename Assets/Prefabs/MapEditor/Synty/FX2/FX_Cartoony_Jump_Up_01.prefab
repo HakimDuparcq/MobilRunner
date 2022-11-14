@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 199238533203650798}
   - component: {fileID: 210706826271747334}
   - component: {fileID: -7018207776454106505}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FX_Cartoony_Jump_Up_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4939,7 +4939,7 @@ GameObject:
   - component: {fileID: 4298707664101664}
   - component: {fileID: 198820996461009716}
   - component: {fileID: 199866225652714276}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FX_Cartoony_Jump_Dust_Up_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9831,7 +9831,7 @@ GameObject:
   - component: {fileID: 4939237754661978}
   - component: {fileID: 198572300893269204}
   - component: {fileID: 199434688789839532}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FX_Cartoony_Jump_Spike_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}

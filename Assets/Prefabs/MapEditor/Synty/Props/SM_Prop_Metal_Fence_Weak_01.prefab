@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2372316}
   - component: {fileID: -7285428623571408555}
   - component: {fileID: 3023205255808657136}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SM_Prop_Metal_Fence_Weak_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}

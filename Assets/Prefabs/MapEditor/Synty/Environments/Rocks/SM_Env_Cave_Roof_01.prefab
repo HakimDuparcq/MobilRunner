@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2370120}
   - component: {fileID: 6493564140064242157}
   - component: {fileID: 1173147799512506410}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SM_Env_Cave_Roof_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2322532}
   - component: {fileID: -2502735570215022271}
   - component: {fileID: -3338219787793686094}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SM_Env_Wall_01_Texture
   m_TagString: Untagged
   m_Icon: {fileID: 0}

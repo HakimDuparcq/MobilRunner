@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4824564017804846}
   - component: {fileID: 198859874812237632}
   - component: {fileID: 199359532248629152}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FX_ShardVine_Smaller_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4931,7 +4931,7 @@ GameObject:
   - component: {fileID: 4269755356800510}
   - component: {fileID: 198771450860100966}
   - component: {fileID: 199429028825071536}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FX_ShardVine_Dust_Trail_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9562,7 +9562,7 @@ GameObject:
   - component: {fileID: 4162742869381626}
   - component: {fileID: 198911813244879436}
   - component: {fileID: 199798050282758740}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FX_ShardVine_Embers_End_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14184,7 +14184,7 @@ GameObject:
   - component: {fileID: 4661348939654984}
   - component: {fileID: 198990160199908330}
   - component: {fileID: 199269405705425438}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FX_ShardVine_Embers_Trail_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18806,7 +18806,7 @@ GameObject:
   - component: {fileID: 4116193931225410}
   - component: {fileID: 198058936220168120}
   - component: {fileID: 199204071379667246}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FX_ShardVine_Dust_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23439,7 +23439,7 @@ GameObject:
   - component: {fileID: 199913781201929620}
   - component: {fileID: 8230220250521273836}
   - component: {fileID: 1099708631311032148}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FX_ShardVine_Shooting_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28407,7 +28407,7 @@ GameObject:
   - component: {fileID: 4007871790137064}
   - component: {fileID: 198429376679163036}
   - component: {fileID: 199174193813559816}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FX_ShardVine_Debris_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33299,7 +33299,7 @@ GameObject:
   - component: {fileID: 4277549818891772}
   - component: {fileID: 198427737160318894}
   - component: {fileID: 199886255381911352}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FX_ShardVine_Blast_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38182,7 +38182,7 @@ GameObject:
   - component: {fileID: 4646654400788962}
   - component: {fileID: 198835076556985600}
   - component: {fileID: 199193052429037734}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FX_ShardVine_Embers_End_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -42804,7 +42804,7 @@ GameObject:
   - component: {fileID: 4510913726306584}
   - component: {fileID: 198343057969577070}
   - component: {fileID: 199017270448217396}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FX_ShardVine_Dust_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -47435,7 +47435,7 @@ GameObject:
   - component: {fileID: 4865067725868080}
   - component: {fileID: 198269298055780630}
   - component: {fileID: 199140979698318078}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FX_ShardVine_Debris_End_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -52327,7 +52327,7 @@ GameObject:
   - component: {fileID: 4871443857236654}
   - component: {fileID: 198738250701318262}
   - component: {fileID: 199210341344298264}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FX_ShardVine_Smaller_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -57250,7 +57250,7 @@ GameObject:
   - component: {fileID: 4728003372104484}
   - component: {fileID: 198017096496975998}
   - component: {fileID: 199862757948103430}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FX_ShardVine_Dust_End_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -61881,7 +61881,7 @@ GameObject:
   - component: {fileID: 4104147690007532}
   - component: {fileID: 198676434064705278}
   - component: {fileID: 199635204473147984}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FX_ShardVine_Dust_End_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -66512,7 +66512,7 @@ GameObject:
   - component: {fileID: 4687339254304756}
   - component: {fileID: 198759488203064768}
   - component: {fileID: 199305375306770902}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FX_ShardVine_Debris_End_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -71404,7 +71404,7 @@ GameObject:
   - component: {fileID: 4877460308557274}
   - component: {fileID: 198439007911731682}
   - component: {fileID: 199422723199990716}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FX_ShardVine_Embers_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -76026,7 +76026,7 @@ GameObject:
   - component: {fileID: 4013793283815650}
   - component: {fileID: 198128013057889222}
   - component: {fileID: 199894566523021506}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FX_ShardVine_Debris_End_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -80918,7 +80918,7 @@ GameObject:
   - component: {fileID: 4001117332197736}
   - component: {fileID: 198075768065479032}
   - component: {fileID: 199859108633453856}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FX_ShardVine_Explosion_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -85837,7 +85837,7 @@ GameObject:
   - component: {fileID: 4324630807630464}
   - component: {fileID: 198335106641635214}
   - component: {fileID: 199753588232955970}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FX_ShardVine_Blast_Trail_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -90720,7 +90720,7 @@ GameObject:
   - component: {fileID: 4155794628830884}
   - component: {fileID: 198335436347790962}
   - component: {fileID: 199737827793607988}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FX_ShardVine_Embers_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}

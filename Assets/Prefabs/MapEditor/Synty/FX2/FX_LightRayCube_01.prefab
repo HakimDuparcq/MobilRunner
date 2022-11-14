@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4927059292654576}
   - component: {fileID: -5908519141193336828}
   - component: {fileID: 1979582905542286387}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FX_LightRayCube_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -76,7 +76,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4042105469209592}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Light_Shaft_Manip
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -108,7 +108,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4703062430380824}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Light_Shaft_Base
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -141,7 +141,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4694693105612888}
   - component: {fileID: 137857311975083480}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SM_LightRay_Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -227,7 +227,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4547173660393908}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Null
   m_TagString: Untagged
   m_Icon: {fileID: 0}

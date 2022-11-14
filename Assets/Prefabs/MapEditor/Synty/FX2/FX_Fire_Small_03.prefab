@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 199789549123953660}
   - component: {fileID: -5477510696895701299}
   - component: {fileID: -4209897106970944742}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FX_Fire_Small_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}

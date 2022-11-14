@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 488594}
   - component: {fileID: 3359268}
   - component: {fileID: 2376124}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SM_Prop_Toture_IronMaiden_Door_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -96,7 +96,7 @@ GameObject:
   - component: {fileID: 2386584}
   - component: {fileID: -1518127681386879240}
   - component: {fileID: -395333425308642108}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SM_Prop_Toture_IronMaiden_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -213,7 +213,7 @@ GameObject:
   - component: {fileID: 476286}
   - component: {fileID: 3385088}
   - component: {fileID: 2326654}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SM_Prop_Toture_IronMaiden_Door_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2359534}
   - component: {fileID: -1435602350637761145}
   - component: {fileID: -1138963526268791371}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SM_Wep_Shield_Gravestone_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -57,6 +57,7 @@ public class GameManager : MonoBehaviour
         MapController.instance.speedMap = 3;
         CameraMovement.instance.SetMainCamera(CameraMovement.instance.cinemachineVCamGameMenu);
         PlayerStats.instance.actualScore = 0;
+        Skin.instance.Reset();
     }
 
     public void SpawnParticleEvent()
@@ -67,18 +68,33 @@ public class GameManager : MonoBehaviour
     public IEnumerator SpawnParticle()
     {
         List<GameObject> particles = new List<GameObject>();
-
-        for (int i = 0; i < Skin.instance.skinNumber; i++)
+        if (Skin.instance.skinNumber>0)
         {
-            particles.Add(Instantiate(Skin.instance.FxBadCoin.gameObject, Player.instance.gameObject.transform.position, Quaternion.identity));
-            StartCoroutine(MoveParticleEnd(particles[particles.Count - 1]));
-            yield return new WaitForSeconds(0.5f);
+            for (int i = 0; i < Skin.instance.skinNumber; i++)
+            {
+                particles.Add(Instantiate(Skin.instance.FxGoodCoin.gameObject, Player.instance.gameObject.transform.position, Quaternion.identity));
+                StartCoroutine(MoveParticleEnd(particles[particles.Count - 1]));
+                yield return new WaitForSeconds(0.5f);
 
+            }
         }
+        else
+        {
+            for (int i = 0; i < -Skin.instance.skinNumber; i++)
+            {
+                particles.Add(Instantiate(Skin.instance.FxBadCoin.gameObject, Player.instance.gameObject.transform.position, Quaternion.identity));
+                StartCoroutine(MoveParticleEnd(particles[particles.Count - 1]));
+                yield return new WaitForSeconds(0.5f);
+
+            }
+        }
+
+        
     }
 
     public IEnumerator MoveParticleEnd(GameObject particle)
     {
+        particle.GetComponent<Collider>().enabled = false;
         float speed = 10;
         for (int i = 0; i < 100; i++)
         {

@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2313744}
   - component: {fileID: 3285457138933962584}
   - component: {fileID: 5960652747844937113}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SM_Wep_Axe_Rune_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}

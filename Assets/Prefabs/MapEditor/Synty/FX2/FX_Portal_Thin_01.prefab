@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4737927634076002}
   - component: {fileID: 198924612908595510}
   - component: {fileID: 199576434686865164}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FX_Electricity_01_Open
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4741,7 +4741,7 @@ GameObject:
   - component: {fileID: 4728965431245924}
   - component: {fileID: 198562589930862428}
   - component: {fileID: 199961302661022728}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FX_Electricity_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9471,7 +9471,7 @@ GameObject:
   - component: {fileID: 4925014735358366}
   - component: {fileID: 198834691398047660}
   - component: {fileID: 199916675888154424}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FX_Portal_01_Open
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14194,7 +14194,7 @@ GameObject:
   - component: {fileID: 199749858846785334}
   - component: {fileID: -8222168190441916224}
   - component: {fileID: -7203870535825998218}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FX_Portal_Thin_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18960,7 +18960,7 @@ GameObject:
   - component: {fileID: 4131126107835394}
   - component: {fileID: 198917867796641160}
   - component: {fileID: 199489661559249150}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FX_Portal_Dots_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}

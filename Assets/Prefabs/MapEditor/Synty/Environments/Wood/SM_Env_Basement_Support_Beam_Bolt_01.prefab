@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2383112}
   - component: {fileID: 4239321637861199754}
   - component: {fileID: 3420701936911153145}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SM_Env_Basement_Support_Beam_Bolt_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}

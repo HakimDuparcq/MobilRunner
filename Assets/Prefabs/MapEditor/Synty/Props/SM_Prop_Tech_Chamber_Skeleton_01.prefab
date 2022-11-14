@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2343796}
   - component: {fileID: -6419426578078782117}
   - component: {fileID: -6965552020176137808}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SM_Prop_Tech_Chamber_Skeleton_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}

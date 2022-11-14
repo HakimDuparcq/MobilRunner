@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 199328309698011688}
   - component: {fileID: 1624102343657287458}
   - component: {fileID: 8637079255185128300}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FX_Impact_Metal_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4938,7 +4938,7 @@ GameObject:
   - component: {fileID: 4630151325240636}
   - component: {fileID: 198393082689990574}
   - component: {fileID: 199386172505856232}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FX_Impact_Metal_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}

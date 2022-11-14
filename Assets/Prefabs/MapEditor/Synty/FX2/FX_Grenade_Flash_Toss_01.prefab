@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 199224807057648364}
   - component: {fileID: -7629598171456493947}
   - component: {fileID: -511543163811637457}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FX_Grenade_Flash_Toss_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4944,7 +4944,7 @@ GameObject:
   - component: {fileID: 4765496667224220}
   - component: {fileID: 198943943029460168}
   - component: {fileID: 199218486347206906}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FX_Grenade_Flash_Smoke_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9791,7 +9791,7 @@ GameObject:
   - component: {fileID: 4766269049130516}
   - component: {fileID: 198985699152395526}
   - component: {fileID: 199377236711299496}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FX_Grenade_Flash_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14642,7 +14642,7 @@ GameObject:
   - component: {fileID: 4183221200841508}
   - component: {fileID: 198068077396699718}
   - component: {fileID: 199193974424126892}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FX_Grenade_Flash_Ember_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19264,7 +19264,7 @@ GameObject:
   - component: {fileID: 4015020420534008}
   - component: {fileID: 198881404918446546}
   - component: {fileID: 199555218814325794}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FX_Grenade_Flash_Spark_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23975,7 +23975,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4067013080781766}
   - component: {fileID: 108072682599203518}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FX_Grenade_Flash_Light_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}

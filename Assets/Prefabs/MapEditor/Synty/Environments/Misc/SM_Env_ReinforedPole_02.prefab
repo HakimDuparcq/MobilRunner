@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2378716}
   - component: {fileID: -3383542187074677233}
   - component: {fileID: -579097713590672749}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SM_Env_ReinforedPole_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}

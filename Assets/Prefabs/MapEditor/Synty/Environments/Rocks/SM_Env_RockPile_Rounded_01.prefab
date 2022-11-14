@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2306006}
   - component: {fileID: 6908476269916573332}
   - component: {fileID: -8618826504440251596}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SM_Env_RockPile_Rounded_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}

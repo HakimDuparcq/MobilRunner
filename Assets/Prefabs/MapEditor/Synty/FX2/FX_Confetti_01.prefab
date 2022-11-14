@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4366987958355574}
   - component: {fileID: 198752283406536632}
   - component: {fileID: 199914885105706468}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FX_Confetti_Flash_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4914,7 +4914,7 @@ GameObject:
   - component: {fileID: 199497547839210522}
   - component: {fileID: 5826822675788923207}
   - component: {fileID: 1060754297309249143}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FX_Confetti_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9849,7 +9849,7 @@ GameObject:
   - component: {fileID: 4816189251445952}
   - component: {fileID: 198595453211048192}
   - component: {fileID: 199241997353355858}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FX_Confetti_Smoke_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}

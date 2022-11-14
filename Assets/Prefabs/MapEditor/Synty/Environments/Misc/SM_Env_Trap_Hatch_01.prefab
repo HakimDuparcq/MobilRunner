@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2350290}
   - component: {fileID: -3627888726467623110}
   - component: {fileID: 775532594706879975}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SM_Env_Trap_Hatch_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}

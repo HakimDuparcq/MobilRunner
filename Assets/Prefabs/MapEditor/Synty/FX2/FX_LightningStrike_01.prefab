@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4412204994031888}
   - component: {fileID: 198945610759355072}
   - component: {fileID: 199087861157585046}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FX_LightningStrike_Impact_Dust_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4905,7 +4905,7 @@ GameObject:
   - component: {fileID: 199771287193113184}
   - component: {fileID: 4399669590082556026}
   - component: {fileID: -7365867411948635190}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FX_LightningStrike_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9824,7 +9824,7 @@ GameObject:
   - component: {fileID: 4503475454163424}
   - component: {fileID: 198094193005281066}
   - component: {fileID: 199834482443900518}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FX_LightningStrike_Impact_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14706,7 +14706,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4392220322949028}
   - component: {fileID: 108209756514170910}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FX_LightningStrike_Light_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14801,7 +14801,7 @@ GameObject:
   - component: {fileID: 4855159049455574}
   - component: {fileID: 198891204908546670}
   - component: {fileID: 199871420585263822}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FX_LightningStrike_Ground_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}

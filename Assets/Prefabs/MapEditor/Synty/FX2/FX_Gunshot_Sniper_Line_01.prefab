@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4861656923558994}
   - component: {fileID: 198542782178085408}
   - component: {fileID: 199167624147053036}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FX_Gunshot_Flash_Long
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4807,7 +4807,7 @@ GameObject:
   - component: {fileID: 199508909343887398}
   - component: {fileID: 6782897273717825830}
   - component: {fileID: -3507300509705734357}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FX_Gunshot_Sniper_Line_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9536,7 +9536,7 @@ GameObject:
   - component: {fileID: 4612314390738284}
   - component: {fileID: 198629221549096034}
   - component: {fileID: 199315634917243540}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FX_Gunshot_Tracer_MachineGun_Smoke_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14419,7 +14419,7 @@ GameObject:
   - component: {fileID: 4109590555330560}
   - component: {fileID: 198603470893932660}
   - component: {fileID: 199240304314728464}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FX_Gunshot_Tracer_Sniper_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19319,7 +19319,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4801826525092972}
   - component: {fileID: 108039664464716002}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FX_Gunshot_Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19413,7 +19413,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4113958714924618}
   - component: {fileID: 108178675019266804}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FX_Gunshot_Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19508,7 +19508,7 @@ GameObject:
   - component: {fileID: 4302025021499832}
   - component: {fileID: 198128241814181974}
   - component: {fileID: 199094382082257636}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FX_Gunshot_Sniper_Impact_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24392,7 +24392,7 @@ GameObject:
   - component: {fileID: 4701863764625914}
   - component: {fileID: 198262139223782336}
   - component: {fileID: 199519327711384246}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FX_Gunshot_Flash_Wide
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29186,7 +29186,7 @@ GameObject:
   - component: {fileID: 4469945705141004}
   - component: {fileID: 198892353095198800}
   - component: {fileID: 199545232355107028}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FX_Gunshot_Sniper_Impact_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33979,7 +33979,7 @@ GameObject:
   - component: {fileID: 4174077325772118}
   - component: {fileID: 198649267437433170}
   - component: {fileID: 199145851762113510}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FX_Gunshot_Sniper_Impact_Dust_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}

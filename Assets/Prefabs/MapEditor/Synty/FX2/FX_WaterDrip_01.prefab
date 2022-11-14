@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4621062726889608}
   - component: {fileID: 198692638350750644}
   - component: {fileID: 199605902937820858}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FX_WaterDrip_Splash_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4905,7 +4905,7 @@ GameObject:
   - component: {fileID: 199064218081804528}
   - component: {fileID: 4358736972506707902}
   - component: {fileID: -2260363366295822476}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FX_WaterDrip_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}

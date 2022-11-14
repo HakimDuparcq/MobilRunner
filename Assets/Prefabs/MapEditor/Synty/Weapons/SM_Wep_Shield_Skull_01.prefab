@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2388282}
   - component: {fileID: -4670655947340175946}
   - component: {fileID: -5167388506158737454}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SM_Wep_Shield_Skull_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}

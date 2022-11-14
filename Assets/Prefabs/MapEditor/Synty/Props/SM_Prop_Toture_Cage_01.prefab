@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2372116}
   - component: {fileID: -7706550931583318888}
   - component: {fileID: 8827728216573906262}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SM_Prop_Toture_Cage_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}

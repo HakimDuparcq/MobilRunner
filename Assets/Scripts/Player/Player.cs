@@ -34,7 +34,7 @@ public class Player : MonoBehaviour
     public Animator animator;
     public CurveMovement curveMovement;
 
-    [HideInInspector] public bool SwipeLeft, SwipeRight, SwipeUp, SwipeDown, canTouch;
+    [HideInInspector] public bool SwipeLeft, SwipeRight, SwipeUp, SwipeDown, canTouch, canHit;
 
     public GameObject cube;
 
@@ -76,9 +76,10 @@ public class Player : MonoBehaviour
     public void ResetPlayer()
     {
         NexPosX = 0;
-        NexPosY = gameObject.transform.position.y;
-        canTouch = true;
+        NexPosY = 1;
+        canTouch = canHit = true;
         animator.SetTrigger("Dance");
+        side = SIDE.Middle;
     }
 
     void Update()
@@ -87,6 +88,9 @@ public class Player : MonoBehaviour
         if (GameManager.instance.gameState == GameState.InGame)
         {
             MoveXY();
+        }
+        if (GameManager.instance.gameState == GameState.InGame  || GameManager.instance.gameState == GameState.EndGame)
+        {
             SetAirState();
         }
 
@@ -95,7 +99,9 @@ public class Player : MonoBehaviour
 
     void FixedUpdate()
     {
+
         Moving();
+
 
 
     }
@@ -105,9 +111,9 @@ public class Player : MonoBehaviour
 
         RaycastHit hit;
         Vector3 foot = transform.position - new Vector3(0, playerHeight * 0.5f - 0.1f, 0);
-        isGrounded = Physics.Raycast(foot, Vector3.down, out hit, 0.2f, Ground);
+        isGrounded = Physics.Raycast(foot, Vector3.down, out hit, 0.2f);
         groundHitPosition = hit.point;
-        //Debug.DrawLine(foot, foot + Vector3.down * (0.2f), Color.black,Time.fixedDeltaTime);
+        Debug.DrawLine(foot, foot + Vector3.down * (0.2f), Color.black,Time.fixedDeltaTime);
 
         animator.SetBool("Grounded", isGrounded);
 
@@ -206,6 +212,10 @@ public class Player : MonoBehaviour
         
         
 #endif
+        if (SwipeLeft || SwipeRight || SwipeUp || SwipeDown)
+        {
+            AudioManager.instance.Play("Switch Side");
+        }
     }
 
     private void MoveXY()
@@ -535,11 +545,13 @@ public class Player : MonoBehaviour
 
     private void GetHit(Collision collision)
     {
+        if (!canHit) { return; }
+        StartCoroutine(CanReturnHit());
+
         cube.transform.position = collision.contacts[0].point;
         foreach (ContactPoint contact in collision.contacts)
         {
             Debug.DrawRay(contact.point, contact.normal, Color.red, 2);
-            //Debug.Log(contact.normal);
         }
 
         if (collision.contacts[0].normal == Vector3.up) //collision.gameObject.name == "Plane")
@@ -555,18 +567,56 @@ public class Player : MonoBehaviour
         if (hitX == HitX.Left)
         {
             animator.SetTrigger("HitSideLeft");
-            side = SIDE.Middle;
-            StartCoroutine(SwitchSideCurve( Mathf.Abs( transform.position.x), 1, side));
             StartCoroutine(Skin.instance.PlayParticleHeadStars());
-            StartCoroutine(CameraMovement.instance.ShakeCamera(2,0.5f));
+            StartCoroutine(CameraMovement.instance.ShakeCamera(2, 0.5f));
+
+            if (side == SIDE.Middle)
+            {
+                side = SIDE.Right;
+                StartCoroutine(SwitchSideCurve(curveMovement.sideDistance - Mathf.Abs(transform.position.x), 1, side));
+                
+            }
+            else if (side==SIDE.Left)
+            {
+                side = SIDE.Middle;
+                StartCoroutine(SwitchSideCurve(Mathf.Abs(transform.position.x), 1, side));
+                
+            }
+            else if (side==SIDE.Right)
+            {
+                side = SIDE.Middle;
+                StartCoroutine(SwitchSideCurve(Mathf.Abs(transform.position.x), -1, side));
+            }
+
+
         }
         else if (hitX == HitX.Right)
         {
             animator.SetTrigger("HitSideRight");
-            side = SIDE.Middle;
-            StartCoroutine(SwitchSideCurve(Mathf.Abs(transform.position.x), -1, side));
-            StartCoroutine(CameraMovement.instance.ShakeCamera(2,0.5f));
+            StartCoroutine(CameraMovement.instance.ShakeCamera(2, 0.5f));
             StartCoroutine(Skin.instance.PlayParticleHeadStars());
+
+            if (side == SIDE.Middle)
+            {
+                side = SIDE.Left;
+                Debug.Log("gub find");
+                StartCoroutine(SwitchSideCurve(curveMovement.sideDistance - Mathf.Abs(transform.position.x), -1, side));
+
+            }
+            else if (side == SIDE.Left)
+            {
+                side = SIDE.Middle;
+                StartCoroutine(SwitchSideCurve(Mathf.Abs(transform.position.x), 1, side));
+
+            }
+            else if (side == SIDE.Right)
+            {
+                side = SIDE.Middle;
+                StartCoroutine(SwitchSideCurve(Mathf.Abs(transform.position.x), -1, side));
+            }
+
+  
+
 
         }
         else if (hitZ == HitZ.Forward && collision.gameObject.GetComponent<PrefabData>()
@@ -584,6 +634,8 @@ public class Player : MonoBehaviour
 
     private void HitDetectionSide(Collision collision)
     {
+
+
         //Debug.Log((collision.contacts[0].point.x - gameObject.transform.position.x));
         if (collision.contacts[0].point.x - gameObject.transform.position.x < -0.17f)  // - 0.17f
         {
@@ -625,6 +677,13 @@ public class Player : MonoBehaviour
         {
             hitZ = HitZ.Forward;
         }
+    }
+    
+    public IEnumerator  CanReturnHit()
+    {
+        canHit = false;
+        yield return new WaitForSeconds(0.1f) ;
+        canHit = true;
     }
 
     private void OnTriggerEnter(Collider other)

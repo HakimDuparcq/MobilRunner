@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2342268}
   - component: {fileID: 4593453321024543670}
   - component: {fileID: -6021879061988586276}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SM_Prop_Goblin_Rotisserie_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}

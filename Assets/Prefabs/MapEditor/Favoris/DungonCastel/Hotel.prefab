@@ -12,8 +12,10 @@ GameObject:
   - component: {fileID: 5076005677507909231}
   - component: {fileID: 5076005677506836097}
   - component: {fileID: -4928604284780320268}
-  - component: {fileID: 8655013999028565089}
-  m_Layer: 0
+  - component: {fileID: 4633471226361697429}
+  - component: {fileID: 1934838018787344493}
+  - component: {fileID: 324762605858402636}
+  m_Layer: 6
   m_Name: Hotel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -103,8 +105,8 @@ MonoBehaviour:
   offset: {fileID: 0}
   size: 0
   speed: 0
---- !u!64 &8655013999028565089
-MeshCollider:
+--- !u!65 &4633471226361697429
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -113,7 +115,32 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4300000, guid: 728728af61c7d2d4fb2cfca2425f84d0, type: 3}
+  serializedVersion: 2
+  m_Size: {x: 0.9990673, y: 2.6052094, z: 1.9850998}
+  m_Center: {x: -1.3626225, y: 1.3026047, z: -9.947598e-14}
+--- !u!65 &1934838018787344493
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5076005677504879451}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.0422251, y: 2.5975714, z: 1.9850998}
+  m_Center: {x: 1.2944372, y: 1.2987857, z: 7.1054274e-14}
+--- !u!65 &324762605858402636
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5076005677504879451}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 3.885222, y: 1.0626636, z: 1.9850998}
+  m_Center: {x: 0, y: 3.4165843, z: 0}

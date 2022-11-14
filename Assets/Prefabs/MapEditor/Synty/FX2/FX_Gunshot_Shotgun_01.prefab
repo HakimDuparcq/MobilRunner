@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4879099127165158}
   - component: {fileID: 198994897263029524}
   - component: {fileID: 199066132636078472}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FX_Gunshot_Shotgun_Flash_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4807,7 +4807,7 @@ GameObject:
   - component: {fileID: 199115488141885032}
   - component: {fileID: 8433113494396085305}
   - component: {fileID: 8705830786996973287}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FX_Gunshot_Shotgun_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9533,7 +9533,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4063536017684390}
   - component: {fileID: 108192328974972184}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FX_Gunshot_Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}

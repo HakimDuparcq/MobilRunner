@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4553461652884612}
   - component: {fileID: 198314147077034834}
   - component: {fileID: 199972415615836120}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FX_WaterRipple_Trail_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4838,7 +4838,7 @@ GameObject:
   - component: {fileID: 199000824641555924}
   - component: {fileID: 4201677418617726101}
   - component: {fileID: 992945032690646726}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FX_WaterRipple_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}

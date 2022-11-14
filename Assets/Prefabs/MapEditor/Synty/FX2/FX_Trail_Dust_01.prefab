@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 199691811414020250}
   - component: {fileID: -3773740677798250427}
   - component: {fileID: 1378740269843025330}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FX_Trail_Dust_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}

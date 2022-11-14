@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 199111635325354908}
   - component: {fileID: 3233956667413004570}
   - component: {fileID: 3657632983780655841}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FX_Money_Notes_Burst_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}

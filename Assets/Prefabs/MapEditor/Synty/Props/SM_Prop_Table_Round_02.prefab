@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2325222}
   - component: {fileID: 5644722543230458491}
   - component: {fileID: 8064635314322052370}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SM_Prop_Table_Round_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}

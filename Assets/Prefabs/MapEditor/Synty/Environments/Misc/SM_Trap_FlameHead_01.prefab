@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2303602}
   - component: {fileID: -1236309822300896660}
   - component: {fileID: -8807319509524450898}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SM_Trap_FlameHead_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}

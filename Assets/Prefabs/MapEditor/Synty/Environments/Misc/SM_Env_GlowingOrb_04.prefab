@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2380346}
   - component: {fileID: -5948636181436332984}
   - component: {fileID: 1248250186355503479}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SM_Env_GlowingOrb_04
   m_TagString: Untagged
   m_Icon: {fileID: 0}

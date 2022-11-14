@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 19932430}
   - component: {fileID: -4200204910365761662}
   - component: {fileID: 8200878747048739685}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FX_Sword_Fire
   m_TagString: Untagged
   m_Icon: {fileID: 0}

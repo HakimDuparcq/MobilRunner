@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2380824}
   - component: {fileID: 2708930814978983875}
   - component: {fileID: 489086930567985977}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SM_Env_Wall_Broken_Edge_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}

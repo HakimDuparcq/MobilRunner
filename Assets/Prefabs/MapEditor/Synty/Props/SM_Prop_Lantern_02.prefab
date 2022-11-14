@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2354634}
   - component: {fileID: 1296410760875846234}
   - component: {fileID: -8885328942449930444}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SM_Prop_Lantern_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}

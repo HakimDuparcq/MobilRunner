@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2312178}
   - component: {fileID: -6589759172104473629}
   - component: {fileID: 2804595996256865281}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SM_Env_Ceiling_Stone_Stairs_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}

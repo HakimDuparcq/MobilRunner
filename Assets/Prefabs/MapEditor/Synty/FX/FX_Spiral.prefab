@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 19905496}
   - component: {fileID: 6194340014567200529}
   - component: {fileID: 1822008239769815872}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FX_Spiral
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4756,7 +4756,7 @@ GameObject:
   - component: {fileID: 465982}
   - component: {fileID: 19804014}
   - component: {fileID: 19951870}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FX_Spiral 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9466,7 +9466,7 @@ GameObject:
   - component: {fileID: 463302}
   - component: {fileID: 19877976}
   - component: {fileID: 19913762}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FX_Spiral 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}

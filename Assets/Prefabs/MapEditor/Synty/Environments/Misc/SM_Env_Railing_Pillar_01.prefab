@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2328260}
   - component: {fileID: -8080295370597512545}
   - component: {fileID: 6001224552775349014}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SM_Env_Railing_Pillar_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 199512379066230422}
   - component: {fileID: -1481255217836887327}
   - component: {fileID: 7342429694869832048}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FX_Slash_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}

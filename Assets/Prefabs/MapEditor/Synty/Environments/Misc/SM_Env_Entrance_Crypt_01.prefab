@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2342230}
   - component: {fileID: 4219532281961533852}
   - component: {fileID: -111453176829713171}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SM_Env_Entrance_Crypt_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}

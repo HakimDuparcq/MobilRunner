@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 199079739478439532}
   - component: {fileID: -7776817978815803283}
   - component: {fileID: 7304437675105243157}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FX_Direction_Arrows_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}

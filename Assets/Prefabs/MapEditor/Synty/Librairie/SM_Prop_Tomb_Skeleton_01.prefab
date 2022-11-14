@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 23204258951113022}
   - component: {fileID: 65016073847576964}
   - component: {fileID: 659887458609702084}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SM_Prop_Tomb_Skeleton_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}

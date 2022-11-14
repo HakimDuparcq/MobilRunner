@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2306990}
   - component: {fileID: -8553050839485491585}
   - component: {fileID: 2617722475952665130}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SM_Prop_Toture_Stocks_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}

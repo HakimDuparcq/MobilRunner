@@ -42,12 +42,19 @@ public class Skin : MonoBehaviour
 
     void Start()
     {
-        
+        UpdateStats();
     }
 
     void Update()
     {
 
+    }
+
+    public void Reset()
+    {
+        bonus = 0;
+        skinNumber = 0;
+        UpdateStats();
     }
 
     public void UpdateStats()
@@ -92,13 +99,12 @@ public class Skin : MonoBehaviour
 
     public IEnumerator PlayParticleHeadStars()
     {
-        //Debug.Log("PlayParticleHeadStars");
         ParticleSystem FxHeadStarss = Instantiate(FxHeadStars, gameObject.transform);
-        //FxSkinChange.gameObject.transform.localPosition = TourbillonBleuOffset;
         FxHeadStarss.Play();
-        int counter = 0;
-        while (counter<3)
+        float counter = 0;
+        while (counter<7)
         {
+            counter += Time.deltaTime;
             FxHeadStarss.gameObject.transform.position = head.position;
             yield return new WaitForSeconds(Time.deltaTime);
         }

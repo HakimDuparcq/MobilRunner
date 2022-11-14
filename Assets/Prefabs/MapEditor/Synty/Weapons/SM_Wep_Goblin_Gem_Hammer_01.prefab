@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2354296}
   - component: {fileID: -1896577585513694565}
   - component: {fileID: -2496573566631015249}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SM_Wep_Goblin_Gem_Hammer_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}

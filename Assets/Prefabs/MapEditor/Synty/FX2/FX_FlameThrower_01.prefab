@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4946885115346356}
   - component: {fileID: 198595019846435092}
   - component: {fileID: 199996472042573172}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FX_FlameThrower_Embers_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4577,7 +4577,7 @@ GameObject:
   - component: {fileID: 199264920374470284}
   - component: {fileID: -1993805348890950909}
   - component: {fileID: -2850258603833514182}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FX_FlameThrower_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}

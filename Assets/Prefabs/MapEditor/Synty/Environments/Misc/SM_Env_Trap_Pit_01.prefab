@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 415500}
   - component: {fileID: 3336852}
   - component: {fileID: 2378706}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SM_Prop_Trap_Pit_Door_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -94,7 +94,7 @@ GameObject:
   - component: {fileID: 440692}
   - component: {fileID: 3347542}
   - component: {fileID: 2375616}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SM_Prop_Trap_Pit_Door_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -179,7 +179,7 @@ GameObject:
   - component: {fileID: 2360916}
   - component: {fileID: -314317643651969422}
   - component: {fileID: -8391173083412020984}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SM_Env_Trap_Pit_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}

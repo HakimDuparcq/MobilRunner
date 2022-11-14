@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2364990}
   - component: {fileID: 5321402417786216542}
   - component: {fileID: 495349560534338441}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SM_Env_Rock_Pebble_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}

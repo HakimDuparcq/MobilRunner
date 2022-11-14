@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2353316}
   - component: {fileID: -368991861578992947}
   - component: {fileID: -4710585591356016396}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SM_Env_DoorDouble_Flat_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}

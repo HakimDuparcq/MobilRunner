@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 199744793079097426}
   - component: {fileID: -1860707101757693597}
   - component: {fileID: 3990247033016889288}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FX_Leaves_Blossom_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}

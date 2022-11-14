@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4561511906714116}
   - component: {fileID: 198190261235977830}
   - component: {fileID: 199512835233955452}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FX_Impact_Water_Ripple_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4894,7 +4894,7 @@ GameObject:
   - component: {fileID: 4840651379043412}
   - component: {fileID: 198993438754507628}
   - component: {fileID: 199686406053989324}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FX_Impact_Small_Dust_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9779,7 +9779,7 @@ GameObject:
   - component: {fileID: 199619432935321296}
   - component: {fileID: 8815181935806911593}
   - component: {fileID: -7024824408168926849}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FX_Impact_Water_Ripple_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}

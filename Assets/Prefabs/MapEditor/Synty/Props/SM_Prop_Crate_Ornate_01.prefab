@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2313020}
   - component: {fileID: 8325194232137560123}
   - component: {fileID: -7590967376957118065}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SM_Prop_Crate_Ornate_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2387144}
   - component: {fileID: -3759270991618525451}
   - component: {fileID: 3172445676784461877}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SM_Wep_Crysta_Halberdl_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}

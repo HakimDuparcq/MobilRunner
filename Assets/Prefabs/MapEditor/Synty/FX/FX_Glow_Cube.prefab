@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 19956260}
   - component: {fileID: 3131106787876565529}
   - component: {fileID: 7294457801314045982}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FX_Glow_Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 23174527119951558}
   - component: {fileID: 65726404313669532}
   - component: {fileID: 1024467729968194143}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SM_Prop_Tomb_Royal_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}

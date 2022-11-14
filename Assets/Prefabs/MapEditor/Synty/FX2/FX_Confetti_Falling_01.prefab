@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 199207802280456806}
   - component: {fileID: -5391578720369516788}
   - component: {fileID: 999051286766156296}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FX_Confetti_Falling_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}

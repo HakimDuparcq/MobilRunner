@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 349590304}
   - component: {fileID: 7346212789261493855}
   - component: {fileID: 4147051882670085411}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SM_Env_Door_Large_Wood_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 6235721638381026548}
   - component: {fileID: -7046694709671639720}
   - component: {fileID: 7875624707617028871}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SM_Prop_Tech_Cog_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}

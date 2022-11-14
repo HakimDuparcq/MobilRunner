@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2300444}
   - component: {fileID: 7755602425834450794}
   - component: {fileID: 7382550046186181193}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SM_Env_Rock_Spike_05
   m_TagString: Untagged
   m_Icon: {fileID: 0}

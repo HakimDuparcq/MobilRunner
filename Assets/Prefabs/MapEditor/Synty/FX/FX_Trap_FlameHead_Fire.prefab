@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 19987796}
   - component: {fileID: 3951571597068486033}
   - component: {fileID: 6558947916336102244}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FX_Trap_FlameHead_Fire
   m_TagString: Untagged
   m_Icon: {fileID: 0}

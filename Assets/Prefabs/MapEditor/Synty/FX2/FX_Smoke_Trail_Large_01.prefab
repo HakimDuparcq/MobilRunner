@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 199127956955962600}
   - component: {fileID: -5222845932007028887}
   - component: {fileID: -8724248261795360102}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FX_Smoke_Trail_Large_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}

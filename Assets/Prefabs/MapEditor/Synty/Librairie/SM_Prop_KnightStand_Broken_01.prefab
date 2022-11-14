@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 23284075580497674}
   - component: {fileID: 65361448723493380}
   - component: {fileID: -3541048591668612918}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SM_Prop_KnightStand_Broken_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}

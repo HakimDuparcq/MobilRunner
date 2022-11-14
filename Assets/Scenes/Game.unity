@@ -7518,8 +7518,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 613036893}
-  m_LocalRotation: {x: 0.23477937, y: -0, z: -0, w: 0.9720487}
-  m_LocalPosition: {x: 0.46, y: 3.028, z: -3.1420002}
+  m_LocalRotation: {x: 0.22338729, y: -0, z: -0, w: 0.9747298}
+  m_LocalPosition: {x: 0.46, y: 4.718, z: -3.1420002}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -7751,7 +7751,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Damping: {x: 0, y: 0.5, z: 0.3}
-  ShoulderOffset: {x: 0, y: 2.98, z: -0.41}
+  ShoulderOffset: {x: 0, y: 4.67, z: -0.41}
   VerticalArmLength: 0
   CameraSide: 0
   CameraDistance: 2.67
@@ -7774,7 +7774,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4044717213e31446939f7bd49c896ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_TrackedObjectOffset: {x: 0, y: 1.4, z: 0}
+  m_TrackedObjectOffset: {x: 0, y: 3.18, z: 0}
   m_LookaheadTime: 0
   m_LookaheadSmoothing: 0
   m_LookaheadIgnoreY: 0
@@ -7784,9 +7784,9 @@ MonoBehaviour:
   m_ScreenY: 0.5
   m_DeadZoneWidth: 0
   m_DeadZoneHeight: 0
-  m_SoftZoneWidth: 0.8
-  m_SoftZoneHeight: 0.8
-  m_BiasX: -0.000000037252903
+  m_SoftZoneWidth: 0
+  m_SoftZoneHeight: 0
+  m_BiasX: 0
   m_BiasY: 0
   m_CenterOnActivate: 1
 --- !u!114 &699136034
@@ -10238,7 +10238,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1178727718
 RectTransform:
   m_ObjectHideFlags: 0
@@ -10939,7 +10939,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1458727469
 RectTransform:
   m_ObjectHideFlags: 0
@@ -11471,8 +11471,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1639007394}
-  m_LocalRotation: {x: 0.19430453, y: -0, z: -0, w: 0.9809413}
-  m_LocalPosition: {x: 0.46, y: 4.308, z: -3.1420002}
+  m_LocalRotation: {x: 0.3797393, y: -0, z: -0, w: 0.9250936}
+  m_LocalPosition: {x: 0.46, y: 4.828, z: -0.8520001}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -11554,7 +11554,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: -0.000061035156, y: -0.00076294}
+  m_AnchoredPosition: {x: -0.00012207031, y: -0.00076294}
   m_SizeDelta: {x: -0.000061035, y: 1210.3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1640535917
@@ -12267,6 +12267,7 @@ MonoBehaviour:
   SwipeUp: 0
   SwipeDown: 0
   canTouch: 0
+  canHit: 0
   cube: {fileID: 545627328}
   airState: 0
   side: 1
@@ -12315,11 +12316,11 @@ MonoBehaviour:
   - {fileID: 358715616}
   - {fileID: 358715620}
   skinNumber: 2
-  FxTourbillonBleu: {fileID: 8233547158643841055, guid: 130c16500db6ff04e84d4bfb17e8a2ad, type: 3}
-  FxHeadStars: {fileID: 1236124450049874501, guid: 1313860e518be944d91bcc67b4cc12a0, type: 3}
+  FxTourbillonBleu: {fileID: 7554909060917083226, guid: 8caae3fb69cbd6f46a5ee27fcc02b754, type: 3}
+  FxHeadStars: {fileID: 113427312757226928, guid: b78492eb66399bd45a5cf38aa34d4b41, type: 3}
   TourbillonBleuOffset: {x: 0, y: -1, z: 0}
-  FxGoodCoin: {fileID: 7541427184211624621, guid: 588f874f5bd4b8648a363dbeb0407c76, type: 3}
-  FxBadCoin: {fileID: 146083122193273448, guid: ca2af652ab1a7df4bb8b3e3d296c4df8, type: 3}
+  FxGoodCoin: {fileID: 8346781944289291278, guid: f1ad4ffd59417a643b5d677060a1891f, type: 3}
+  FxBadCoin: {fileID: 509899119586859191, guid: e22ecc663e88bd943b7d2c47459192ed, type: 3}
   head: {fileID: 359009436}
   goldText: {fileID: 89848200}
 --- !u!114 &1738229769
@@ -12339,9 +12340,9 @@ MonoBehaviour:
   scoreDisplayMenu: {fileID: 1703603639}
   scoreDisplayInGame: {fileID: 1785375315}
   scoreDisplayScoreView: {fileID: 780138471}
-  score1Star: 0
-  score2Star: 0
-  score3Star: 0
+  score1Star: 10
+  score2Star: 20
+  score3Star: 30
   emptyStar: {fileID: 215112701, guid: 9fb00b1a09cec944ea284d11aae06d32, type: 3}
   fullStar: {fileID: 2145976362, guid: 9fb00b1a09cec944ea284d11aae06d32, type: 3}
   star1: {fileID: 1328250362}
@@ -12701,7 +12702,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: -0.000061035156, y: -0.00076294}
+  m_AnchoredPosition: {x: -0.00012207031, y: -0.00076294}
   m_SizeDelta: {x: -0.000061035, y: 1210.3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1913002406
@@ -13037,6 +13038,7 @@ MonoBehaviour:
   SettingsButton: {fileID: 273964223}
   SettingsReturn: {fileID: 541007395}
   ScoreViewNext: {fileID: 878099618}
+  HomeInGame: {fileID: 1560784383}
 --- !u!1 &1951730953
 GameObject:
   m_ObjectHideFlags: 0
@@ -13343,16 +13345,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   yCamFollow: 0
   speedFollow: 5
-  Ground:
+  coeffMoveSideCam: 0.7
+  ObstacleGround:
     serializedVersion: 2
-    m_Bits: 8
+    m_Bits: 72
   followCam: {fileID: 1922277745}
   cinemachineVCamInGame: {fileID: 613036894}
   cinemachineVCamGameMenu: {fileID: 218541068}
   cinemachineVCamGameMenuTransition: {fileID: 179373017}
   cinemachineVCamEndGame: {fileID: 1639007396}
-  cameraRotationStart: {x: 0, y: 0, z: 0}
-  cameraRotationGame: {x: 0, y: 4.97, z: -5.33}
 --- !u!4 &1972171197
 Transform:
   m_ObjectHideFlags: 0
@@ -13458,7 +13459,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Map: {fileID: 915737308}
-  speedMap: 3
+  speedMap: 5
 --- !u!114 &1972171202
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13475,9 +13476,11 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 863aa0d349789604dae4aadb6c109260, type: 2}
   - {fileID: 11400000, guid: 519aca7fc0f1ebd41adb982f700511a7, type: 2}
   - {fileID: 11400000, guid: 51f065e7e99b0db44bd56d1e3c2ce2f8, type: 2}
+  - {fileID: 11400000, guid: f0223d04bc4420a46a846518faefffa7, type: 2}
   contener: {fileID: 482991123}
   createMap: 1
   startMoveObject: {fileID: 2382238358604824885, guid: 74d7cc93d4e32034f984583a722f23d7, type: 3}
+  distanceFirstPattern: 15
   movePatterns: []
   speedMove: 5
   plane: {fileID: 1640535917}
@@ -14204,7 +14207,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4044717213e31446939f7bd49c896ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_TrackedObjectOffset: {x: 0, y: 2.99, z: 0}
+  m_TrackedObjectOffset: {x: 0, y: 4, z: 0}
   m_LookaheadTime: 0
   m_LookaheadSmoothing: 0
   m_LookaheadIgnoreY: 0
@@ -14232,7 +14235,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Damping: {x: 0, y: 0.5, z: 0.3}
-  ShoulderOffset: {x: 0, y: 4.26, z: -0.41}
+  ShoulderOffset: {x: 0, y: 4.78, z: 1.88}
   VerticalArmLength: 0
   CameraSide: 0
   CameraDistance: 2.67

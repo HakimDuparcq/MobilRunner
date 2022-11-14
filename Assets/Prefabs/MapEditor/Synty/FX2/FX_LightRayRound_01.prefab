@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4188635514572642}
   - component: {fileID: -2323825188307527072}
   - component: {fileID: -5484635009286888465}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FX_LightRayRound_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -76,7 +76,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4020572726549186}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Null
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -108,7 +108,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4394258651901054}
   - component: {fileID: 137707612719104074}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SM_LightRay_Round
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -195,7 +195,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4411457003746022}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Light_Shaft_Manip
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -227,7 +227,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4806503542488776}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Light_Shaft_Base
   m_TagString: Untagged
   m_Icon: {fileID: 0}

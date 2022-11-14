@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 199670995508575902}
   - component: {fileID: -9111223203781345558}
   - component: {fileID: 2543845448495264464}
-  m_Layer: 1
+  m_Layer: 6
   m_Name: FX_RainbowGlow_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4867,7 +4867,7 @@ GameObject:
   - component: {fileID: 4785579178748422}
   - component: {fileID: 198513709470255688}
   - component: {fileID: 199757717155378160}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FX_RainbowGlow_Ring_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9750,7 +9750,7 @@ GameObject:
   - component: {fileID: 4593645317285048}
   - component: {fileID: 198858621691583668}
   - component: {fileID: 199801719446523414}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FX_RainbowGlow_Sparkles_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}

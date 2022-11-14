@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 410384}
   - component: {fileID: 3332012}
   - component: {fileID: 2353500}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SM_Prop_Tech_Chamber_Broken_Glass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -96,7 +96,7 @@ GameObject:
   - component: {fileID: 2385350}
   - component: {fileID: -9169666189472619255}
   - component: {fileID: 2916236079116469457}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SM_Prop_Tech_Chamber_Broken_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}

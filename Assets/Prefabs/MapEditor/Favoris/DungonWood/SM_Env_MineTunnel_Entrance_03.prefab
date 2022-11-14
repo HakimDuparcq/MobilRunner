@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2637269315413402118}
   - component: {fileID: -2720368047925979072}
   - component: {fileID: 7498438954943708704}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SM_Env_MineTunnel_Entrance_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}

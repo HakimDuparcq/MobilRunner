@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4986716785240454347}
   - component: {fileID: 3290939315469771066}
   - component: {fileID: 6814263133130833815}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SM_Env_Gem_Spike_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}

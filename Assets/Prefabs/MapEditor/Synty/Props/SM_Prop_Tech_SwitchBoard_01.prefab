@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2337926}
   - component: {fileID: -2909539879727510216}
   - component: {fileID: -2316426960739585755}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SM_Prop_Tech_SwitchBoard_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}

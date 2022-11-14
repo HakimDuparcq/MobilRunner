@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 199776928502730230}
   - component: {fileID: -629153095643671476}
   - component: {fileID: -5981180739860084279}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FX_Sparkles_Trail_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}

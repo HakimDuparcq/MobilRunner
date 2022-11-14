@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2397544}
   - component: {fileID: -6431184261252677164}
   - component: {fileID: -6511265056515582959}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SM_Prop_Forge_Ventilation_Pipe_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}

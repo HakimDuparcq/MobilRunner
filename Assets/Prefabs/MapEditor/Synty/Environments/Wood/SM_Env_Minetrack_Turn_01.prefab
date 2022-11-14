@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2326966}
   - component: {fileID: -4121375013581626259}
   - component: {fileID: -8245111032552308999}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SM_Env_Minetrack_Turn_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}

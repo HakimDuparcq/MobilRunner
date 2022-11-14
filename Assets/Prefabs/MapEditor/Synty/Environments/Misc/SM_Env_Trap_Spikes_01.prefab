@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2361470}
   - component: {fileID: 3359774386422565837}
   - component: {fileID: -3134952437554463313}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SM_Env_Trap_Spikes_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}

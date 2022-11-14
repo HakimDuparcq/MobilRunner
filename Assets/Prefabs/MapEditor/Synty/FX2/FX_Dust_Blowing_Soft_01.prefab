@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 199507253976756006}
   - component: {fileID: -1002965713032269665}
   - component: {fileID: 9075227345907563990}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FX_Dust_Blowing_Soft_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}

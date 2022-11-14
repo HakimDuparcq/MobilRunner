@@ -14,6 +14,7 @@ public class PatternManager : MonoBehaviour
     public GameObject startMoveObject;
 
     private float offset;
+    public float distanceFirstPattern;
 
     public List<ListGameObject> movePatterns = new List<ListGameObject>();
 
@@ -46,7 +47,7 @@ public class PatternManager : MonoBehaviour
 
     public void CreateMap()
     {
-        offset = 0;
+        offset = distanceFirstPattern;
         for (int i = 0; i < patterns.Length; i++)
         {
             GameObject patterni = new GameObject();
@@ -63,26 +64,27 @@ public class PatternManager : MonoBehaviour
 
     public void OnLoadPattern(GameObject patterni,int number)
     {
-        offset += patterns[number].sizePattern;
+        
 
         //Start Move
         GameObject startMove = Instantiate(startMoveObject,  Vector3.forward * (offset + patterns[number].startMove), Quaternion.identity);  
         startMove.transform.parent = patterni.transform;
         startMove.GetComponent<Collider>().enabled = true;
         startMove.GetComponent<Collider>().isTrigger = true;
-        //startMove.GetComponent<MeshRenderer>().enabled = false;
+        startMove.GetComponent<MeshRenderer>().enabled = false;
 
         if (patterns[number].difficulty==DifficultyLevel.End) {startMove.tag = "Finish";}
 
         for (int ii = 0; ii < patterns[number].gameObjects.Count; ii++)
         {
-            GameObject obstacle = Instantiate(patterns[number].gameObjects[ii], patterns[number].positions[ii]+  Vector3.forward * offset   , Quaternion.identity);
+            GameObject obstacle = Instantiate(patterns[number].gameObjects[ii], patterns[number].positions[ii]+  Vector3.forward * offset   , patterns[number].rotation[ii]  );
             obstacle.transform.parent = patterni.transform;
             if (obstacle.GetComponent<PrefabData>().obstacleType==ObstacleType.NoCollision)
             {
-                obstacle.GetComponent<Collider>().enabled = false;
+                foreach (var collider in obstacle.GetComponents<Collider>()) { collider.enabled = false; }
             }
         }
+        offset += patterns[number].sizePattern;
 
     }
 
@@ -113,7 +115,7 @@ public class PatternManager : MonoBehaviour
         {
             for (int ii = 0; ii < movePatterns[i].listGameObject.Count; ii++)
             {
-                movePatterns[i].listGameObject[ii].transform.Translate(Vector3.back * Time.deltaTime * speedMove);
+                movePatterns[i].listGameObject[ii].transform.Translate(Vector3.forward * Time.deltaTime * speedMove);
             }
         }
 

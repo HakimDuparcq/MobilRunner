@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2350030}
   - component: {fileID: 279883166629559690}
   - component: {fileID: 4199521590988452374}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SM_Prop_Vase_07
   m_TagString: Untagged
   m_Icon: {fileID: 0}

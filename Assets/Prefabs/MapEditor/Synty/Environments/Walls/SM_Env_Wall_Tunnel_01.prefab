@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2374452}
   - component: {fileID: -5818936417966920659}
   - component: {fileID: 2643079346495458358}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SM_Env_Wall_Tunnel_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}

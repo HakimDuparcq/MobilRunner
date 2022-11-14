@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4305601036734238}
   - component: {fileID: 198114219622526734}
   - component: {fileID: 199493011274213978}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FX_Healing_Spirals_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4836,7 +4836,7 @@ GameObject:
   - component: {fileID: 4494094876429104}
   - component: {fileID: 198997899948690088}
   - component: {fileID: 199151839895382382}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FX_Healing_Sparkles_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9663,7 +9663,7 @@ GameObject:
   - component: {fileID: 199928695985356350}
   - component: {fileID: 3216484319880681097}
   - component: {fileID: 1840348195723997041}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FX_Healing_Cirle_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}

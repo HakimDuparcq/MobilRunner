@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4851735735293792}
   - component: {fileID: 198947917942187372}
   - component: {fileID: 199985317658165858}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FX_StarStunned_Smoke_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4914,7 +4914,7 @@ GameObject:
   - component: {fileID: 199638047343435042}
   - component: {fileID: -5999773439882322208}
   - component: {fileID: -3636854531690485675}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FX_StarStunned_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9849,7 +9849,7 @@ GameObject:
   - component: {fileID: 4102144938689248}
   - component: {fileID: 198523363726998414}
   - component: {fileID: 199199868928197880}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FX_StarStunned_Smoke_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}

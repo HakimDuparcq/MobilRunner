@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2379396}
   - component: {fileID: -4341547460795518824}
   - component: {fileID: -6167314770507011244}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SM_Env_Pillar_Square_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}

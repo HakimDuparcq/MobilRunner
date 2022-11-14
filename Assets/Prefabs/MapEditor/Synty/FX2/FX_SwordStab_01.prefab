@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4807868893883126}
   - component: {fileID: 198796065650352084}
   - component: {fileID: 199758188534980610}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FX_SwordSlash_Sparks_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4896,7 +4896,7 @@ GameObject:
   - component: {fileID: 199273632801245852}
   - component: {fileID: 4445147569832226588}
   - component: {fileID: 7064028862706854853}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FX_SwordStab_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9814,7 +9814,7 @@ GameObject:
   - component: {fileID: 4718001370089940}
   - component: {fileID: 198437641029713558}
   - component: {fileID: 199279355177432538}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FX_SwordSlash_Sparks_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14697,7 +14697,7 @@ GameObject:
   - component: {fileID: 4427094924376628}
   - component: {fileID: 198941499454287408}
   - component: {fileID: 199962037143688156}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FX_SwordSlash_Hit_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}

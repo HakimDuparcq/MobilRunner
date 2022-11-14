@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 19905376}
   - component: {fileID: -7914328678437290284}
   - component: {fileID: -3203486477143164725}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FX_Magic_Swirl
   m_TagString: Untagged
   m_Icon: {fileID: 0}

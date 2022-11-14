@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 199496225399935470}
   - component: {fileID: -2345374008591518551}
   - component: {fileID: -4711691861571336842}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FX_Poison_Purple_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4871,7 +4871,7 @@ GameObject:
   - component: {fileID: 4240939189162776}
   - component: {fileID: 198913513614146188}
   - component: {fileID: 199368231073485376}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FX_Poison_Purple_Smoke_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}

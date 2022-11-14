@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2389700}
   - component: {fileID: 4154037937312390588}
   - component: {fileID: -4882586958904607013}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SM_Prop_Toture_StretchTable_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}

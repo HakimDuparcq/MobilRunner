@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4980115582993738}
   - component: {fileID: 198127392019969480}
   - component: {fileID: 199673477678695374}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FX_Grenade_Explosive_Fire_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4902,7 +4902,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4801413484899634}
   - component: {fileID: 108666441239852268}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FX_Grenade_Explosive_Light_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4997,7 +4997,7 @@ GameObject:
   - component: {fileID: 4299143270688432}
   - component: {fileID: 198952811680876272}
   - component: {fileID: 199710680214557830}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FX_Grenade_Explosive_Smoke_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9844,7 +9844,7 @@ GameObject:
   - component: {fileID: 4878865312098284}
   - component: {fileID: 198374215395229706}
   - component: {fileID: 199063947496093554}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FX_Grenade_Explosive_Debris_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14675,7 +14675,7 @@ GameObject:
   - component: {fileID: 199080232139317452}
   - component: {fileID: 4203958319623765322}
   - component: {fileID: -2371011348826157431}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FX_Grenade_Explosive_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19559,7 +19559,7 @@ GameObject:
   - component: {fileID: 4312733247216562}
   - component: {fileID: 198653790583224578}
   - component: {fileID: 199202521984898756}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FX_Grenade_Explosive_Ember_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}

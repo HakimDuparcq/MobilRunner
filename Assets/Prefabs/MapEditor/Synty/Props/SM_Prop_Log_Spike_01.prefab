@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2381950}
   - component: {fileID: 6334144283309989455}
   - component: {fileID: -7399153257033860706}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SM_Prop_Log_Spike_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}

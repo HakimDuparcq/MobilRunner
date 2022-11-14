@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2313824}
   - component: {fileID: 2570717143185324513}
   - component: {fileID: 3531939301026773481}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SM_Wep_Shield_Chitin_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}

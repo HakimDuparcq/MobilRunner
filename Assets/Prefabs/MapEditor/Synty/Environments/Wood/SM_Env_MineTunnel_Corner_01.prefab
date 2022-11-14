@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2335506}
   - component: {fileID: -374933160066765727}
   - component: {fileID: 3915598503007409579}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SM_Env_MineTunnel_Corner_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}

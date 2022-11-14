@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2309308}
   - component: {fileID: 50036798917931104}
   - component: {fileID: -6302490362440739931}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SM_Prop_Bolt_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}

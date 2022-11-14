@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2384682}
   - component: {fileID: 3483463620319061075}
   - component: {fileID: -2664377234829232228}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SM_Prop_Goblin_Branch_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}

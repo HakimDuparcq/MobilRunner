@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4414050909605702258}
   - component: {fileID: -7133221439783911812}
   - component: {fileID: 919932246029521999}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SM_Env_Rune_Pillar_05
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2313384}
   - component: {fileID: 4010571569634253615}
   - component: {fileID: -5110412815915932572}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SM_Wep_Handle_Metal_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}

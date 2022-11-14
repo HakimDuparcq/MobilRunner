@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2327520}
   - component: {fileID: 774146055851562403}
   - component: {fileID: -3900721265895676237}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SM_Env_Stalagmite_04
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2307018}
   - component: {fileID: 8865820542606861385}
   - component: {fileID: 80279423650856110}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SM_Env_Fence_Goblin_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}

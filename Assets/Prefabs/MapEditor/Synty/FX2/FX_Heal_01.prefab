@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 199650048263207216}
   - component: {fileID: -3752601673188992112}
   - component: {fileID: -2867070289941058440}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FX_Heal_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4929,7 +4929,7 @@ GameObject:
   - component: {fileID: 4678185445172316}
   - component: {fileID: 198410904701440020}
   - component: {fileID: 199256865592472146}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FX_Heal_Sparkles_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}

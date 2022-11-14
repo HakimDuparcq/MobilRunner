@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4690808087912251850}
   - component: {fileID: -7990214691439277500}
   - component: {fileID: 6781776745356908454}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SM_Env_Wood_Construction_Wheel_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}

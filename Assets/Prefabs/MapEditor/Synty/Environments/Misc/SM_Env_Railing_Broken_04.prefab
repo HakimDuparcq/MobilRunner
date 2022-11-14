@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2381918}
   - component: {fileID: 5220921133047042241}
   - component: {fileID: 6345951339000211160}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SM_Env_Railing_Broken_04
   m_TagString: Untagged
   m_Icon: {fileID: 0}

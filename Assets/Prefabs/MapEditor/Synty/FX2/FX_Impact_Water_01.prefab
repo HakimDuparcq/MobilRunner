@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4193896687670242}
   - component: {fileID: 198761460724525984}
   - component: {fileID: 199478121245193958}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FX_Impact_Small_Dust_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4896,7 +4896,7 @@ GameObject:
   - component: {fileID: 199990038222607388}
   - component: {fileID: -2852460087954295491}
   - component: {fileID: -304040533286676107}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FX_Impact_Water_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}

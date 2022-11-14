@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 401336}
   - component: {fileID: 3307186}
   - component: {fileID: 2360532}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SM_Prop_Chest_Wood_Lid
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -96,7 +96,7 @@ GameObject:
   - component: {fileID: 2322930}
   - component: {fileID: 1135216387978538565}
   - component: {fileID: -6292247426244248392}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SM_Prop_Chest_Wood_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}

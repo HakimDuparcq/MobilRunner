@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4472554598252872}
   - component: {fileID: 198696913381902060}
   - component: {fileID: 199264293674104112}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FX_PowerDraw_Electricity_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4741,7 +4741,7 @@ GameObject:
   - component: {fileID: 4963508098443438}
   - component: {fileID: 198994978116601044}
   - component: {fileID: 199225696259796840}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FX_PowerBeam_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9583,7 +9583,7 @@ GameObject:
   - component: {fileID: 4174156950413558}
   - component: {fileID: 198109838524708078}
   - component: {fileID: 199013330005028542}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FX_PowerBeam_Swirl_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14475,7 +14475,7 @@ GameObject:
   - component: {fileID: 4521774990183428}
   - component: {fileID: 198495510763825136}
   - component: {fileID: 199812523513484332}
-  m_Layer: 1
+  m_Layer: 6
   m_Name: FX_PowerBeam_Impact_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19286,7 +19286,7 @@ GameObject:
   - component: {fileID: 4700267063537436}
   - component: {fileID: 198927104176090148}
   - component: {fileID: 199443214984496778}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FX_PowerBeam_Embers_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23850,7 +23850,7 @@ GameObject:
   - component: {fileID: 4960557175370188}
   - component: {fileID: 198735535632867920}
   - component: {fileID: 199037720878358258}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FX_PowerBeam_Glow_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28752,7 +28752,7 @@ GameObject:
   - component: {fileID: 4497076491854560}
   - component: {fileID: 198783778819824790}
   - component: {fileID: 199778926516930044}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FX_PowerBeam_ImpactSoft_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33472,7 +33472,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4003216315560438}
   - component: {fileID: 108987212518669824}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FX_PowerBeam_Glow_Light_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33566,7 +33566,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4220202450861508}
   - component: {fileID: 108062184839945160}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FX_PowerBeam_Glow_Light_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33663,7 +33663,7 @@ GameObject:
   - component: {fileID: 199448492956091140}
   - component: {fileID: -7950058687501708162}
   - component: {fileID: -2427713817488290839}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FX_PowerDraw_Shoot_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38609,7 +38609,7 @@ GameObject:
   - component: {fileID: 4806954381421182}
   - component: {fileID: 198501443778316118}
   - component: {fileID: 199277944620707790}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FX_PowerBeam_Electricity_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -43339,7 +43339,7 @@ GameObject:
   - component: {fileID: 4563494704468760}
   - component: {fileID: 198800197317246690}
   - component: {fileID: 199945012284955192}
-  m_Layer: 1
+  m_Layer: 6
   m_Name: FX_PowerBeam_Shine
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -48150,7 +48150,7 @@ GameObject:
   - component: {fileID: 4747818493617772}
   - component: {fileID: 198259832994317724}
   - component: {fileID: 199263125959657990}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FX_PowerBeam_Flash_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -52943,7 +52943,7 @@ GameObject:
   - component: {fileID: 4023144680277842}
   - component: {fileID: 198069893921287696}
   - component: {fileID: 199268047866721380}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FX_PowerBeam_Glow_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2309578}
   - component: {fileID: 4443892967504091917}
   - component: {fileID: 8071428839212627691}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SM_Env_Wood_Platform_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}

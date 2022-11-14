@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2384024}
   - component: {fileID: -8573338882984356323}
   - component: {fileID: 108137510001939095}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SM_Env_Rock_Brick_Simple_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}

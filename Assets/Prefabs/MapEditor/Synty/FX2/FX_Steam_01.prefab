@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 199326340111179614}
   - component: {fileID: 1074191101763721670}
   - component: {fileID: 2904831967457751878}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FX_Steam_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}

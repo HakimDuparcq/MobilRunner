@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 199538644977711144}
   - component: {fileID: 8135473140513885511}
   - component: {fileID: 154294842174725720}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FX_Magic_Lights_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
