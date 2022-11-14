@@ -11,9 +11,7 @@ GameObject:
   - component: {fileID: 487656}
   - component: {fileID: 3374666}
   - component: {fileID: 2382218}
-  - component: {fileID: -135505617313350390}
-  - component: {fileID: 8508806884854712668}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: SM_Env_Bone_Spike_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -85,32 +83,3 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &-135505617313350390
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 196306}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4300000, guid: c6e3cdfc26ed2f64c8f0bed3b37cda1c, type: 3}
---- !u!114 &8508806884854712668
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 196306}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ae861be614bf2424e92bd1323d5b1542, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  crossNumber: 0
-  offset: {fileID: 0}
-  size: 0

@@ -86,7 +86,7 @@ public class MapEditor : MonoBehaviour
     {
 
         ListenerUI();
-
+        LoadPreviewInMemoryCache();
     }
 
     void Update()
@@ -108,6 +108,36 @@ public class MapEditor : MonoBehaviour
 
     }
 
+
+    public void LoadPreviewInMemoryCache()
+    {
+        AssetPreview.SetPreviewTextureCacheSize(10000); // nombre d'image a charger
+        for (int i = 0; i < catalog.Length; i++)
+        {
+            for (int ii = 0; ii < catalog[i].prefabsButton.Length && ii < catalog[i].prefabsObject.Length; ii++)
+            {
+                AssetPreview.GetAssetPreview(catalog[i].prefabsObject[ii]);
+            }
+
+        }
+        StartCoroutine(SetPreview());
+    }
+
+    public IEnumerator SetPreview()
+    {
+        while(AssetPreview.IsLoadingAssetPreviews())
+        {
+            yield return new WaitForSeconds(Time.deltaTime);
+        }
+        for (int i = 0; i < catalog.Length; i++)
+        {
+            for (int ii = 0; ii < catalog[i].prefabsButton.Length && ii < catalog[i].prefabsObject.Length; ii++)
+            {
+                catalog[i].prefabsButton[ii].GetComponent<RawImage>().texture = AssetPreview.GetAssetPreview(catalog[i].prefabsObject[ii]);
+            }
+        }
+    }
+
     public void ListenerUI()
     {
         for (int i = 0; i < catalog.Length; i++)
@@ -116,10 +146,10 @@ public class MapEditor : MonoBehaviour
             {
                 int x = ii;
                 catalog[i].prefabsButton[ii].onClick.AddListener(delegate { ClickButtonPrefabs(x); });
-                catalog[i].prefabsButton[ii].GetComponent<RawImage>().texture = AssetPreview.GetAssetPreview(catalog[i].prefabsObject[ii]);
+                //catalog[i].prefabsButton[ii].GetComponent<RawImage>().texture = AssetPreview.GetAssetPreview(catalog[i].prefabsObject[ii]);
             }
-
         }
+
         Selector.onClick.AddListener(OnSelection);
         Save.onClick.AddListener(OnSave);
         Load.onClick.AddListener(OnLoad);
@@ -337,14 +367,19 @@ public class MapEditor : MonoBehaviour
                     if (followObstacle.GetComponent<PrefabData>().obstacleType == ObstacleType.Start)
                     {
                         startPatternOnMap = newObstacle;
+                        Debug.Log("StartOnmap");
                     }
                     else if (followObstacle.GetComponent<PrefabData>().obstacleType == ObstacleType.End)
                     {
                         endPatternOnMap = newObstacle;
+                        Debug.Log("ENdOnmap");
+
                     }
                     else if (followObstacle.GetComponent<PrefabData>().obstacleType == ObstacleType.StartMove)
                     {
                         startMoveOnMap = newObstacle;
+                        Debug.Log("MoveOnmap");
+
                     }
                     else
                     {

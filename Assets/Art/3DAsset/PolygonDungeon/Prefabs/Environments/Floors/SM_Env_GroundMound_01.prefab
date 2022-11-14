@@ -11,9 +11,7 @@ GameObject:
   - component: {fileID: 427962}
   - component: {fileID: 3370480}
   - component: {fileID: 2381336}
-  - component: {fileID: 1529488502756102159}
-  - component: {fileID: 3711031312505346331}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: SM_Env_GroundMound_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -85,32 +83,3 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &1529488502756102159
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 142126}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ae861be614bf2424e92bd1323d5b1542, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  crossNumber: 0
-  offset: {fileID: 0}
-  size: 0
---- !u!64 &3711031312505346331
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 142126}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4300000, guid: 6210eefa6dfd9fe44804d85bd670ace9, type: 3}

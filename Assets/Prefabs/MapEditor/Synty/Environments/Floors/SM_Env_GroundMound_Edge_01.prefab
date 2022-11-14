@@ -97,9 +97,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae861be614bf2424e92bd1323d5b1542, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  obstacleType: 1
+  montable: 0
   crossNumber: 0
   offset: {fileID: 0}
   size: 0
+  speed: 0
 --- !u!64 &7922658276484375343
 MeshCollider:
   m_ObjectHideFlags: 0

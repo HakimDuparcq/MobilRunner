@@ -11,9 +11,7 @@ GameObject:
   - component: {fileID: 483244}
   - component: {fileID: 3328566}
   - component: {fileID: 2380420}
-  - component: {fileID: 1191189806403748999}
-  - component: {fileID: 3836577065489261414}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: SM_Env_Sewer_Canal_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -85,32 +83,3 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &1191189806403748999
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 155712}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ae861be614bf2424e92bd1323d5b1542, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  crossNumber: 0
-  offset: {fileID: 0}
-  size: 0
---- !u!64 &3836577065489261414
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 155712}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4300000, guid: 5b23bc4b7135c49409961dc780ebb0ce, type: 3}
