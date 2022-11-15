@@ -65,17 +65,13 @@ public class PlayerStats : MonoBehaviour
         {
             scoreDisplayScoreView.text = ((int)(actualScore)).ToString();
             SetupStars();
-            
-        }
-        else if (GameManager.instance.gameState == GameState.GameMenu)
-        {
-            if (actualScore> bestScore)
+
+            if (actualScore > bestScore)
             {
                 bestScore = actualScore;
                 PlayerPrefs.SetInt("BestScore", (int)bestScore);
             }
             scoreDisplayMenu.text = ((int)(bestScore)).ToString();
-
         }
     }
 

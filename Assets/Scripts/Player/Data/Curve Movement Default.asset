@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f72a12703133e548a378fab737931ca, type: 3}
   m_Name: Curve Movement Default
   m_EditorClassIdentifier: 
-  sideDistance: 4
+  sideDistance: 5
   switchSideCurve:
     serializedVersion: 2
     m_Curve:
@@ -62,8 +62,8 @@ MonoBehaviour:
       inWeight: 0
       outWeight: 0
     - serializedVersion: 3
-      time: 0.6148071
-      value: 2.2996826
+      time: 0.42156982
+      value: 2.4694748
       inSlope: 0.010091771
       outSlope: 0.010091771
       tangentMode: 0
@@ -71,8 +71,8 @@ MonoBehaviour:
       inWeight: 0.33333334
       outWeight: 0.12615845
     - serializedVersion: 3
-      time: 1.2776489
-      value: -0.014282227
+      time: 0.89575195
+      value: 0.006286621
       inSlope: -1.6906213
       outSlope: -1.6906213
       tangentMode: 0
@@ -82,7 +82,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  jumpTimer: 1.2799994
+  jumpTimer: 0.8799997
   downCurve:
     serializedVersion: 2
     m_Curve:
@@ -96,8 +96,8 @@ MonoBehaviour:
       inWeight: 0
       outWeight: 0.06974374
     - serializedVersion: 3
-      time: 4.5556912
-      value: -11.353799
+      time: 2.8709378
+      value: -11.0632715
       inSlope: -1.338697
       outSlope: -1.338697
       tangentMode: 0
@@ -107,7 +107,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  downTimer: 1.7399989
+  downTimer: 0.02
   rollCurve:
     serializedVersion: 2
     m_Curve:
@@ -132,7 +132,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  rollTimer: 1.5999991
+  rollTimer: 0.23999996
   sideHitCurve:
     serializedVersion: 2
     m_Curve:

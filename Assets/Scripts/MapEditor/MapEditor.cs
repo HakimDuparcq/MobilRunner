@@ -343,7 +343,12 @@ public class MapEditor : MonoBehaviour
             followObstacle.transform.position = positionObject;
 
             //materials
-            Material[] matArray = { followObstacle.GetComponent<MeshRenderer>().material, null };
+            Material[] matArray = new Material[2];
+            if (followObstacle.GetComponent<MeshRenderer>())
+            {
+                matArray = new Material[2]  {followObstacle.GetComponent<MeshRenderer>().material, null };
+            }
+           
 
             if (followObstacle.GetComponent<PrefabData>().crossNumber == 0  || isOverPose)
             {
@@ -387,7 +392,11 @@ public class MapEditor : MonoBehaviour
                 
 
             }
-            followObstacle.GetComponent<MeshRenderer>().materials = matArray;
+            if (followObstacle.GetComponent<MeshRenderer>())
+            {
+                followObstacle.GetComponent<MeshRenderer>().materials = matArray;
+            }
+            
 
             
         }
@@ -412,11 +421,13 @@ public class MapEditor : MonoBehaviour
 
         patterns[patternNumber].startMove = startMoveOnMap.transform.position.z - startPatternOnMap.transform.position.z;
 
+        
         for (int i = 0; i < obstaclesOnMap.Count; i++)
         {
+            bool isfinish = false;
             for (int ii = 0; ii < catalog.Length; ii++)
             {
-                for (int iii = 0; iii < catalog[ii].prefabsObject.Length; iii++)
+                for (int iii = 0; iii < catalog[ii].prefabsObject.Length  && !isfinish; iii++)
                 {
                     if (catalog[ii].prefabsObject[iii].name+"(Clone)" == obstaclesOnMap[i].name)
                     {
@@ -424,6 +435,8 @@ public class MapEditor : MonoBehaviour
                         patterns[patternNumber].positions.Add(obstaclesOnMap[i].transform.position - Vector3.forward * startPatternOnMap.transform.position.z);
                         patterns[patternNumber].rotation.Add(obstaclesOnMap[i].transform.rotation);
                         EditorUtility.SetDirty(patterns[patternNumber]);
+                        isfinish = true;
+                        break;
                     }
                 }
             }

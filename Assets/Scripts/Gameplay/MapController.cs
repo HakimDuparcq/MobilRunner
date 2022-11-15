@@ -7,7 +7,7 @@ public class MapController : MonoBehaviour
     public static MapController instance;
     public GameObject Map;
     public float speedMap;
-
+    public Vector3 startMapPosition;
 
 
     private void Awake()

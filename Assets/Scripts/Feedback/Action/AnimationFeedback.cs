@@ -13,7 +13,7 @@ namespace Hakim
         {
             if (isEndGame)
             {
-                if (Skin.instance.skinNumber >= 2)
+                if (Mathf.Abs( Skin.instance.skinNumber ) >= Skin.instance.skinNumberToWin)
                 {
                     Player.instance.animator.SetTrigger("Victory");
                     yield break;

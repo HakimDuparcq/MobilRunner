@@ -13,7 +13,7 @@ namespace Hakim
         {
             if (soundName != ""){ AudioManager.instance.Play(soundName); }
             else{
-                if (Skin.instance.skinNumber >= 2){AudioManager.instance.Play("Win");}
+                if (Mathf.Abs(Skin.instance.skinNumber) >= Skin.instance.skinNumberToWin) { AudioManager.instance.Play("Win");}
                 else{
                     AudioManager.instance.Play("Loose");}
             }

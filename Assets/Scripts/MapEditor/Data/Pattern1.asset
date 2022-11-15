@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Pattern1
   m_EditorClassIdentifier: 
   sizePattern: 15
-  startMove: 12
+  startMove: -1
   difficulty: 0
   gameObjects:
   - {fileID: 5369098629915983117, guid: 6832d280ab02b014ebae8c216a0c0f19, type: 3}
@@ -44,7 +44,7 @@ MonoBehaviour:
   - {x: 2.505, y: 0.09937096, z: 7}
   - {x: 2.3912754, y: 0.09533882, z: 7.0381775}
   - {x: 7.45, y: 0.12, z: 7.097046}
-  - {x: 0, y: 0.09928894, z: 2}
+  - {x: 0, y: 0.98, z: 2}
   rotation:
   - {x: -0, y: 1, z: -0, w: -0.00000004371139}
   - {x: -0, y: 1, z: -0, w: -0.00000004371139}

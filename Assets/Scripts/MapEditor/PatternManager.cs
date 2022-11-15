@@ -13,15 +13,13 @@ public class PatternManager : MonoBehaviour
 
     public GameObject startMoveObject;
 
-    private float offset;
+    public float offset;
     public float distanceFirstPattern;
 
     public List<ListGameObject> movePatterns = new List<ListGameObject>();
 
     public float speedMove;
 
-    public GameObject plane;
-    public Transform startPlanePos;
 
     private void Awake()
     {
@@ -129,7 +127,7 @@ public class PatternManager : MonoBehaviour
             Destroy(contener.transform.GetChild(i).gameObject);
         }
         movePatterns = new List<ListGameObject>();
-        plane.transform.position = startPlanePos.position;
+        MapController.instance.Map.transform.position = Vector3.zero;
         CreateMap();
     }
 

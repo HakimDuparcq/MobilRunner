@@ -391,6 +391,11 @@ public class Player : MonoBehaviour
             StartCoroutine(GoDown(true));
             
         }
+
+        if (airState == AirState.Run)
+        {
+            AudioManager.instance.Play("Footstep");
+        }
     }
 
 

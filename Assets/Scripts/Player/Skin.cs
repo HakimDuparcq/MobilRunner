@@ -11,9 +11,6 @@ public class Skin : MonoBehaviour
     public int bonus;
     public int bonusMax;
 
-    public int shield;
-    public int shieldMax;
-
     public GameObject startSkin;
     public GameObject deadSkin;
     public GameObject actualSkin;
@@ -22,6 +19,7 @@ public class Skin : MonoBehaviour
     public GameObject[] badSkins;
 
     public int skinNumber;
+    public int skinNumberToWin;
 
     public ParticleSystem FxTourbillonBleu;
     public ParticleSystem FxHeadStars;

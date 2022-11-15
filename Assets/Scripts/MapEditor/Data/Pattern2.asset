@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Pattern2
   m_EditorClassIdentifier: 
   sizePattern: 15
-  startMove: 2
+  startMove: -1
   difficulty: 0
   gameObjects:
   - {fileID: 5369098629915983117, guid: 6832d280ab02b014ebae8c216a0c0f19, type: 3}
@@ -28,6 +28,8 @@ MonoBehaviour:
   - {fileID: 4187746007671667090, guid: 209ebc34589a5704b92b0c49606c2dce, type: 3}
   - {fileID: 8950813752695207084, guid: 09ffa946560bcc040a7b2c1a719920dc, type: 3}
   - {fileID: 105362, guid: a8d50d2c59bdfa948b5d87bb0f7fe471, type: 3}
+  - {fileID: 8950813752695207084, guid: 09ffa946560bcc040a7b2c1a719920dc, type: 3}
+  - {fileID: 105362, guid: a8d50d2c59bdfa948b5d87bb0f7fe471, type: 3}
   - {fileID: 4187746007671667090, guid: 209ebc34589a5704b92b0c49606c2dce, type: 3}
   - {fileID: 4187746007671667090, guid: 209ebc34589a5704b92b0c49606c2dce, type: 3}
   - {fileID: 4187746007671667090, guid: 209ebc34589a5704b92b0c49606c2dce, type: 3}
@@ -35,7 +37,6 @@ MonoBehaviour:
   - {fileID: 4187746007671667090, guid: 209ebc34589a5704b92b0c49606c2dce, type: 3}
   - {fileID: 2637269315415555030, guid: cd37093dd1e91b74791460f280b8caf9, type: 3}
   - {fileID: 2637269315415555030, guid: cd37093dd1e91b74791460f280b8caf9, type: 3}
-  - {fileID: 6271179225082297516, guid: eb6f607ba02388c498026bc403572c8f, type: 3}
   - {fileID: 6271179225082297516, guid: eb6f607ba02388c498026bc403572c8f, type: 3}
   - {fileID: 6271179225082297516, guid: eb6f607ba02388c498026bc403572c8f, type: 3}
   - {fileID: 6271179225082297516, guid: eb6f607ba02388c498026bc403572c8f, type: 3}
@@ -55,6 +56,8 @@ MonoBehaviour:
   - {x: -2.5, y: 0.10032463, z: 10}
   - {x: -2.5, y: 0.23531342, z: 5}
   - {x: -2.5, y: 0.23531342, z: 5}
+  - {x: -2.5, y: 0.23531342, z: 5}
+  - {x: -2.5, y: 0.23531342, z: 5}
   - {x: 2.505, y: 0.09863281, z: 9}
   - {x: 2.505, y: 0.09852219, z: 14}
   - {x: -2.5, y: 0.098526, z: 14}
@@ -63,13 +66,13 @@ MonoBehaviour:
   - {x: 7.558749, y: -1.0838703e-16, z: 10}
   - {x: 2.259293, y: 0.10024071, z: 10}
   - {x: -4.8629465, y: 0.2900257, z: 9}
-  - {x: -4.284382, y: 3.2316635, z: 9}
   - {x: -5.2865705, y: 0.3132248, z: 7}
   - {x: -3.7873702, y: 0.09898758, z: 8}
   - {x: -4.4342604, y: 0.27923203, z: 11}
   - {x: -7.164286, y: 0.10000038, z: 11}
   - {x: -7.328191, y: 0.09891701, z: 8}
   rotation:
+  - {x: -0, y: 1, z: -0, w: -0.00000004371139}
   - {x: -0, y: 1, z: -0, w: -0.00000004371139}
   - {x: -0, y: 1, z: -0, w: -0.00000004371139}
   - {x: -0, y: 1, z: -0, w: -0.00000004371139}
