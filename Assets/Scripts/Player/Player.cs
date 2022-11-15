@@ -391,8 +391,7 @@ public class Player : MonoBehaviour
             StartCoroutine(GoDown(true));
             
         }
-
-        if (airState == AirState.Run)
+        if (airState == AirState.Run  && animator.GetCurrentAnimatorClipInfo(0)[0].clip.name != "Stand To Roll 4 double  perfect")
         {
             AudioManager.instance.Play("Footstep");
         }
