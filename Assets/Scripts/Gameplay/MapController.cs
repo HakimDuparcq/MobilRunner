@@ -6,7 +6,8 @@ public class MapController : MonoBehaviour
 {
     public static MapController instance;
     public GameObject Map;
-    public float speedMap;
+    [HideInInspector ]public float speedMap;
+    public float speedMapRestart;
     public Vector3 startMapPosition;
 
 
@@ -17,7 +18,7 @@ public class MapController : MonoBehaviour
 
     void Start()
     {
-        
+        speedMap = speedMapRestart;
     }
 
     void Update()

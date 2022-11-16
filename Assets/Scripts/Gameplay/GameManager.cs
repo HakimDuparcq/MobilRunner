@@ -54,7 +54,7 @@ public class GameManager : MonoBehaviour
         gameState = GameState.GameMenu;
         PatternManager.instance.ResetMap();
         Player.instance.ResetPlayer();
-        MapController.instance.speedMap = 3;
+        MapController.instance.speedMap = MapController.instance.speedMapRestart;
         //MapController.instance.Map.transform.position = MapController.instance.startMapPosition;
         CameraMovement.instance.SetMainCamera(CameraMovement.instance.cinemachineVCamGameMenu);
         PlayerStats.instance.actualScore = 0;
